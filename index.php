@@ -59,8 +59,7 @@
               <ul>
                 <li>
                   <a href="#"
-                    ><i class="fa fa-map-marker-alt"></i>Store Location</a
-                  >
+                    ><i class="fa fa-map-marker-alt"></i>Store Location</a>
                 </li>
                 <li>
                   <a href="#"><i class="fa fa-truck"></i>Order Status</a>
@@ -103,9 +102,7 @@
           <!-- Header Logo Start -->
           <div class="col-auto">
             <div class="header-logo justify-content-center">
-              <a href="index.html"
-                ><img src="assets/images/logo/logo.webp" alt="Learts Logo"
-              /></a>
+              <a href="index.php"><img src="assets/images/logo/logo.webp" alt="Learts Logo"/></a>
             </div>
           </div>
           <!-- Header Logo End -->
@@ -118,15 +115,9 @@
                   <div class="col-auto">
                     <select class="search-select select2-basic">
                       <option value="0">All Categories</option>
-                      <option value="kids-babies">Kids &amp; Babies</option>
                       <option value="home-decor">Home Decor</option>
                       <option value="gift-ideas">Gift ideas</option>
                       <option value="kitchen">Kitchen</option>
-                      <option value="toys">Toys</option>
-                      <option value="kniting-sewing">
-                        Kniting &amp; Sewing
-                      </option>
-                      <option value="pots">Pots</option>
                     </select>
                   </div>
                   <div class="col">
@@ -143,7 +134,7 @@
           <div class="col-auto">
             <div class="header-tools justify-content-end">
               <div class="header-login">
-                <a href="my-account.html"><i class="far fa-user"></i></a>
+                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
               <div class="header-wishlist">
                 <a href="#offcanvas-wishlist" class="offcanvas-toggle"
@@ -172,344 +163,35 @@
             </button>
             <ul class="header-category-list">
               <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-1.webp" alt="" />
-                  Knitting</a
-                >
+                <a href="#"><img src="assets/images/icons/cat-icon-4.webp" /> Birthday gifts</a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-2.webp" alt="" />
-                  Sewing</a
-                >
+                <a href="#"><img src="assets/images/icons/cat-icon-5.webp" /> Homedecor</a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-3.webp" alt="" />
-                  Holyday gifts</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-4.webp" alt="" />
-                  Birthday gifts</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-5.webp" alt="" /> Home
-                  decor</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-6.webp" alt="" /> For
-                  kids & babies</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-7.webp" alt="" />
-                  Garden decor</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-8.webp" alt="" />
-                  Accessories</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-9.webp" alt="" />
-                  Soap</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="assets/images/icons/cat-icon-10.webp" alt="" />
-                  Sale</a
-                >
+                <a href="#"><img src="assets/images/icons/cat-icon-6.webp" alt="" /> Forkids & babies</a>
               </li>
             </ul>
           </div>
           <nav class="site-main-menu justify-content-center menu-height-60">
             <ul>
               <li class="has-children">
-                <a href="index.html"><span class="menu-text">Home</span></a>
+                <a href="index.php"><span class="menu-text">Home</span></a>
               </li>
               <li class="has-children">
-                <a href="shop.html"><span class="menu-text">Shop</span></a>
+                <a href="shop.php"><span class="menu-text">Shop</span></a>
               </li>
               <li class="has-children">
-                <a href="#"><span class="menu-text">Project</span></a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="portfolio-3-columns.html"
-                      ><span class="menu-text">Portfolio 3 Columns</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio-4-columns.html"
-                      ><span class="menu-text">Portfolio 4 Columns</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio-5-columns.html"
-                      ><span class="menu-text">Portfolio 5 Columns</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio-details.html"
-                      ><span class="menu-text">Portfolio Details</span></a
-                    >
-                  </li>
-                </ul>
+                <a href="about-us.php"><span class="menu-text">about</span></a>
               </li>
               <li class="has-children">
-                <a href="#"><span class="menu-text">Elements</span></a>
-                <ul class="sub-menu mega-menu">
-                  <li>
-                    <a href="#" class="mega-menu-title"
-                      ><span class="menu-text">Column One</span></a
-                    >
-                    <ul>
-                      <li>
-                        <a href="elements-products.html"
-                          ><span class="menu-text">Product Styles</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-products-tabs.html"
-                          ><span class="menu-text">Product Tabs</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-product-sale-banner.html"
-                          ><span class="menu-text"
-                            >Product & Sale Banner</span
-                          ></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#" class="mega-menu-title"
-                      ><span class="menu-text">Column Two</span></a
-                    >
-                    <ul>
-                      <li>
-                        <a href="elements-category-banner.html"
-                          ><span class="menu-text">Category Banner</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-team.html"
-                          ><span class="menu-text">Team Member</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-testimonials.html"
-                          ><span class="menu-text">Testimonials</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#" class="mega-menu-title"
-                      ><span class="menu-text">Column Three</span></a
-                    >
-                    <ul>
-                      <li>
-                        <a href="elements-instagram.html"
-                          ><span class="menu-text">Instagram</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-map.html"
-                          ><span class="menu-text">Google Map</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-icon-box.html"
-                          ><span class="menu-text">Icon Box</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#" class="mega-menu-title"
-                      ><span class="menu-text">Column Four</span></a
-                    >
-                    <ul>
-                      <li>
-                        <a href="elements-buttons.html"
-                          ><span class="menu-text">Buttons</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-faq.html"
-                          ><span class="menu-text">FAQs / Toggles</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="elements-brands.html"
-                          ><span class="menu-text">Brands</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a href="#"><span class="menu-text">Blog</span></a>
-                <ul class="sub-menu">
-                  <li class="has-children">
-                    <a href="blog-right-sidebar.html"
-                      ><span class="menu-text">Standard Layout</span></a
-                    >
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-right-sidebar.html"
-                          ><span class="menu-text">Right Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-left-sidebar.html"
-                          ><span class="menu-text">Left Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-fullwidth.html"
-                          ><span class="menu-text">Full Width</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="blog-grid-right-sidebar.html"
-                      ><span class="menu-text">Grid Layout</span></a
-                    >
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-grid-right-sidebar.html"
-                          ><span class="menu-text">Right Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-grid-left-sidebar.html"
-                          ><span class="menu-text">Left Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-grid-fullwidth.html"
-                          ><span class="menu-text">Full Width</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="blog-list-right-sidebar.html"
-                      ><span class="menu-text">List Layout</span></a
-                    >
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-list-right-sidebar.html"
-                          ><span class="menu-text">Right Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-list-left-sidebar.html"
-                          ><span class="menu-text">Left Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-list-fullwidth.html"
-                          ><span class="menu-text">Full Width</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="blog-masonry-right-sidebar.html"
-                      ><span class="menu-text">Masonry Layout</span></a
-                    >
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-masonry-right-sidebar.html"
-                          ><span class="menu-text">Right Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-masonry-left-sidebar.html"
-                          ><span class="menu-text">Left Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-masonry-fullwidth.html"
-                          ><span class="menu-text">Full Width</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="blog-details-right-sidebar.html"
-                      ><span class="menu-text">Single Post Layout</span></a
-                    >
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="blog-details-right-sidebar.html"
-                          ><span class="menu-text">Right Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-details-left-sidebar.html"
-                          ><span class="menu-text">Left Sidebar</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog-details-fullwidth.html"
-                          ><span class="menu-text">Full Width</span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a href="#"><span class="menu-text">Pages</span></a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="about-us.html"
-                      ><span class="menu-text">About us</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="about-us-2.html"
-                      ><span class="menu-text">About us 02</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact-us.html"
-                      ><span class="menu-text">Contact us</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="coming-soon.html"
-                      ><span class="menu-text">Coming Soon</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="404.html"
-                      ><span class="menu-text">Page 404</span></a
-                    >
-                  </li>
-                </ul>
+                <a href="contact-us.php"><span class="menu-text">contact us</span></a>
               </li>
             </ul>
           </nav>
           <div class="header-call">
-            <p><i class="fa fa-phone"></i> 0918 206 263</p>
+            <a href="login-register.php" class="btn btn">Login</a>
+            <a href="login-register.php" class="btn btn-primary">Signup</a>
           </div>
         </div>
       </div>
@@ -526,7 +208,7 @@
           <!-- Header Logo Start -->
           <div class="col">
             <div class="header-logo">
-              <a href="index.html"
+              <a href="index.php"
                 ><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"
               /></a>
             </div>
@@ -538,572 +220,16 @@
             <nav class="site-main-menu justify-content-center">
               <ul>
                 <li class="has-children">
-                  <a href="#"><span class="menu-text">Home</span></a>
-                  <ul class="sub-menu mega-menu">
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">HOME GROUP</span></a
-                      >
-                      <ul>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-01.webp"
-                            alt="home-01"
-                          />
-                          <a href="index.html"
-                            ><span class="menu-text">Arts Propelled</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-02.webp"
-                            alt="home-02"
-                          />
-                          <a href="index-2.html"
-                            ><span class="menu-text">Decor Thriving</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-03.webp"
-                            alt="home-03"
-                          />
-                          <a href="index-3.html"
-                            ><span class="menu-text">Savvy Delight</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-04.webp"
-                            alt="home-04"
-                          />
-                          <a href="index-4.html"
-                            ><span class="menu-text">Perfect Escapes</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="index-2.html" class="mega-menu-title"
-                        ><span class="menu-text">HOME GROUP</span></a
-                      >
-                      <ul>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-05.webp"
-                            alt="home-05"
-                          />
-                          <a href="index-5.html"
-                            ><span class="menu-text">Kitchen Cozy</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-06.webp"
-                            alt="home-06"
-                          />
-                          <a href="index-6.html"
-                            ><span class="menu-text">Dreamy Designs</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-07.webp"
-                            alt="home-07"
-                          />
-                          <a href="index-7.html"
-                            ><span class="menu-text">Crispy Recipes</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-08.webp"
-                            alt="home-08"
-                          />
-                          <a href="index-8.html"
-                            ><span class="menu-text">Decoholic Chic</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="index-2.html" class="mega-menu-title"
-                        ><span class="menu-text">HOME GROUP</span></a
-                      >
-                      <ul>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-9.webp"
-                            alt="home-9"
-                          />
-                          <a href="index-9.html"
-                            ><span class="menu-text">Reblended Dish</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-10.webp"
-                            alt="home-10"
-                          />
-                          <a href="index-10.html"
-                            ><span class="menu-text">Craftin House</span></a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            class="mmh_img"
-                            src="assets/images/demo/menu/home-11.webp"
-                            alt="home-11"
-                          />
-                          <a href="index-11.html"
-                            ><span class="menu-text">Craftswork Biz</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="menu-banner"
-                        ><img
-                          src="assets/images/banner/menu-banner-1.webp"
-                          alt="Home Menu Banner"
-                      /></a>
-                    </li>
-                  </ul>
+                  <a href="index.php"><span class="menu-text">home</span></a>
                 </li>
                 <li class="has-children">
-                  <a href="#"><span class="menu-text">Shop</span></a>
-                  <ul class="sub-menu mega-menu">
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">SHOP PAGES</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="shop.html"
-                            ><span class="menu-text">Shop No Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-left-sidebar.html"
-                            ><span class="menu-text">Shop Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-right-sidebar.html"
-                            ><span class="menu-text"
-                              >Shop Right Sidebar</span
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-fullwidth-no-gutters.html"
-                            ><span class="menu-text"
-                              >Shop Fullwidth No Space</span
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-fullwidth.html"
-                            ><span class="menu-text"
-                              >Shop Fullwidth No Sidebar</span
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-fullwidth-left-sidebar.html"
-                            ><span class="menu-text"
-                              >Shop Fullwidth Left Sidebar</span
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shop-fullwidth-right-sidebar.html"
-                            ><span class="menu-text"
-                              >Shop Fullwidth Right Sidebar</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">PRODUCT PAGES</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="product-details.html"
-                            ><span class="menu-text">Basic</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-fullwidth.html"
-                            ><span class="menu-text">Fullwidth</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-sticky.html"
-                            ><span class="menu-text">Sticky Details</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-sidebar.html"
-                            ><span class="menu-text">Width Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-extra-content.html"
-                            ><span class="menu-text">Extra Content</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-image-variation.html"
-                            ><span class="menu-text">Variations Images</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-group.html"
-                            ><span class="menu-text">Bought Together</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="product-details-360.html"
-                            ><span class="menu-text">Product 360</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">PRODUCT & Other PAGES</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="product-details-background.html"
-                            ><span class="menu-text"
-                              >Product with Background</span
-                            ></a
-                          >
-                        </li>
-                        <li>
-                          <a href="shopping-cart.html"
-                            ><span class="menu-text">Shopping Cart</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="checkout.html"
-                            ><span class="menu-text">Checkout</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="order-tracking.html"
-                            ><span class="menu-text">Order Tracking</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="wishlist.html"
-                            ><span class="menu-text">Wishlist</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="login-register.html"
-                            ><span class="menu-text">Customer Login</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="my-account.html"
-                            ><span class="menu-text">My Account</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="lost-password.html"
-                            ><span class="menu-text">Lost Password</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="align-self-center">
-                      <a href="#" class="menu-banner"
-                        ><img
-                          src="assets/images/banner/menu-banner-2.webp"
-                          alt="Shop Menu Banner"
-                      /></a>
-                    </li>
-                  </ul>
+                  <a href="shop.php"><span class="menu-text">shop</span></a>
                 </li>
                 <li class="has-children">
-                  <a href="#"><span class="menu-text">Project</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="portfolio-3-columns.html"
-                        ><span class="menu-text">Portfolio 3 Columns</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="portfolio-4-columns.html"
-                        ><span class="menu-text">Portfolio 4 Columns</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="portfolio-5-columns.html"
-                        ><span class="menu-text">Portfolio 5 Columns</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="portfolio-details.html"
-                        ><span class="menu-text">Portfolio Details</span></a
-                      >
-                    </li>
-                  </ul>
+                  <a href="#"><span class="menu-text">about</span></a>
                 </li>
                 <li class="has-children">
-                  <a href="#"><span class="menu-text">Elements</span></a>
-                  <ul class="sub-menu mega-menu">
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">Column One</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="elements-products.html"
-                            ><span class="menu-text">Product Styles</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-products-tabs.html"
-                            ><span class="menu-text">Product Tabs</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-product-sale-banner.html"
-                            ><span class="menu-text"
-                              >Product & Sale Banner</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">Column Two</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="elements-category-banner.html"
-                            ><span class="menu-text">Category Banner</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-team.html"
-                            ><span class="menu-text">Team Member</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-testimonials.html"
-                            ><span class="menu-text">Testimonials</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">Column Three</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="elements-instagram.html"
-                            ><span class="menu-text">Instagram</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-map.html"
-                            ><span class="menu-text">Google Map</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-icon-box.html"
-                            ><span class="menu-text">Icon Box</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="mega-menu-title"
-                        ><span class="menu-text">Column Four</span></a
-                      >
-                      <ul>
-                        <li>
-                          <a href="elements-buttons.html"
-                            ><span class="menu-text">Buttons</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-faq.html"
-                            ><span class="menu-text">FAQs / Toggles</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="elements-brands.html"
-                            ><span class="menu-text">Brands</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="has-children">
-                  <a href="#"><span class="menu-text">Blog</span></a>
-                  <ul class="sub-menu">
-                    <li class="has-children">
-                      <a href="blog-right-sidebar.html"
-                        ><span class="menu-text">Standard Layout</span></a
-                      >
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="blog-right-sidebar.html"
-                            ><span class="menu-text">Right Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-left-sidebar.html"
-                            ><span class="menu-text">Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-fullwidth.html"
-                            ><span class="menu-text">Full Width</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="has-children">
-                      <a href="blog-grid-right-sidebar.html"
-                        ><span class="menu-text">Grid Layout</span></a
-                      >
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="blog-grid-right-sidebar.html"
-                            ><span class="menu-text">Right Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-grid-left-sidebar.html"
-                            ><span class="menu-text">Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-grid-fullwidth.html"
-                            ><span class="menu-text">Full Width</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="has-children">
-                      <a href="blog-list-right-sidebar.html"
-                        ><span class="menu-text">List Layout</span></a
-                      >
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="blog-list-right-sidebar.html"
-                            ><span class="menu-text">Right Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-list-left-sidebar.html"
-                            ><span class="menu-text">Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-list-fullwidth.html"
-                            ><span class="menu-text">Full Width</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="has-children">
-                      <a href="blog-masonry-right-sidebar.html"
-                        ><span class="menu-text">Masonry Layout</span></a
-                      >
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="blog-masonry-right-sidebar.html"
-                            ><span class="menu-text">Right Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-masonry-left-sidebar.html"
-                            ><span class="menu-text">Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-masonry-fullwidth.html"
-                            ><span class="menu-text">Full Width</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="has-children">
-                      <a href="blog-details-right-sidebar.html"
-                        ><span class="menu-text">Single Post Layout</span></a
-                      >
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="blog-details-right-sidebar.html"
-                            ><span class="menu-text">Right Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-details-left-sidebar.html"
-                            ><span class="menu-text">Left Sidebar</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-details-fullwidth.html"
-                            ><span class="menu-text">Full Width</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="has-children">
-                  <a href="#"><span class="menu-text">Pages</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="about-us.html"
-                        ><span class="menu-text">About us</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="about-us-2.html"
-                        ><span class="menu-text">About us 02</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="contact-us.html"
-                        ><span class="menu-text">Contact us</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="coming-soon.html"
-                        ><span class="menu-text">Coming Soon</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="404.html"
-                        ><span class="menu-text">Page 404</span></a
-                      >
-                    </li>
-                  </ul>
+                  <a href="contact-us.php"><span class="menu-text">contact us</span></a>
                 </li>
               </ul>
             </nav>
@@ -1114,7 +240,7 @@
           <div class="col-auto">
             <div class="header-tools justify-content-end">
               <div class="header-login">
-                <a href="my-account.html"><i class="far fa-user"></i></a>
+                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
               <div class="header-search d-none d-sm-block">
                 <a href="#offcanvas-search" class="offcanvas-toggle"
@@ -1163,7 +289,7 @@
           <!-- Header Logo Start -->
           <div class="col">
             <div class="header-logo">
-              <a href="index.html"
+              <a href="index.php"
                 ><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"
               /></a>
             </div>
@@ -1174,7 +300,7 @@
           <div class="col-auto">
             <div class="header-tools justify-content-end">
               <div class="header-login d-none d-sm-block">
-                <a href="my-account.html"><i class="far fa-user"></i></a>
+                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
               <div class="header-search d-none d-sm-block">
                 <a href="#offcanvas-search" class="offcanvas-toggle"
@@ -1224,7 +350,7 @@
           <!-- Header Logo Start -->
           <div class="col">
             <div class="header-logo">
-              <a href="index.html"
+              <a href="index.php"
                 ><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"
               /></a>
             </div>
@@ -1235,7 +361,7 @@
           <div class="col-auto">
             <div class="header-tools justify-content-end">
               <div class="header-login d-none d-sm-block">
-                <a href="my-account.html"><i class="far fa-user"></i></a>
+                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
               <div class="header-search d-none d-sm-block">
                 <a href="#offcanvas-search" class="offcanvas-toggle"
@@ -1290,13 +416,9 @@
               <div class="col-lg-4 col-12 mb-3">
                 <select class="search-select select2-basic">
                   <option value="0">All Categories</option>
-                  <option value="kids-babies">Kids &amp; Babies</option>
                   <option value="home-decor">Home Decor</option>
                   <option value="gift-ideas">Gift ideas</option>
                   <option value="kitchen">Kitchen</option>
-                  <option value="toys">Toys</option>
-                  <option value="kniting-sewing">Kniting &amp; Sewing</option>
-                  <option value="pots">Pots</option>
                 </select>
               </div>
             </div>
@@ -1320,13 +442,13 @@
         <div class="body customScroll">
           <ul class="minicart-product-list">
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-1.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Walnut Cutting Board</a
                 >
                 <span class="quantity-price"
@@ -1336,13 +458,13 @@
               </div>
             </li>
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-2.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Lucky Wooden Elephant</a
                 >
                 <span class="quantity-price"
@@ -1352,13 +474,13 @@
               </div>
             </li>
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-3.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Fish Cut Out Set</a
                 >
                 <span class="quantity-price"
@@ -1371,7 +493,7 @@
         </div>
         <div class="foot">
           <div class="buttons">
-            <a href="wishlist.html" class="btn btn-dark btn-hover-primary"
+            <a href="wishlist.php" class="btn btn-dark btn-hover-primary"
               >view wishlist</a
             >
           </div>
@@ -1390,13 +512,13 @@
         <div class="body customScroll">
           <ul class="minicart-product-list">
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-1.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Walnut Cutting Board</a
                 >
                 <span class="quantity-price"
@@ -1406,13 +528,13 @@
               </div>
             </li>
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-2.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Lucky Wooden Elephant</a
                 >
                 <span class="quantity-price"
@@ -1422,13 +544,13 @@
               </div>
             </li>
             <li>
-              <a href="product-details.html" class="image"
+              <a href="product-details.php" class="image"
                 ><img
                   src="assets/images/product/cart-product-3.webp"
                   alt="Cart product Image"
               /></a>
               <div class="content">
-                <a href="product-details.html" class="title"
+                <a href="product-details.php" class="title"
                   >Fish Cut Out Set</a
                 >
                 <span class="quantity-price"
@@ -1445,10 +567,10 @@
             <span class="amount">$144.00</span>
           </div>
           <div class="buttons">
-            <a href="shopping-cart.html" class="btn btn-dark btn-hover-primary"
+            <a href="shopping-cart.php" class="btn btn-dark btn-hover-primary"
               >view cart</a
             >
-            <a href="checkout.html" class="btn btn-outline-dark">checkout</a>
+            <a href="checkout.php" class="btn btn-outline-dark">checkout</a>
           </div>
           <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
         </div>
@@ -1468,494 +590,31 @@
         <div class="offcanvas-menu">
           <ul>
             <li>
-              <a href="#"><span class="menu-text">Home</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="#"><span class="menu-text">Home Group</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="index.html"
-                        ><span class="menu-text">Arts Propelled</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-2.html"
-                        ><span class="menu-text">Decor Thriving</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-3.html"
-                        ><span class="menu-text">Savvy Delight</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-4.html"
-                        ><span class="menu-text">Perfect Escapes</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">Home Group</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="index-5.html"
-                        ><span class="menu-text">Kitchen Cozy</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-6.html"
-                        ><span class="menu-text">Dreamy Designs</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-7.html"
-                        ><span class="menu-text">Crispy Recipes</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-8.html"
-                        ><span class="menu-text">Decoholic Chic</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">Home Group</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="index-9.html"
-                        ><span class="menu-text">Reblended Dish</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-10.html"
-                        ><span class="menu-text">Craftin House</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="index-11.html"
-                        ><span class="menu-text">Craftswork Biz</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <a href="index.php"><span class="menu-text">Home</span></a>
             </li>
             <li>
-              <a href="#"><span class="menu-text">Shop</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="#"><span class="menu-text">Shop Pages</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="shop.html"
-                        ><span class="menu-text">Shop No Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-left-sidebar.html"
-                        ><span class="menu-text">Shop Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-right-sidebar.html"
-                        ><span class="menu-text">Shop Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-fullwidth-no-gutters.html"
-                        ><span class="menu-text"
-                          >Shop Fullwidth No Space</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-fullwidth.html"
-                        ><span class="menu-text"
-                          >Shop Fullwidth No Sidebar</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-fullwidth-left-sidebar.html"
-                        ><span class="menu-text"
-                          >Shop Fullwidth Left Sidebar</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="shop-fullwidth-right-sidebar.html"
-                        ><span class="menu-text"
-                          >Shop Fullwidth Right Sidebar</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">Product Pages</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="product-details.html"
-                        ><span class="menu-text">Basic</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-fullwidth.html"
-                        ><span class="menu-text">Fullwidth</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-sticky.html"
-                        ><span class="menu-text">Sticky Details</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-sidebar.html"
-                        ><span class="menu-text">Width Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-extra-content.html"
-                        ><span class="menu-text">Extra Content</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-image-variation.html"
-                        ><span class="menu-text">Variations Images</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-group.html"
-                        ><span class="menu-text">Bought Together</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-360.html"
-                        ><span class="menu-text">Product 360</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="product-details-background.html"
-                        ><span class="menu-text"
-                          >Product with Background</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="mega-menu-title"
-                    ><span class="menu-text">PRODUCT & Other PAGES</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="shopping-cart.html"
-                        ><span class="menu-text">Shopping Cart</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="checkout.html"
-                        ><span class="menu-text">Checkout</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="order-tracking.html"
-                        ><span class="menu-text">Order Tracking</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="wishlist.html"
-                        ><span class="menu-text">Wishlist</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="login-register.html"
-                        ><span class="menu-text">Customer Login</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="my-account.html"
-                        ><span class="menu-text">My Account</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="lost-password.html"
-                        ><span class="menu-text">Lost Password</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <a href="shop.php"><span class="menu-text">Shop</span></a>
             </li>
             <li>
-              <a href="#"><span class="menu-text">Project</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="portfolio-3-columns.html"
-                    ><span class="menu-text">Portfolio 3 Columns</span></a
-                  >
-                </li>
-                <li>
-                  <a href="portfolio-4-columns.html"
-                    ><span class="menu-text">Portfolio 4 Columns</span></a
-                  >
-                </li>
-                <li>
-                  <a href="portfolio-5-columns.html"
-                    ><span class="menu-text">Portfolio 5 Columns</span></a
-                  >
-                </li>
-                <li>
-                  <a href="portfolio-details.html"
-                    ><span class="menu-text">Portfolio Details</span></a
-                  >
-                </li>
-              </ul>
+              <a href="about-us.php"><span class="menu-text">about</span></a>
             </li>
             <li>
-              <a href="#"><span class="menu-text">Elements</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="#" class="mega-menu-title"
-                    ><span class="menu-text">Column One</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="elements-products.html"
-                        ><span class="menu-text">Product Styles</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-products-tabs.html"
-                        ><span class="menu-text">Product Tabs</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-product-sale-banner.html"
-                        ><span class="menu-text">Product & Sale Banner</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="mega-menu-title"
-                    ><span class="menu-text">Column Two</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="elements-category-banner.html"
-                        ><span class="menu-text">Category Banner</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-team.html"
-                        ><span class="menu-text">Team Member</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-testimonials.html"
-                        ><span class="menu-text">Testimonials</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="mega-menu-title"
-                    ><span class="menu-text">Column Three</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="elements-instagram.html"
-                        ><span class="menu-text">Instagram</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-map.html"
-                        ><span class="menu-text">Google Map</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-icon-box.html"
-                        ><span class="menu-text">Icon Box</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="mega-menu-title"
-                    ><span class="menu-text">Column Four</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="elements-buttons.html"
-                        ><span class="menu-text">Buttons</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-faq.html"
-                        ><span class="menu-text">FAQs / Toggles</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="elements-brands.html"
-                        ><span class="menu-text">Brands</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"><span class="menu-text">Blog</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="#"><span class="menu-text">Standard Layout</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="blog-right-sidebar.html"
-                        ><span class="menu-text">Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-left-sidebar.html"
-                        ><span class="menu-text">Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-fullwidth.html"
-                        ><span class="menu-text">Full Width</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">Grid Layout</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="blog-grid-right-sidebar.html"
-                        ><span class="menu-text">Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-grid-left-sidebar.html"
-                        ><span class="menu-text">Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-grid-fullwidth.html"
-                        ><span class="menu-text">Full Width</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">List Layout</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="blog-list-right-sidebar.html"
-                        ><span class="menu-text">Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-list-left-sidebar.html"
-                        ><span class="menu-text">Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-list-fullwidth.html"
-                        ><span class="menu-text">Full Width</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><span class="menu-text">Masonry Layout</span></a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="blog-masonry-right-sidebar.html"
-                        ><span class="menu-text">Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-masonry-left-sidebar.html"
-                        ><span class="menu-text">Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-masonry-fullwidth.html"
-                        ><span class="menu-text">Full Width</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="menu-text">Single Post Layout</span></a
-                  >
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="blog-details-right-sidebar.html"
-                        ><span class="menu-text">Right Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-details-left-sidebar.html"
-                        ><span class="menu-text">Left Sidebar</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="blog-details-fullwidth.html"
-                        ><span class="menu-text">Full Width</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"><span class="menu-text">Pages</span></a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="about-us.html"
-                    ><span class="menu-text">About us</span></a
-                  >
-                </li>
-                <li>
-                  <a href="about-us-2.html"
-                    ><span class="menu-text">About us 02</span></a
-                  >
-                </li>
-                <li>
-                  <a href="contact-us.html"
-                    ><span class="menu-text">Contact us</span></a
-                  >
-                </li>
-                <li>
-                  <a href="coming-soon.html"
-                    ><span class="menu-text">Coming Soon</span></a
-                  >
-                </li>
-                <li>
-                  <a href="404.html"><span class="menu-text">Page 404</span></a>
-                </li>
-              </ul>
+              <a href="contact-us.php"><span class="menu-text">contact us</span></a>
             </li>
           </ul>
         </div>
         <div class="offcanvas-buttons">
           <div class="header-tools">
             <div class="header-login">
-              <a href="my-account.html"><i class="far fa-user"></i></a>
+              <a href="my-account.php"><i class="far fa-user"></i></a>
             </div>
             <div class="header-wishlist">
-              <a href="wishlist.html"
+              <a href="wishlist.php"
                 ><span>3</span><i class="far fa-heart"></i
               ></a>
             </div>
             <div class="header-cart">
-              <a href="shopping-cart.html"
+              <a href="shopping-cart.php"
                 ><span class="cart-count">3</span
                 ><i class="fas fa-shopping-cart"></i
               ></a>
@@ -1985,7 +644,7 @@
             <h3 class="sub-title">Little Simple Things</h3>
             <h2 class="title">Where Motivations Take Root</h2>
             <div class="link">
-              <a href="shop.html" class="btn btn-light btn-hover-black"
+              <a href="shop.php" class="btn btn-light btn-hover-black"
                 >shop now</a
               >
             </div>
@@ -2002,14 +661,14 @@
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
-                <a href="shop.html" class="image"
+                <a href="shop.php" class="image"
                   ><img
                     src="assets/images/banner/category/banner-s1-1.webp"
                     alt=""
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.html">Gift ideas</a>
+                    <a href="shop.php">Gift ideas</a>
                     <span class="number">16</span>
                   </h3>
                 </div>
@@ -2020,14 +679,14 @@
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
-                <a href="shop.html" class="image"
+                <a href="shop.php" class="image"
                   ><img
                     src="assets/images/banner/category/banner-s1-2.webp"
                     alt=""
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.html">Home Decor</a>
+                    <a href="shop.php">Home Decor</a>
                     <span class="number">16</span>
                   </h3>
                 </div>
@@ -2038,14 +697,14 @@
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
-                <a href="shop.html" class="image"
+                <a href="shop.php" class="image"
                   ><img
                     src="assets/images/banner/category/banner-s1-3.webp"
                     alt=""
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.html">Kids & Babies</a>
+                    <a href="shop.php">Kids & Babies</a>
                     <span class="number">6</span>
                   </h3>
                 </div>
@@ -2056,14 +715,14 @@
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
-                <a href="shop.html" class="image"
+                <a href="shop.php" class="image"
                   ><img
                     src="assets/images/banner/category/banner-s1-4.webp"
                     alt=""
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.html">Kitchen</a>
+                    <a href="shop.php">Kitchen</a>
                     <span class="number">15</span>
                   </h3>
                 </div>
@@ -2074,14 +733,14 @@
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
-                <a href="shop.html" class="image"
+                <a href="shop.php" class="image"
                   ><img
                     src="assets/images/banner/category/banner-s1-5.webp"
                     alt=""
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.html">Kniting & Sewing</a>
+                    <a href="shop.php">Kniting & Sewing</a>
                     <span class="number">4</span>
                   </h3>
                 </div>
@@ -2165,7 +824,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2175,7 +834,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2183,7 +842,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Country Feast Set</a>
+                      <a href="product-details.php">Country Feast Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2217,7 +876,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2227,7 +886,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2235,7 +894,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Wooden Condiment Cups</a>
+                      <a href="product-details.php">Wooden Condiment Cups</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2269,7 +928,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2279,7 +938,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2287,7 +946,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Pottery Bowl Set</a>
+                      <a href="product-details.php">Pottery Bowl Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2321,7 +980,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2336,7 +995,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2344,7 +1003,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Hallmark Grandma Mug</a>
+                      <a href="product-details.php">Hallmark Grandma Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2378,7 +1037,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2393,7 +1052,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2401,7 +1060,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Boho Beard Mug</a>
+                      <a href="product-details.php">Boho Beard Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2435,7 +1094,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="hot">hot</span>
                       </span>
@@ -2450,7 +1109,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2458,7 +1117,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Round Tray Plate</a>
+                      <a href="product-details.php">Round Tray Plate</a>
                     </h6>
                     <span class="price"> $100.00 </span>
                     <div class="product-buttons">
@@ -2489,7 +1148,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -2504,7 +1163,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2512,7 +1171,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Steel Watering Can</a>
+                      <a href="product-details.php">Steel Watering Can</a>
                     </h6>
                     <span class="price">
                       <span class="old">$20.00</span>
@@ -2546,7 +1205,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -2561,7 +1220,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2569,7 +1228,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Metal Wall Clock</a>
+                      <a href="product-details.php">Metal Wall Clock</a>
                     </h6>
                     <span class="price"> $200.00 - $250.00 </span>
                     <div class="product-buttons">
@@ -2607,7 +1266,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2617,7 +1276,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2625,7 +1284,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Pottery Bowl Set</a>
+                      <a href="product-details.php">Pottery Bowl Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2659,7 +1318,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2674,7 +1333,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2682,7 +1341,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Hallmark Grandma Mug</a>
+                      <a href="product-details.php">Hallmark Grandma Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2716,7 +1375,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2731,7 +1390,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2739,7 +1398,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Boho Beard Mug</a>
+                      <a href="product-details.php">Boho Beard Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2773,7 +1432,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="hot">hot</span>
                       </span>
@@ -2788,7 +1447,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2796,7 +1455,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Round Tray Plate</a>
+                      <a href="product-details.php">Round Tray Plate</a>
                     </h6>
                     <span class="price"> $100.00 </span>
                     <div class="product-buttons">
@@ -2827,7 +1486,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -2842,7 +1501,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2850,7 +1509,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Steel Watering Can</a>
+                      <a href="product-details.php">Steel Watering Can</a>
                     </h6>
                     <span class="price">
                       <span class="old">$20.00</span>
@@ -2884,7 +1543,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -2899,7 +1558,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2907,7 +1566,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Metal Wall Clock</a>
+                      <a href="product-details.php">Metal Wall Clock</a>
                     </h6>
                     <span class="price"> $200.00 - $250.00 </span>
                     <div class="product-buttons">
@@ -2938,7 +1597,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -2948,7 +1607,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -2956,7 +1615,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Country Feast Set</a>
+                      <a href="product-details.php">Country Feast Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -2990,7 +1649,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3000,7 +1659,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3008,7 +1667,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Wooden Condiment Cups</a>
+                      <a href="product-details.php">Wooden Condiment Cups</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3049,7 +1708,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3064,7 +1723,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3072,7 +1731,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Boho Beard Mug</a>
+                      <a href="product-details.php">Boho Beard Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3106,7 +1765,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="hot">hot</span>
                       </span>
@@ -3121,7 +1780,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3129,7 +1788,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Round Tray Plate</a>
+                      <a href="product-details.php">Round Tray Plate</a>
                     </h6>
                     <span class="price"> $100.00 </span>
                     <div class="product-buttons">
@@ -3160,7 +1819,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -3175,7 +1834,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3183,7 +1842,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Steel Watering Can</a>
+                      <a href="product-details.php">Steel Watering Can</a>
                     </h6>
                     <span class="price">
                       <span class="old">$20.00</span>
@@ -3217,7 +1876,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -3232,7 +1891,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3240,7 +1899,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Metal Wall Clock</a>
+                      <a href="product-details.php">Metal Wall Clock</a>
                     </h6>
                     <span class="price"> $200.00 - $250.00 </span>
                     <div class="product-buttons">
@@ -3271,7 +1930,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3281,7 +1940,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3289,7 +1948,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Country Feast Set</a>
+                      <a href="product-details.php">Country Feast Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3323,7 +1982,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3333,7 +1992,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3341,7 +2000,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Wooden Condiment Cups</a>
+                      <a href="product-details.php">Wooden Condiment Cups</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3375,7 +2034,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3385,7 +2044,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3393,7 +2052,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Pottery Bowl Set</a>
+                      <a href="product-details.php">Pottery Bowl Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3427,7 +2086,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3442,7 +2101,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3450,7 +2109,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Hallmark Grandma Mug</a>
+                      <a href="product-details.php">Hallmark Grandma Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3491,7 +2150,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -3506,7 +2165,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3514,7 +2173,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Steel Watering Can</a>
+                      <a href="product-details.php">Steel Watering Can</a>
                     </h6>
                     <span class="price">
                       <span class="old">$20.00</span>
@@ -3548,7 +2207,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -3563,7 +2222,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3571,7 +2230,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Metal Wall Clock</a>
+                      <a href="product-details.php">Metal Wall Clock</a>
                     </h6>
                     <span class="price"> $200.00 - $250.00 </span>
                     <div class="product-buttons">
@@ -3602,7 +2261,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3612,7 +2271,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3620,7 +2279,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Country Feast Set</a>
+                      <a href="product-details.php">Country Feast Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3654,7 +2313,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3664,7 +2323,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3672,7 +2331,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Wooden Condiment Cups</a>
+                      <a href="product-details.php">Wooden Condiment Cups</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3706,7 +2365,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3716,7 +2375,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3724,7 +2383,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Pottery Bowl Set</a>
+                      <a href="product-details.php">Pottery Bowl Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3758,7 +2417,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3773,7 +2432,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3781,7 +2440,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Hallmark Grandma Mug</a>
+                      <a href="product-details.php">Hallmark Grandma Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3815,7 +2474,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -3830,7 +2489,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3838,7 +2497,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Boho Beard Mug</a>
+                      <a href="product-details.php">Boho Beard Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -3872,7 +2531,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="hot">hot</span>
                       </span>
@@ -3887,7 +2546,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3895,7 +2554,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Round Tray Plate</a>
+                      <a href="product-details.php">Round Tray Plate</a>
                     </h6>
                     <span class="price"> $100.00 </span>
                     <div class="product-buttons">
@@ -3933,7 +2592,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="hot">hot</span>
                       </span>
@@ -3948,7 +2607,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -3956,7 +2615,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Round Tray Plate</a>
+                      <a href="product-details.php">Round Tray Plate</a>
                     </h6>
                     <span class="price"> $100.00 </span>
                     <div class="product-buttons">
@@ -3987,7 +2646,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -4002,7 +2661,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4010,7 +2669,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Steel Watering Can</a>
+                      <a href="product-details.php">Steel Watering Can</a>
                     </h6>
                     <span class="price">
                       <span class="old">$20.00</span>
@@ -4044,7 +2703,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-10%</span>
                       </span>
@@ -4059,7 +2718,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4067,7 +2726,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Metal Wall Clock</a>
+                      <a href="product-details.php">Metal Wall Clock</a>
                     </h6>
                     <span class="price"> $200.00 - $250.00 </span>
                     <div class="product-buttons">
@@ -4098,7 +2757,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -4108,7 +2767,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4116,7 +2775,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Country Feast Set</a>
+                      <a href="product-details.php">Country Feast Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -4150,7 +2809,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -4160,7 +2819,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4168,7 +2827,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Wooden Condiment Cups</a>
+                      <a href="product-details.php">Wooden Condiment Cups</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -4202,7 +2861,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -4212,7 +2871,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4220,7 +2879,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Pottery Bowl Set</a>
+                      <a href="product-details.php">Pottery Bowl Set</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -4254,7 +2913,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -4269,7 +2928,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4277,7 +2936,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Hallmark Grandma Mug</a>
+                      <a href="product-details.php">Hallmark Grandma Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -4311,7 +2970,7 @@
               <div class="col">
                 <div class="product">
                   <div class="product-thumb">
-                    <a href="product-details.html" class="image">
+                    <a href="product-details.php" class="image">
                       <span class="product-badges">
                         <span class="onsale">-13%</span>
                       </span>
@@ -4326,7 +2985,7 @@
                       />
                     </a>
                     <a
-                      href="wishlist.html"
+                      href="wishlist.php"
                       class="add-to-wishlist hintT-left"
                       data-hint="Add to wishlist"
                       ><i class="far fa-heart"></i
@@ -4334,7 +2993,7 @@
                   </div>
                   <div class="product-info">
                     <h6 class="title">
-                      <a href="product-details.html">Boho Beard Mug</a>
+                      <a href="product-details.php">Boho Beard Mug</a>
                     </h6>
                     <span class="price">
                       <span class="old">$45.00</span>
@@ -4433,7 +3092,7 @@
                 </p>
               </div>
               <div class="countdown1" data-countdown="2024/01/01"></div>
-              <a href="shop.html" class="btn btn-dark btn-hover-primary"
+              <a href="shop.php" class="btn btn-dark btn-hover-primary"
                 >Shop Now</a
               >
             </div>
@@ -4456,7 +3115,7 @@
             <div class="product-list-slider">
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-1.webp"
                       alt="List product"
@@ -4464,7 +3123,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Boho Beard Mug</a>
+                    <a href="product-details.php">Boho Beard Mug</a>
                   </h6>
                   <span class="price">
                     <span class="old">$45.00</span>
@@ -4475,7 +3134,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-2.webp"
                       alt="List product"
@@ -4483,7 +3142,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Motorized Tricycle</a>
+                    <a href="product-details.php">Motorized Tricycle</a>
                   </h6>
                   <span class="price"> $35.00 </span>
                 </div>
@@ -4491,7 +3150,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-3.webp"
                       alt="List product"
@@ -4499,7 +3158,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Walnut Cutting Board</a>
+                    <a href="product-details.php">Walnut Cutting Board</a>
                   </h6>
                   <span class="price"> $100.00 </span>
                   <div class="ratting">
@@ -4510,7 +3169,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-4.webp"
                       alt="List product"
@@ -4518,7 +3177,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Pizza Plate Tray</a>
+                    <a href="product-details.php">Pizza Plate Tray</a>
                   </h6>
                   <span class="price">
                     <span class="old">$30.00</span>
@@ -4532,7 +3191,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-5.webp"
                       alt="List product"
@@ -4540,7 +3199,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Minimalist Ceramic Pot</a>
+                    <a href="product-details.php">Minimalist Ceramic Pot</a>
                   </h6>
                   <span class="price"> $120.00 </span>
                   <div class="ratting">
@@ -4551,7 +3210,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-6.webp"
                       alt="List product"
@@ -4559,7 +3218,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Clear Silicate Teapot</a>
+                    <a href="product-details.php">Clear Silicate Teapot</a>
                   </h6>
                   <span class="price"> $140.00 </span>
                 </div>
@@ -4577,7 +3236,7 @@
             <div class="product-list-slider">
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-7.webp"
                       alt="List product"
@@ -4585,7 +3244,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Pottery Bowl Set</a>
+                    <a href="product-details.php">Pottery Bowl Set</a>
                   </h6>
                   <span class="price">
                     <span class="old">$45.00</span>
@@ -4599,7 +3258,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-8.webp"
                       alt="List product"
@@ -4607,7 +3266,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Electric Egg Blender</a>
+                    <a href="product-details.php">Electric Egg Blender</a>
                   </h6>
                   <span class="price"> $200.00 </span>
                   <div class="ratting">
@@ -4618,7 +3277,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-9.webp"
                       alt="List product"
@@ -4626,7 +3285,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Hallmark Grandma Mug</a>
+                    <a href="product-details.php">Hallmark Grandma Mug</a>
                   </h6>
                   <span class="price">
                     <span class="old">$45.00</span>
@@ -4640,7 +3299,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-10.webp"
                       alt="List product"
@@ -4648,7 +3307,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Modern Camera</a>
+                    <a href="product-details.php">Modern Camera</a>
                   </h6>
                   <span class="price"> $380.00 </span>
                   <div class="ratting">
@@ -4659,7 +3318,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-11.webp"
                       alt="List product"
@@ -4667,7 +3326,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Steel Watering Can</a>
+                    <a href="product-details.php">Steel Watering Can</a>
                   </h6>
                   <span class="price">
                     <span class="old">$20.00</span>
@@ -4681,7 +3340,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-12.webp"
                       alt="List product"
@@ -4689,7 +3348,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Minimalist Ceramic Pot</a>
+                    <a href="product-details.php">Minimalist Ceramic Pot</a>
                   </h6>
                   <span class="price"> $120.00 </span>
                   <div class="ratting">
@@ -4710,7 +3369,7 @@
             <div class="product-list-slider">
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-1.webp"
                       alt="List product"
@@ -4718,7 +3377,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Boho Beard Mug</a>
+                    <a href="product-details.php">Boho Beard Mug</a>
                   </h6>
                   <span class="price">
                     <span class="old">$45.00</span>
@@ -4729,7 +3388,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-13.webp"
                       alt="List product"
@@ -4737,7 +3396,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Antique Sewing Scissors</a>
+                    <a href="product-details.php">Antique Sewing Scissors</a>
                   </h6>
                   <span class="price">
                     <span class="old">$15.00</span>
@@ -4751,7 +3410,7 @@
 
               <div class="list-product">
                 <div class="thumbnail">
-                  <a href="product-details.html"
+                  <a href="product-details.php"
                     ><img
                       src="assets/images/product/list-product-4.webp"
                       alt="List product"
@@ -4759,7 +3418,7 @@
                 </div>
                 <div class="content">
                   <h6 class="title">
-                    <a href="product-details.html">Pizza Plate Tray</a>
+                    <a href="product-details.php">Pizza Plate Tray</a>
                   </h6>
                   <span class="price">
                     <span class="old">$30.00</span>
@@ -4842,7 +3501,7 @@
           <div class="col-xl-4 col-lg-5 col-12 learts-mb-40">
             <div class="widget-contact">
               <p class="email">contact@learts.com</p>
-              <p class="phone">(+88) 123 4566 6868</p>
+              <!-- <p class="phone">(+88) 123 4566 6868</p> -->
               <img
                 class="learts-mt-10"
                 src="assets/images/others/pay.webp"
@@ -4858,9 +3517,9 @@
             <div class="row row-cols-sm-3 row-cols-1 learts-mb-n40">
               <div class="col learts-mb-40">
                 <ul class="widget-list">
-                  <li><a href="#">Men</a></li>
-                  <li><a href="#">Women</a></li>
-                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">About Us</a></li>
                   <li><a href="#">Flash sale</a></li>
                 </ul>
               </div>

@@ -47,7 +47,7 @@
         <div class="container">
             <div class="coming-soon-content">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt=""></a>
+                    <a href="index.php"><img src="assets/images/logo/logo-2.webp" alt=""></a>
                 </div>
                 <h2 class="title">Coming soon</h2>
                 <div class="countdown3" data-countdown="2024/01/01"></div>
