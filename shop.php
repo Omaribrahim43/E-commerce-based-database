@@ -1,46 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Learts – Handmade Shop eCommerce HTML Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Vendor CSS (Bootstrap & Icon Font) -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/vendor/customFonts.css">
-
-    <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe-default-skin.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-
-    <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-
-</head>
-
+<?php include_once 'head-vars.php';?>
 <body>
 
     <?php include_once 'navbar.php'?>
@@ -49,7 +9,7 @@
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
-    <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
+    <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -217,8 +177,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-17.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-17-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-17.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-17-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -243,8 +203,8 @@
                                             <span class="product-badges">
                                                 <span class="outofstock"><i class="far fa-frown"></i></span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-14.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-14-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-14.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-14-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -269,8 +229,8 @@
                                             <span class="hot">hot</span>
                                         </span>
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-30.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-30-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-30.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-30-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -292,8 +252,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-9.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-9-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-9.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-9-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -318,8 +278,8 @@
                                             <span class="product-badges">
                                                 <span class="onsale">-20%</span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-25.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-25-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-25.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-25-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -345,8 +305,8 @@
                                             <span class="product-badges">
                                                 <span class="onsale">-13%</span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-1.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-1-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-1.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-1-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -369,7 +329,7 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-31.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-31.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -391,8 +351,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-15.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-15-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-15.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-15-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -414,8 +374,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-12.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-12-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-12.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-12-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -440,8 +400,8 @@
                                             <span class="product-badges">
                                                 <span class="outofstock"><i class="far fa-frown"></i></span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-32.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-32-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-32.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-32-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                         <div class="product-options">
@@ -469,8 +429,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-6.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-6-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-6.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-6-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -495,7 +455,7 @@
                                             <span class="product-badges">
                                                 <span class="onsale">-13%</span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-19.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-19.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -522,8 +482,8 @@
                                                 <span class="outofstock"><i class="far fa-frown"></i></span>
                                             <span class="hot">hot</span>
                                             </span>
-                                            <img src="assets/images/product/s328/product-8.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-8-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-8.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-8-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                         <div class="product-options">
@@ -556,8 +516,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-28.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-28-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-28.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-28-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -579,8 +539,8 @@
                                 <div class="product">
                                     <div class="product-thumb">
                                         <a href="product-details.php" class="image">
-                                            <img src="assets/images/product/s328/product-11.webp" alt="Product Image">
-                                            <img class="image-hover " src="assets/images/product/s328/product-11-hover.webp" alt="Product Image">
+                                            <img src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-11.webp" alt="Product Image">
+                                            <img class="image-hover " src="https://template.hasthemes.com/learts/learts/assets/images/product/s328/product-11-hover.webp" alt="Product Image">
                                         </a>
                                         <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                     </div>
@@ -641,14 +601,14 @@
                             </div>
                         </div>
                         <!-- Price Range End -->
-
+                                                                            <!-- end of images in browser -->
                         <!-- List Product Widget Start -->
                         <div class="single-widget learts-mb-40">
                             <h3 class="widget-title product-filter-widget-title">Products</h3>
                             <ul class="widget-products">
                                 <li class="product">
                                     <div class="thumbnail">
-                                        <a href="product-details.php"><img src="assets/images/product/widget-1.webp" alt="List product"></a>
+                                        <a href="product-details.php"><img src="https://template.hasthemes.com/learts/learts/assets/images/product/widget-1.webp" alt="List product"></a>
                                     </div>
                                     <div class="content">
                                         <h6 class="title"><a href="product-details.php">Walnut Cutting Board</a></h6>
@@ -662,7 +622,7 @@
                                 </li>
                                 <li class="product">
                                     <div class="thumbnail">
-                                        <a href="product-details.php"><img src="assets/images/product/widget-2.webp" alt="List product"></a>
+                                        <a href="product-details.php"><img src="https://template.hasthemes.com/learts/learts/assets/images/product/widget-2.webp" alt="List product"></a>
                                     </div>
                                     <div class="content">
                                         <h6 class="title"><a href="product-details.php">Decorative Christmas Fox</a></h6>
@@ -676,7 +636,7 @@
                                 </li>
                                 <li class="product">
                                     <div class="thumbnail">
-                                        <a href="product-details.php"><img src="assets/images/product/widget-3.webp" alt="List product"></a>
+                                        <a href="product-details.php"><img src="https://template.hasthemes.com/learts/learts/assets/images/product/widget-3.webp" alt="List product"></a>
                                     </div>
                                     <div class="content">
                                         <h6 class="title"><a href="product-details.php">Lucky Wooden Elephant</a></h6>

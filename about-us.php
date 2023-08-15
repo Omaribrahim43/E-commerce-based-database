@@ -3,47 +3,7 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Learts – Handmade Shop eCommerce HTML Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Vendor CSS (Bootstrap & Icon Font) -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/vendor/customFonts.css">
-
-    <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe-default-skin.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-
-    <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-
-</head>
-
+<?php include_once 'head-vars.php';?>
 <body>
 
     <!-- Header Section Start -->
@@ -448,7 +408,7 @@
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
-    <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
+    <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp ">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -483,7 +443,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12 text-center learts-mb-30">
-                    <img src="assets/images/about/about-5.webp" alt="">
+                    <img src="https://htmldemo.net/learts/learts/assets/images/about/about-5.webp" alt="">
                 </div>
 
             </div>
@@ -538,7 +498,7 @@
     <!-- Video Banner Section Start -->
     <div class="section">
         <div class="container">
-            <div class="video-banner2" data-bg-image="assets/images/banner/video/video-banner-2.webp">
+            <div class="video-banner2" data-bg-image="https://htmldemo.net/learts/learts/assets/images/banner/video/video-banner-2.webp">
                 <div class="content">
                     <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="video-popup">
                         <img src="assets/images/icons/button-play-light.webp" alt="">
@@ -603,27 +563,27 @@
 
             <div class="instafeed instafeed-carousel instafeed-carousel1">
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-1.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-1.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-2.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-2.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-3.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-3.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-4.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-4.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-2.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-2.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="instafeed-item" href="#">
-                    <img src="assets/images/instagram/instagram-3.webp" alt="instagram image" />
+                    <img src="https://htmldemo.net/learts/learts/assets/images/instagram/instagram-3.webp" alt="instagram image" />
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>

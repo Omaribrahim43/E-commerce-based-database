@@ -1,46 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Learts – Handmade Shop eCommerce HTML Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Vendor CSS (Bootstrap & Icon Font) -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/vendor/customFonts.css">
-
-    <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css">
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe-default-skin.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-
-    <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-
-</head>
-
+<?php include_once 'head-vars.php';?>
 <body>
 
     <?php include_once 'navbar.php'?>
@@ -49,7 +9,7 @@
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
-    <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
+    <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -78,24 +38,24 @@
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-images">
                         <button class="product-gallery-popup hintT-left" data-hint="Click to enlarge" data-images='[
-                            {"src": "assets/images/product/single/1/product-zoom-1.webp", "w": 700, "h": 1100},
-                            {"src": "assets/images/product/single/1/product-zoom-2.webp", "w": 700, "h": 1100},
-                            {"src": "assets/images/product/single/1/product-zoom-3.webp", "w": 700, "h": 1100},
-                            {"src": "assets/images/product/single/1/product-zoom-4.webp", "w": 700, "h": 1100}
+                            {"src": "https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-1.webp", "w": 700, "h": 1100},
+                            {"src": "https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-2.webp", "w": 700, "h": 1100},
+                            {"src": "https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-3.webp", "w": 700, "h": 1100},
+                            {"src": "https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-4.webp", "w": 700, "h": 1100}
                         ]'><i class="fas fa-expand"></i></button>
                         <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="product-video-popup video-popup hintT-left" data-hint="Click to see video"><i class="fas fa-play"></i></a>
                         <div class="product-gallery-slider">
                             <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-1.webp">
-                                <img src="assets/images/product/single/1/product-1.webp" alt="">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-1.webp" alt="">
                             </div>
                             <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-2.webp">
-                                <img src="assets/images/product/single/1/product-2.webp" alt="">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-2.webp" alt="">
                             </div>
                             <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-3.webp">
-                                <img src="assets/images/product/single/1/product-3.webp" alt="">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-3.webp" alt="">
                             </div>
                             <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-4.webp">
-                                <img src="assets/images/product/single/1/product-4.webp" alt="">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/single/1/product-zoom-4.webp" alt="">
                             </div>
                         </div>
                         <div class="product-thumb-slider">
@@ -393,8 +353,8 @@
                                 <span class="product-badges">
                                     <span class="onsale">-13%</span>
                                 </span>
-                                <img src="assets/images/product/s270/product-1.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-1-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -417,8 +377,8 @@
                     <div class="product">
                         <div class="product-thumb">
                             <a href="product-details.php" class="image">
-                                <img src="assets/images/product/s270/product-2.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-2-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-2.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-2-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -443,8 +403,8 @@
                                 <span class="hot">hot</span>
                             </span>
                             <a href="product-details.php" class="image">
-                                <img src="assets/images/product/s270/product-3.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-3-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-3.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-3-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -469,8 +429,8 @@
                                 <span class="product-badges">
                                     <span class="onsale">-27%</span>
                                 </span>
-                                <img src="assets/images/product/s270/product-4.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-4-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-4.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-4-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -493,8 +453,8 @@
                     <div class="product">
                         <div class="product-thumb">
                             <a href="product-details.php" class="image">
-                                <img src="assets/images/product/s270/product-5.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-5-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-5.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-5-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             <div class="product-options">
@@ -528,8 +488,8 @@
                     <div class="product">
                         <div class="product-thumb">
                             <a href="product-details.php" class="image">
-                                <img src="assets/images/product/s270/product-6.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-6-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-6.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-6-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -554,8 +514,8 @@
                                 <span class="product-badges">
                                     <span class="hot">hot</span>
                                 </span>
-                                <img src="assets/images/product/s270/product-7.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-7-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-7.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-7-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                         </div>
@@ -581,8 +541,8 @@
                                     <span class="outofstock"><i class="far fa-frown"></i></span>
                                 <span class="hot">hot</span>
                                 </span>
-                                <img src="assets/images/product/s270/product-8.webp" alt="Product Image">
-                                <img class="image-hover " src="assets/images/product/s270/product-8-hover.webp" alt="Product Image">
+                                <img src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-8.webp" alt="Product Image">
+                                <img class="image-hover " src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-8-hover.webp" alt="Product Image">
                             </a>
                             <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             <div class="product-options">

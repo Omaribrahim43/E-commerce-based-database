@@ -48,7 +48,7 @@
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
-    <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
+    <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp ">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -82,21 +82,21 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="thumbnail"><a href="product-details.php"><img src="assets/images/product/cart-product-1.webp" alt="wishlist-product-1"></a></td>
+                            <td class="thumbnail"><a href="product-details.php"><img src="https://htmldemo.net/learts/learts/assets/images/product/cart-product-1.webp" alt="wishlist-product-1"></a></td>
                             <td class="name"> <a href="product-details.php">Walnut Cutting Board</a></td>
                             <td class="price"><span>£100.00</span></td>
                             <td class="add-to-cart"><a href="#" class="btn btn-light btn-hover-dark"><i class="fas fa-shopping-cart mr-2"></i>Add to Cart</a></td>
                             <td class="remove"><a href="#" class="btn">×</a></td>
                         </tr>
                         <tr>
-                            <td class="thumbnail"><a href="product-details.php"><img src="assets/images/product/cart-product-2.webp" alt="wishlist-product-2"></a></td>
+                            <td class="thumbnail"><a href="product-details.php"><img src="https://htmldemo.net/learts/learts/assets/images/product/cart-product-2.webp" alt="wishlist-product-2"></a></td>
                             <td class="name"> <a href="product-details.php">Lucky Wooden Elephant</a></td>
                             <td class="price"><span>£35.00</span></td>
                             <td class="add-to-cart"><a href="#" class="btn btn-light btn-hover-dark"><i class="fas fa-shopping-cart mr-2"></i>Add to Cart</a></td>
                             <td class="remove"><a href="#" class="btn">×</a></td>
                         </tr>
                         <tr>
-                            <td class="thumbnail"><a href="product-details.php"><img src="assets/images/product/cart-product-3.webp" alt="wishlist-product-3"></a></td>
+                            <td class="thumbnail"><a href="product-details.php"><img src="https://htmldemo.net/learts/learts/assets/images/product/cart-product-3.webp" alt="wishlist-product-3"></a></td>
                             <td class="name"> <a href="product-details.php">Fish Cut Out Set</a></td>
                             <td class="price"><span>£9.00</span></td>
                             <td class="add-to-cart"><a href="#" class="btn btn-light btn-hover-dark"><i class="fas fa-shopping-cart mr-2"></i>Add to Cart</a></td>

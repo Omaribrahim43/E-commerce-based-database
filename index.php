@@ -1,54 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Learts – Handmade Shop eCommerce HTML Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/images/favicon.webp"
-    />
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Vendor CSS (Bootstrap & Icon Font) -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css" />
-    <link rel="stylesheet" href="assets/css/vendor/customFonts.css" />
-
-    <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css" />
-    <link
-      rel="stylesheet"
-      href="assets/css/plugins/photoswipe-default-skin.css"
-    />
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/plugins/slick.css" />
-
-    <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
-  </head>
-
+  <?php include_once 'head-vars.php';?>
   <body>
     <!-- Topbar Section Start -->
     <div class="topbar-section section border-bottom">
@@ -157,22 +109,6 @@
       <!-- Site Menu Section Start -->
       <div class="site-menu-section section border-top">
         <div class="container">
-          <div class="header-categories">
-            <button class="category-toggle">
-              <i class="fas fa-bars"></i> Browse Categories
-            </button>
-            <ul class="header-category-list">
-              <li>
-                <a href="#"><img src="assets/images/icons/cat-icon-4.webp" /> Birthday gifts</a>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/icons/cat-icon-5.webp" /> Homedecor</a>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/icons/cat-icon-6.webp" alt="" /> Forkids & babies</a>
-              </li>
-            </ul>
-          </div>
           <nav class="site-main-menu justify-content-center menu-height-60">
             <ul>
               <li class="has-children">
@@ -634,24 +570,159 @@
     <div class="offcanvas-overlay"></div>
 
     <!-- Slider main container Start -->
-    <div class="home6-slider section">
-      <div
-        class="home6-slide-item"
-        data-bg-image="assets/images/slider/home6/slide1-1.webp"
-      >
-        <div class="container">
-          <div class="home6-slide1-content">
-            <h3 class="sub-title">Little Simple Things</h3>
-            <h2 class="title">Where Motivations Take Root</h2>
-            <div class="link">
-              <a href="shop.php" class="btn btn-light btn-hover-black"
-                >shop now</a
-              >
+    <div class="home2-slider swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="home2-slide-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-autoplay="5000" data-bg-color="#F1DED0" style="background-color: rgb(241, 222, 208); width: 679px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="2">
+                <div class="home2-slide3-image">
+                    <img src="assets/images/slider/home2/slider-3.webp" alt="Slide One Image">
+
+                    <div class="home2-slide3-product1">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-3-2.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+                    <div class="home2-slide3-product2">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-3-3.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home2-slide-content">
+                    <h5 class="sub-title">DAILY OFFER</h5>
+                    <h2 class="title">Country Feast Set</h2>
+                    <div class="link"><a href="shop.html">shop collection</a></div>
+                </div>
+                <div class="home2-slide-pages">
+                    <span class="current">3</span>
+                    <span class="border"></span>
+                    <span class="total">3</span>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="home2-slide-item swiper-slide swiper-slide-duplicate-next" data-swiper-autoplay="5000" data-bg-color="#EEE5DD" style="background-color: rgb(238, 229, 221); width: 679px; opacity: 1; transform: translate3d(-679px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="0">
+                <div class="home2-slide1-image">
+                    <img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-1-1.webp" alt="Slide One Image">
+
+                    <div class="home2-slide1-product1">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-1-2.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home2-slide-content">
+                    <h5 class="sub-title">DAILY OFFER</h5>
+                    <h2 class="title">Country Feast Set</h2>
+                    <div class="link"><a href="shop.html">shop collection</a></div>
+                </div>
+                <div class="home2-slide-pages">
+                    <span class="current">1</span>
+                    <span class="border"></span>
+                    <span class="total">3</span>
+                </div>
+            </div>
+            <div class="home2-slide-item swiper-slide swiper-slide-prev" data-swiper-autoplay="5000" data-bg-color="#F5F1F1" style="background-color: rgb(245, 241, 241); width: 679px; opacity: 1; transform: translate3d(-1358px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="1">
+                <div class="home2-slide2-image">
+                    <img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-2-1.webp" alt="Slide One Image">
+
+                    <div class="home2-slide2-product1">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-2-2.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+                    <div class="home2-slide2-product2">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-2-3.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home2-slide-content">
+                    <h5 class="sub-title">DAILY OFFER</h5>
+                    <h2 class="title">DESIGNS FOR YOU</h2>
+                    <div class="link"><a href="shop.html">shop collection</a></div>
+                </div>
+                <div class="home2-slide-pages">
+                    <span class="current">2</span>
+                    <span class="border"></span>
+                    <span class="total">3</span>
+                </div>
+            </div>
+            <div class="home2-slide-item swiper-slide swiper-slide-active" data-swiper-autoplay="5000" data-bg-color="#F1DED0" style="background-color: rgb(241, 222, 208); width: 679px; opacity: 1; transform: translate3d(-2037px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="2">
+                <div class="home2-slide3-image">
+                    <img src="assets/images/slider/home2/slider-3.webp" alt="Slide One Image">
+
+                    <div class="home2-slide3-product1">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-3-2.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+                    <div class="home2-slide3-product2">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-3-3.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home2-slide-content">
+                    <h5 class="sub-title">DAILY OFFER</h5>
+                    <h2 class="title">Country Feast Set</h2>
+                    <div class="link"><a href="shop.html">shop collection</a></div>
+                </div>
+                <div class="home2-slide-pages">
+                    <span class="current">3</span>
+                    <span class="border"></span>
+                    <span class="total">3</span>
+                </div>
+            </div>
+        <div class="home2-slide-item swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-autoplay="5000" data-bg-color="#EEE5DD" style="background-color: rgb(238, 229, 221); width: 679px; opacity: 0; transform: translate3d(-2716px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="0">
+                <div class="home2-slide1-image">
+                    <img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-1-1.webp" alt="Slide One Image">
+
+                    <div class="home2-slide1-product1">
+                        <button class="slide-pointer"><span>+</span></button>
+                        <div class="slide-product">
+                            <div class="image"><img src="https://htmldemo.net/learts/learts/assets/images/slider/home2/slider-1-2.webp" alt="Slide Product Image"></div>
+                            <h6 class="title">Country Feast set </h6>
+                            <span class="price">$39.00</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home2-slide-content">
+                    <h5 class="sub-title">DAILY OFFER</h5>
+                    <h2 class="title">Country Feast Set</h2>
+                    <div class="link"><a href="shop.html">shop collection</a></div>
+                </div>
+                <div class="home2-slide-pages">
+                    <span class="current">1</span>
+                    <span class="border"></span>
+                    <span class="total">3</span>
+                </div>
+            </div></div>
+        <div class="home2-slider-prev swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"><i class="ti-angle-left"></i></div>
+        <div class="home2-slider-next swiper-button-next" tabindex="0" role="button" aria-label="Next slide"><i class="ti-angle-right"></i></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
     <!-- Slider main container End -->
 
     <!-- Category Banner Section Start -->
@@ -675,7 +746,6 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
@@ -693,25 +763,6 @@
               </div>
             </div>
           </div>
-
-          <div class="col">
-            <div class="category-banner1">
-              <div class="inner">
-                <a href="shop.php" class="image"
-                  ><img
-                    src="assets/images/banner/category/banner-s1-3.webp"
-                    alt=""
-                /></a>
-                <div class="content">
-                  <h3 class="title">
-                    <a href="shop.php">Kids & Babies</a>
-                    <span class="number">6</span>
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="col">
             <div class="category-banner1">
               <div class="inner">
@@ -724,24 +775,6 @@
                   <h3 class="title">
                     <a href="shop.php">Kitchen</a>
                     <span class="number">15</span>
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="category-banner1">
-              <div class="inner">
-                <a href="shop.php" class="image"
-                  ><img
-                    src="assets/images/banner/category/banner-s1-5.webp"
-                    alt=""
-                /></a>
-                <div class="content">
-                  <h3 class="title">
-                    <a href="shop.php">Kniting & Sewing</a>
-                    <span class="number">4</span>
                   </h3>
                 </div>
               </div>
@@ -800,14 +833,6 @@
                   data-bs-toggle="tab"
                   class="btn btn-md btn-light btn-hover-primary"
                   >Kitchen</a
-                >
-              </li>
-              <li class="nav-item mx-1 mb-2">
-                <a
-                  href="#product-toys"
-                  data-bs-toggle="tab"
-                  class="btn btn-md btn-light btn-hover-primary"
-                  >Toys</a
                 >
               </li>
             </ul>
@@ -881,7 +906,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-20.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-20.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -933,7 +958,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-21.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-21.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -985,12 +1010,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-22.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-22.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1042,12 +1067,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-1.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1099,12 +1124,12 @@
                         <span class="hot">hot</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-23.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-23-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1153,12 +1178,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-24.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-24-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1210,12 +1235,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-16.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-16-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1271,7 +1296,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-21.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-21.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1323,12 +1348,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-22.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-22.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1380,12 +1405,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-1.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1437,12 +1462,12 @@
                         <span class="hot">hot</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-23.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-23-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1491,12 +1516,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-24.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-24-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1548,12 +1573,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-16.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-16-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1654,7 +1679,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-20.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-20.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1713,12 +1738,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-1.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1770,12 +1795,12 @@
                         <span class="hot">hot</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-23.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-23-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1824,12 +1849,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-24.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-24-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1881,12 +1906,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-16.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-16-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -1987,7 +2012,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-20.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-20.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2039,7 +2064,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-21.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-21.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2091,12 +2116,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-22.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-22.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2155,12 +2180,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-24.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-24-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2212,12 +2237,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-16.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-16-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2318,7 +2343,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-20.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-20.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2370,7 +2395,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-21.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-21.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2422,12 +2447,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-22.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-22.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2479,12 +2504,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-1.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2536,12 +2561,12 @@
                         <span class="hot">hot</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-23.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-23-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2597,12 +2622,12 @@
                         <span class="hot">hot</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-23.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-23-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-23-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2651,12 +2676,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-24.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-24-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-24-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2708,12 +2733,12 @@
                         <span class="onsale">-10%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-16.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-16-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-16-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2814,7 +2839,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-20.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-20.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2866,7 +2891,7 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-21.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-21.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2918,12 +2943,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-22.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-22.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -2975,12 +3000,12 @@
                         <span class="onsale">-13%</span>
                       </span>
                       <img
-                        src="assets/images/product/s270/product-1.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1.webp"
                         alt="Product Image"
                       />
                       <img
                         class="image-hover"
-                        src="assets/images/product/s270/product-1-hover.webp"
+                        src="https://htmldemo.net/learts/learts/assets/images/product/s270/product-1-hover.webp"
                         alt="Product Image"
                       />
                     </a>
@@ -3038,7 +3063,7 @@
           <div class="col learts-mb-30">
             <div class="sale-banner8">
               <img
-                src="assets/images/banner/sale/sale-banner8-1.webp"
+                src="https://htmldemo.net/learts/learts/assets/images/banner/sale/sale-banner8-1.webp"
                 alt="Sale Banner Image"
               />
               <div class="content">
@@ -3054,7 +3079,7 @@
           <div class="col learts-mb-30">
             <div class="sale-banner8">
               <img
-                src="assets/images/banner/sale/sale-banner8-2.webp"
+                src="https://htmldemo.net/learts/learts/assets/images/banner/sale/sale-banner8-2.webp"
                 alt="Sale Banner Image"
               />
               <div class="content">
@@ -3077,7 +3102,7 @@
         <div class="row align-items-center learts-mb-n30">
           <div class="col-lg-6 col-12 learts-mb-30">
             <div class="product-deal-image text-center">
-              <img src="assets/images/product/deal-product-2.webp" alt="" />
+              <img src="https://htmldemo.net/learts/learts/assets/images/product/deal-product-2.webp" alt="" />
             </div>
           </div>
 
@@ -3117,7 +3142,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-1.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-1.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3136,7 +3161,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-2.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-2.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3152,7 +3177,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-3.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-3.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3171,7 +3196,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-4.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-4.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3193,7 +3218,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-5.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-5.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3212,7 +3237,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-6.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-6.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3238,7 +3263,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-7.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-7.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3260,7 +3285,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-8.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-8.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3279,7 +3304,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-9.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-9.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3301,7 +3326,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-10.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-10.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3320,7 +3345,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-11.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-11.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3342,7 +3367,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-12.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-12.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3371,7 +3396,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-1.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-1.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3390,7 +3415,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-13.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-13.webp"
                       alt="List product"
                   /></a>
                 </div>
@@ -3412,7 +3437,7 @@
                 <div class="thumbnail">
                   <a href="product-details.php"
                     ><img
-                      src="assets/images/product/list-product-4.webp"
+                      src="https://htmldemo.net/learts/learts/assets/images/product/list-product-4.webp"
                       alt="List product"
                   /></a>
                 </div>
