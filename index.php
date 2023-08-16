@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- omar migdady -->
 <html class="no-js" lang="en">
   <?php include_once 'head-vars.php';?>
   <body>
