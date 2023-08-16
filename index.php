@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!-- omar migdady -->
-<!-- malek sawalha -->
-
 <html class="no-js" lang="en">
   <?php include_once 'head-vars.php';?>
   <body>
