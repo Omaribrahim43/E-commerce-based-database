@@ -1,6 +1,3 @@
-<!-- Rania Taha -->
-
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <?php include_once 'head-vars.php';?>
