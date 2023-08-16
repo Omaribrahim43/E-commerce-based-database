@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-=======
->>>>>>> bf23dd70f130c4ef7e372883d23fcfcca3873501
+<!-- uhuhu -->
 <html class="no-js" lang="en">
   <?php include_once 'head-vars.php';?>
   <body>
