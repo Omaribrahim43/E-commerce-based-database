@@ -8547,7 +8547,7 @@ body.offcanvas-open .sticky-header {
 }
 .category-banner1 .inner .content .title {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 800;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13114,6 +13114,8 @@ body.offcanvas-open .sticky-header {
 .shop-product-filter button.active {
   color: #333;
 }
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px),
   only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (max-width: 767px) {
