@@ -1,3 +1,9 @@
+<?php 
+require 'config/function.php';
+
+alertMessage();
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <?php include_once 'head-vars.php';?>
