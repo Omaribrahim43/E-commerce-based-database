@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<?php include_once 'head-vars.php';?>
-<body>
-
-    <?php include_once 'navbar.php'?>
-
+<?php 
+$pageTitle = 'Contact Us';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+?>
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
@@ -42,13 +40,14 @@
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
                         <h4 class="title">ADDRESS</h4>
-                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 1800 Abbot Kinney Blvd. Unit D & E Venice</span>
+                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 1234 Rainbow Street, Building C, Apartment 5
+Amman, Jordan</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
                         <h4 class="title">CONTACT</h4>
-                        <span class="info"><i class="icon fas fa-phone-alt"></i> Mobile: (+88) – 1990 – 6886 <br> Hotline: 1800 – 1102</span>
+                        <span class="info"><i class="icon fas fa-phone-alt"></i> Mobile: (+962) – 777 - 2121 <br> Hotline: 0800 – 2222</span>
                         <span class="info"><i class="icon far fa-envelope"></i> Mail: <a href="#">contact@leartsstore.com</a></span>
                     </div>
                 </div>
@@ -63,14 +62,15 @@
 
             <!-- Contact Map Start -->
             <div class="row learts-mt-60">
-                <div class="col">
-                    <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
+            <div class="col">
+            <img src="assets/images/contact/location-map.PNG" alt="location-map" style="width: 100%; height: auto; max-width: 100%;">
+            </div>
+            </div>
+            </div>
             </div>
             <!-- Contact Map End -->
 
-        </div>
-    </div>
+     
     <!-- Contact Information & Map Section End -->
 
     <!-- Contact Form Section Start -->
@@ -101,97 +101,7 @@
         </div>
     </div>
     <!-- Contact Form Section End -->
-
-    <div class="footer2-section section section-padding">
-        <div class="container">
-            <div class="row learts-mb-n40">
-
-                <div class="col-lg-6 learts-mb-40">
-                    <div class="widget-about">
-                        <img src="assets/images/logo/logo-2.webp" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod itaque recusandae commodi mollitia facere iure nisi, laudantium quis quas perferendis a minus dolores.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 learts-mb-40">
-                    <div class="row">
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Store location</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Orders</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Support Policy</a></li>
-                                <li><a href="#">Size Guide</a></li>
-                                <li><a href="#">FAQs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 learts-mb-40">
-                    <ul class="widget-list">
-                        <li> <i class="fab fa-twitter"></i> <a href="https://www.twitter.com/">Twitter</a></li>
-                        <li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
-                        <li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
-                        <li> <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/">Youtube</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="footer2-copyright section">
-        <div class="container">
-            <p class="copyright text-center">&copy; 2023 learts. All Rights Reserved</p>
-        </div>
-    </div>
-
-    <!-- JS
-============================================ -->
-
-    <!-- Vendors JS -->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugins JS -->
-    <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <script src="assets/js/plugins/mo.min.js"></script>
-    <script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
-    <script src="assets/js/plugins/jquery.matchHeight-min.js"></script>
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-    <script src="assets/js/plugins/photoswipe.min.js"></script>
-    <script src="assets/js/plugins/photoswipe-ui-default.min.js"></script>
-    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
-    <script src="assets/js/plugins/ResizeSensor.js"></script>
-    <script src="assets/js/plugins/jquery.sticky-sidebar.min.js"></script>
-    <script src="assets/js/plugins/product360.js"></script>
-    <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
-    <script src="assets/js/plugins/scrollax.min.js"></script>
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
-<script src="assets/js/plugins/plugins.min.js"></script> -->
-
-    <!-- Main Activation JS -->
-    <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<?php
+include 'includes/footer.php';
+include 'includes/scripts.php';
+?>
