@@ -40,13 +40,14 @@ include 'includes/navbar.php';
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
                         <h4 class="title">ADDRESS</h4>
-                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 1800 Abbot Kinney Blvd. Unit D & E Venice</span>
+                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 1234 Rainbow Street, Building C, Apartment 5
+Amman, Jordan</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
                         <h4 class="title">CONTACT</h4>
-                        <span class="info"><i class="icon fas fa-phone-alt"></i> Mobile: (+88) – 1990 – 6886 <br> Hotline: 1800 – 1102</span>
+                        <span class="info"><i class="icon fas fa-phone-alt"></i> Mobile: (+962) – 777 - 2121 <br> Hotline: 0800 – 2222</span>
                         <span class="info"><i class="icon far fa-envelope"></i> Mail: <a href="#">contact@leartsstore.com</a></span>
                     </div>
                 </div>
@@ -61,14 +62,15 @@ include 'includes/navbar.php';
 
             <!-- Contact Map Start -->
             <div class="row learts-mt-60">
-                <div class="col">
-                    <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
+            <div class="col">
+            <img src="assets/images/contact/location-map.PNG" alt="location-map" style="width: 100%; height: auto; max-width: 100%;">
+            </div>
+            </div>
+            </div>
             </div>
             <!-- Contact Map End -->
 
-        </div>
-    </div>
+     
     <!-- Contact Information & Map Section End -->
 
     <!-- Contact Form Section Start -->

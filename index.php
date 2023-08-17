@@ -739,8 +739,10 @@ include 'includes/head-vars.php';
                 /></a>
                 <div class="content">
                   <h3 class="title">
-                    <a href="shop.php">Gift ideas</a>
-                    <span class="number">16</span>
+                    <a href="shop.php">Gift ideas </a> 
+                    <span class="description">Explore our curated collection of thoughtful and 
+                      charming  gift ideas, 
+                      meticulously handcrafted with love and creativity. </span>
                   </h3>
                 </div>
               </div>
@@ -757,7 +759,8 @@ include 'includes/head-vars.php';
                 <div class="content">
                   <h3 class="title">
                     <a href="shop.php">Home Decor</a>
-                    <span class="number">16</span>
+                    <span class="description">Transform your living spaces into havens of artistic
+                       beauty and comfort with our enchanting Home Decor collection. </span>
                   </h3>
                 </div>
               </div>
@@ -774,7 +777,8 @@ include 'includes/head-vars.php';
                 <div class="content">
                   <h3 class="title">
                     <a href="shop.php">Kitchen</a>
-                    <span class="number">15</span>
+                    <span class="description">Indulge in the culinary arts with our Kitchen category, 
+                      a treasure of handcrafted wonders for your culinary haven. </span>
                   </h3>
                 </div>
               </div>
