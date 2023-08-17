@@ -1,46 +1,27 @@
-<?php
-include_once 'test.php';
+<?php 
+    include_once 'test.php';
+ 
+    
+    if (isset($_POST["signin"])) {
+        $registerEmail = $_POST["registerEmail"];
+        $registerPassword = $_POST["registerPassword"];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $registerEmail = $_POST["registerEmail"];
-    $registerUserName = $_POST["registerUserName"];
-    $registerPassword = $_POST["registerPassword"]; 
-    $registerConfrimPassword = $_POST["registerConfrimPassword"]; 
+        $sql = "SELECT  user_email , user_password FROM users WHERE user_email='$registerEmail'";
 
-    // Check if the email is a Gmail address using regular expression
-    if (!preg_match('/^[a-zA-Z0-9._%+-]+@gmail\.com$/', $registerEmail)) {
-        $emailError = "Please use a Gmail address for registration.";
-    } else {
-        // Check if the password starts with an uppercase letter
-        if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/', $registerPassword))  {
-            $passwordError = "Password should contain one uppercase letter, lowercase letters, digit, and special character";
-        } else {
-            // Check if passwords match
-            if ($registerPassword !== $registerConfirmPassword) {
-                $confirmPasswordError = "Passwords do not match.";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            if (password_verify($registerPassword, $row["user_password"])) {
+                header("Location: index.php");
             } else {
-                // Hash the password
-                $hashedPassword = password_hash($registerPassword, PASSWORD_DEFAULT);
-
-                // Check if email already exists in the database
-                $emailCheckQuery = "SELECT * FROM users WHERE user_email = '$registerEmail'";
-                $emailCheckResult = mysqli_query($conn, $emailCheckQuery);
-
-                if (mysqli_num_rows($emailCheckResult) > 0) {
-                    $emailError = "Email address is already registered.";
-                } else {
-                    // Insert the new user record
-                    $sql = "INSERT INTO users (username, user_email, user_password) VALUES ('$registerUserName', '$registerEmail', '$hashedPassword')";
-
-                if ($conn->query($sql) === TRUE) {
-                    header("Location: login.php");
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }
+                $passworderrors = "Invalid password.";
             }
+        } else {
+            $emailErrors = "User not found.";
         }
+
     }
-}}
 
 ?>
 <!DOCTYPE html>
@@ -61,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col">
 
                     <div class="page-title">
-                        <h1 class="title">Register</h1>
+                        <h1 class="title">LOGIN</h1>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active">Register</li>
+                            <li class="breadcrumb-item active">LOGIN</li>
                         </ul>
                     </div>
 
@@ -72,62 +53,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+    <!-- Page Title/Header End -->
 
+    <!-- Login & Register Section Start -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row g-0">
             <div class="col-lg-6 offset-lg-3">
-                    <div class="user-login-register">
-                        <div class="login-register-title" >
-                            <h2 class="title">Register</h2>
-                            <p class="desc">If you don’t have an account, register now!</p>
+                     <div class="user-login-register bg-light">
+                        <div class="login-register-title">
+                            <h2 class="title">Login</h2>
+                            <p class="desc">Great to have you back!</p>
                         </div>
                         <div class="login-register-form">
-                   
+                            <form method="post" id='sign-in-form'>
+                                <div class="row learts-mb-n50">
+                                    <div class="col-12 learts-mb-50">
+                                        <input type="email" id="registerEmail" name="registerEmail" placeholder=" email address">
+                                        <?php if (!empty($emailErrors)) echo "<span style='color: red;'>$emailErrors</span>"; ?>
 
-<form  method="post" id="sign-up-form">
-    <!-- Your form fields here -->
+                                    </div>
+                                    <div class="col-12 learts-mb-50">
+                                        <input type="password"id="registerPassword" name="registerPassword" placeholder="Password">
+                                        <?php if (!empty($passwordErrors)) echo "<span style='color: red;'>$passwordErrors</span>"; ?>
 
-    <div class="col-12 learts-mb-20">
-        <label for="registerEmail">Email address <abbr class="required" required>*</abbr></label>
-        <input type="text" id="registerEmail" name="registerEmail">
-        <?php if (!empty($emailError)) echo "<span style='color: red;'>$emailError</span>"; ?>
-
-    </div>
-
-    <div class="col-12 learts-mb-20">
-        <label for="registerUserName">User name <abbr class="required" required>*</abbr></label>
-        <input type="text" id="registerUserName" name="registerUserName">
-        <?php if (!empty($usernameError)) echo "<span style='color: red;'>$usernameError</span>"; ?>
-
-    </div>
-
-    <div class="col-12 learts-mb-20">
-        <label for="registerPassword">Enter Password <abbr class="required" required>*</abbr></label>
-        <input type="password" id="registerPassword" name="registerPassword">
-        <?php if (!empty($passwordError)) echo "<span style='color: red;'>$passwordError</span>"; ?>
-
-    </div>
-
-    <div class="col-12 learts-mb-20">
-        <label for="registerConfirmPassword">Confirm Password <abbr class="required" required>*</abbr></label>
-        <input type="password" id="registerConfrimPassword" name="registerConfrimPassword">
-        <?php if (!empty($confirmPasswordError)) echo "<span style='color: red;'>$confirmPasswordError</span>"; ?>
-
-
-    </div>
-
-
-    <div class="col-12 text-center learts-mb-50">
-        <button class="btn btn-dark btn-outline-hover-dark" type="submit" id="sign-up" name="signup" >Register</button>
-    </div>
-</form>
-                        </div>
+                                    </div>
+                                    <div class="col-12 text-center learts-mb-50">
+                                        <button class="btn btn-dark btn-outline-hover-dark"  id="sign-in" value="signin" name="signin" >login</button>
+                                    </div>
+                                    <div class="col-12 learts-mb-50">
+                                        <div class="row learts-mb-n20">
+                                            <div class="col-12 learts-mb-20">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 learts-mb-20">
+                                                <a href="lost-password.php" class="fw-400">Lost your password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
                     </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Login & Register Section End -->
+                </div> 
+       
 
     <div class="footer2-section section section-padding">
         <div class="container">
@@ -181,7 +153,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 
-
     <!-- JS
 ============================================ -->
 
@@ -213,7 +184,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
     <script src="assets/js/plugins/scrollax.min.js"></script>
-
 
 
     <!-- Main Activation JS -->
