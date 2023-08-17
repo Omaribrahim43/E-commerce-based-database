@@ -1,5 +1,5 @@
 <?php 
-require '../config/function.php';
+require_once '../config/function.php';
 if(isset($_POST['saveUser'])) {
     $name = validate($_POST['name']);
     $phone = validate($_POST['phone']);
