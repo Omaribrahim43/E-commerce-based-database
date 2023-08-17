@@ -693,7 +693,7 @@ $id = $_GET['id']??1;
 
                     <div class="col-md col-12 align-self-center learts-mb-20">
                         <div class="isotope-filter shop-product-filter" data-target="#shop-products">
-                            <button  data-filter="*">all</button>
+                            <button  data-filter="*"><a href="shop.php?id=<?php echo 0;?>">all</a></button>
                             <button data-filter=".featured"><a href="shop.php?id=<?php echo 1;?>">Gift ideas</a></button>
                             <button data-filter=".new"  ><a href="shop.php?id=<?php echo 2;?>">Home Decor</a></button>
                             <button data-filter=".sales" ><a href="shop.php?id=<?php echo 3;?>">Kitchen</a></button>
@@ -787,8 +787,15 @@ $id = $_GET['id']??1;
                     
                     <?php
                      
+                     $sql;
+
+                     if($id == 0){
+                        $sql = "SELECT * FROM products";
+                     }else{
+                     $sql = "SELECT * FROM products WHERE category_id='$id'";
+                     }
                     
-                    $sql = "SELECT * FROM products WHERE category_id='$id'";
+                  
                     $result = mysqli_query($conn, $sql);
                   
                     if ($result) {

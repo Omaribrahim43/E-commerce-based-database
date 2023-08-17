@@ -115,7 +115,7 @@ include 'includes/head-vars.php';
                 <a href="index.php"><span class="menu-text">Home</span></a>
               </li>
               <li class="has-children">
-                <a href="shop.php"><span class="menu-text">Shop</span></a>
+                <a href="shop.php?id=<?php echo 0;?>"><span class="menu-text">Shop</span></a>
               </li>
               <li class="has-children">
                 <a href="about-us.php"><span class="menu-text">about</span></a>
