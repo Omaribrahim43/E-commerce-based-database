@@ -2,8 +2,8 @@
 <!-- hassan -->
 <html class="no-js" lang="en">
 <?php 
-include('head-vars.php');
-require 'config/function.php';
+include_once('head-vars.php');
+require_once 'config/function.php';
 
 if(isset($_SESSION['loggedInStatus'])) {
     redirect('index.php', 'You are already logged in.');

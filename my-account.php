@@ -6,7 +6,7 @@
 
     <?php include_once 'navbar.php'?>
 
-<?php $conn = mysqli_connect("localhost", "root", "", "ecommerce-project"); ?>
+<?php $conn = mysqli_connect("localhost", "root", "", "ecommerce_project"); ?>
 
     <div class="offcanvas-overlay"></div>
 
@@ -58,7 +58,7 @@
 
                         $user = mysqli_query($conn,"SELECT * FROM users");
 
-                        $sqlUser = "SELECT user_firstname, user_lastname, username, user_email, user_password  FROM users";
+                        $sqlUser = "SELECT * FROM users";
                         $userResult = mysqli_query($conn, $sqlUser);
                         // var_dump($userResult);
 
@@ -84,7 +84,7 @@
                         // $sqlOrder = "SELECT * FROM orders";
 
                         $orderResult = mysqli_query($conn, "SELECT * FROM orders");
-                        print_r($orderResult);
+                        // print_r($orderResult);
                         ?>
 
 
@@ -201,7 +201,7 @@
                                         <h4 class="title">Shipping Address <a href="#" class="edit-link">edit</a></h4>
                                         <address>
                                             <!-- <p><strong>Alex Tuntuni</strong></p> -->
-                                            <p><?php echo $row["order_address"];?></p> <?php    }  ?> 
+                                            <p><?php echo $row["order_address"];?></p> <?php    } $i++ ?> 
                                         <?php    while ($row = mysqli_fetch_array($userResult)){ ?>
                                             <p><?php echo $row["user_phone"];?></p>  <?php    }  ?>
                                         </address>
@@ -218,15 +218,15 @@
 
                           
 
-
+                                  <!-- WHERE user_id='".$_GET['user_id']."' -->
 
                             <?php
-                            $userResult = mysqli_query($conn,"SELECT * FROM users WHERE user_id='".$_GET['user_id']."'");
+                            $userResult = mysqli_query($conn,"SELECT*FROM users");
                                                         $row = mysqli_fetch_array($userResult);
 
 
                             if (count($_POST)>0){
-                                mysqli_query($conn,"UPDATE users SET user_firstname='".$_POST['user_firstname']."',user_lastname='". $_POST['user_lastname']."' ,username='" . $_POST['username']. "',user_password='".$_POST['user_password']. "' WHERE user_id='".$_POST['user_id']."'");
+                                mysqli_query($conn,"UPDATE users SET username='".$_POST['username']."',user_email='". $_POST['user_email']."' ,username='" . $_POST['username']. "',user_password='".$_POST['user_password']. "' WHERE user_id='".$_POST['user_id']."'");
                             $alert = "Data successfully updated";
                             header("Location: my-account.php");
                             exit();
@@ -248,20 +248,20 @@
                                                     <label for="first-name">First Name <abbr class="required">*</abbr></label>
                                                     <input type="hidden" id="user_id"name = "user_id"value="<?php echo $row['user_id']?>">
                             
-                                                    <input type="text" id="first-name"name = "user_firstname"value="<?php echo $row['user_firstname']?>">
+                                                    <input type="text" id="first-name"name = "username"value="<?php echo $row['username']?>">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-12 learts-mb-30">
+                                            <!-- <div class="col-md-6 col-12 learts-mb-30">
                                                 <div class="single-input-item">
                                                     <label for="last-name">Last Name <abbr class="required">*</abbr></label>
-                                                    <input type="text" id="last-name"name = "user_lastname"value="<?php echo $row['user_lastname']?>">
+                                                    <input type="text" id="last-name"name = "user_lastname"value="">
                                                 </div>
                                             </div>
                                             <div class="col-12 learts-mb-30">
                                                 <label for="display-name">Display Name <abbr class="required">*</abbr></label>
-                                                <input type="text" id="display-name" name = "username"value="<?php echo $row['username']?>">
+                                                <input type="text" id="display-name" name = "username"value="">
                                                 <p>This will be how your name will be displayed in the account section and in reviews</p>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 learts-mb-30">
                                                 <label for="email">Email Addres <abbr class="required">*</abbr></label>
                                                 <input type="email" id="email" name = "user_email"value="<?php echo $row['user_email']?>">

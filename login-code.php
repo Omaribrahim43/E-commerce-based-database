@@ -1,6 +1,6 @@
 <?php
 
-require 'config/function.php';
+require_once 'config/function.php';
 
 if(isset($_POST['loginBtn'])){
     $emailInput = validate($_POST['email']);
