@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <?php include_once 'head-vars.php';?>
@@ -439,7 +436,6 @@
                         <div class="desc">
                             <p>It’s all about the joy when finally you have done something beautiful on your own and observe it with quite a great deal of proud & successful feeling.</p>
                         </div>
-                        <a href="#" class="link">Learn more</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 text-center learts-mb-30">
@@ -455,7 +451,7 @@
     <!-- Feature Section Start -->
     <div class="section section-padding">
         <div class="container">
-            <div class="row row-cols-md-3 row-cols-1 learts-mb-n30">
+            <div class="row row-cols-md-2 row-cols-1 learts-mb-n30">
 
                 <div class="col learts-mb-30">
                     <div class="icon-box4">
@@ -479,16 +475,7 @@
                     </div>
                 </div>
 
-                <div class="col learts-mb-30">
-                    <div class="icon-box4">
-                        <div class="inner">
-                            <div class="content">
-                                <h6 class="title">SECURE PAYMENT</h6>
-                                <img class="img-hover-color " src="assets/images/others/pay.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
 
             </div>
         </div>
