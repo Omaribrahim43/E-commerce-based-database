@@ -1,3 +1,8 @@
+<?php 
+$pageTitle = 'Shop';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+?>
 
 <?php 
 include ("database.php");
@@ -920,6 +925,10 @@ $id= $_GET['id']; ?>
 
     </div>
     <!-- Shop Products Section End -->
+<?php 
+include 'includes/footer.php';
+include 'includes/scripts.php';
+?>
 
 
 

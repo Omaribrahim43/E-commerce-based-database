@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<?php include_once 'head-vars.php';?>
-<body>
-    <!-- Header Section Start -->
+<!-- Header Section Start -->
     <div class="header-section section section-fluid bg-white d-none d-xl-block">
         <div class="container">
             <div class="row align-items-center">
@@ -10,7 +6,7 @@
                 <!-- Header Logo Start -->
                 <div class="col-auto">
                     <div class="header-logo">
-                        <a href="index.php"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.PNG" width="100px"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -78,7 +74,7 @@
                 <!-- Header Logo Start -->
                 <div class="col-xl-auto col">
                     <div class="header-logo">
-                        <a href="index.php"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.PNG" width="100px"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -156,7 +152,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.php"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.PNG" width="100px"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -202,7 +198,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.php"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.PNG" width="100px"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -400,5 +396,3 @@
         </div>
     </div>
     <!-- OffCanvas Search End -->
-</body>
-</html>

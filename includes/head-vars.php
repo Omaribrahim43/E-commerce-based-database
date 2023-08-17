@@ -1,7 +1,10 @@
+<?php require 'config/function.php'; ?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Learts – Handmade Shop eCommerce HTML Template</title>
+    <title><?php if(isset($pageTitle)) {echo $pageTitle; } else {echo 'Handmade Harmony Shop';} ?></title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -46,3 +49,4 @@
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
+  <body>
