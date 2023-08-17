@@ -41,7 +41,7 @@
                         <a href="#download" data-bs-toggle="tab">Download <i class="far fa-arrow-to-bottom"></i></a>
                         <a href="#address" data-bs-toggle="tab">address <i class="far fa-map-marker-alt"></i></a>
                         <a href="#account-info" data-bs-toggle="tab">Account Details <i class="far fa-user"></i></a>
-                        <a href="login-register.php">Logout <i class="far fa-sign-out-alt"></i></a>
+                        <a href="admin/logout.php">Logout <i class="far fa-sign-out-alt"></i></a>
                     </div>
                 </div>
                 <!-- My Account Tab List End -->

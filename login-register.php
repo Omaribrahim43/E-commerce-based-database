@@ -1,6 +1,15 @@
 <!DOCTYPE html>
+<!-- hassan -->
 <html class="no-js" lang="en">
-<?php include_once 'head-vars.php';?>
+<?php 
+include('head-vars.php');
+require 'config/function.php';
+
+if(isset($_SESSION['loggedInStatus'])) {
+    redirect('index.php', 'You are already logged in.');
+}
+?>
+
 <body>
 
     <?php include_once 'navbar.php'?>
@@ -39,16 +48,17 @@
                             <p class="desc">Great to have you back!</p>
                         </div>
                         <div class="login-register-form">
-                            <form action="#">
+                            <?= alertMessage(); ?>
+                            <form action="login-code.php" method="POST">
                                 <div class="row learts-mb-n50">
                                     <div class="col-12 learts-mb-50">
-                                        <input type="email" placeholder="Username or email address">
+                                        <input type="email" name="email" placeholder="email address">
                                     </div>
                                     <div class="col-12 learts-mb-50">
-                                        <input type="password" placeholder="Password">
+                                        <input type="password" name="password" placeholder="Password">
                                     </div>
                                     <div class="col-12 text-center learts-mb-50">
-                                        <button class="btn btn-dark btn-outline-hover-dark">login</button>
+                                        <button type="submit" name="loginBtn" class="btn btn-dark btn-outline-hover-dark">login</button>
                                     </div>
                                     <div class="col-12 learts-mb-50">
                                         <div class="row learts-mb-n20">
@@ -75,7 +85,7 @@
                             <p class="desc">If you don’t have an account, register now!</p>
                         </div>
                         <div class="login-register-form">
-                            <form action="#">
+                            <form action="login-code.php" method="POST">
                                 <div class="row learts-mb-n50">
                                     <div class="col-12 learts-mb-20">
                                         <label for="registerEmail">Email address <abbr class="required">*</abbr></label>
