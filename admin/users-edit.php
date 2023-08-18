@@ -13,7 +13,7 @@
 
                 <?= alertMessage(); ?>
 
-                <form action="code.php" method="POST">
+                <form action="user-code.php" method="POST">
 
                     <?php 
                         $paramResult = chechParamId('user_id');
@@ -22,7 +22,7 @@
                             return false;
                         }
 
-                        $user = getById('users', chechParamId('user_id'));
+                        $user = getById('users', chechParamId('user_id'), 'user_id');
                         if($user['status'] == 200) {
 
                             ?>

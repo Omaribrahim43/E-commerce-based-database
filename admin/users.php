@@ -13,7 +13,7 @@
 
                 <?= alertMessage(); ?>
 
-                <table class="table table-borderd table-striped">
+                <table class="table table-borderd table-striped align-middle text-center">
                     <thead>
                         <tr>
                             <th>Id</th>

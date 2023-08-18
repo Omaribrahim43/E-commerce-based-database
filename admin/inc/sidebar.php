@@ -30,31 +30,31 @@
         <li class="nav-item">
           <a class="nav-link  " href="categories.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-object-group text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Categories</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="product.php">
+          <a class="nav-link  " href="products.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-brands fa-product-hunt text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Product</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="oreders.php">
+          <a class="nav-link  " href="orders.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-truck text-dark text-lg"></i>
             </div>
-            <span class="nav-link-text ms-1">Oreders</span>
+            <span class="nav-link-text ms-1">Orders</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link  " href="comments.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-comments text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Comments</span>
           </a>
