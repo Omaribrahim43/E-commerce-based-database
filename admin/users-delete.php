@@ -5,9 +5,9 @@ $paraResult = chechParamId('user_id');
 if(is_numeric($paraResult)){
     $userId = validate($paraResult);
 
-    $user = getById('users', $userId);
+    $user = getById('users', $userId, 'user_id');
     if($user['status'] == 200) {
-        $userDeleteRes = deleteQuery('users', $userId);
+        $userDeleteRes = deleteQuery('users', $userId, 'user_id');
         if($userDeleteRes){
             $user = redirect('users.php', 'User Deleted Successfuly');
         } else {

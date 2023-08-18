@@ -11207,7 +11207,7 @@ body.offcanvas-open .sticky-header {
   font-size: 12px;
   font-weight: 300;
   line-height: 1;
-  content: "    ";
+  content: "";
   color: #ababab;
 }
 .product-review .content .ratings .star-rating .rating-active {
@@ -11219,15 +11219,15 @@ body.offcanvas-open .sticky-header {
   overflow: hidden;
   height: 100%;
 }
-.product-review .content .ratings .star-rating .rating-active::before {
+/* .product-review .content .ratings .star-rating .rating-active::before {
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
   font-weight: 900;
   line-height: 1;
-  content: "    ";
+  content: " ";
   white-space: nowrap;
   color: #f5cc26;
-}
+} */
 .product-review .content .meta {
   display: -webkit-box;
   display: -webkit-flex;

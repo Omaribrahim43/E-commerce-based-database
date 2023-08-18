@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
                 <?= alertMessage(); ?>
-                <form action="code.php" method="POST">
+                <form action="user-code.php" method="POST">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">

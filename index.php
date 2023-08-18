@@ -3,7 +3,7 @@ $pageTitle = 'Home';
 include 'includes/head-vars.php';
 ?>
     <!-- Topbar Section Start -->
-    <div class="topbar-section section border-bottom">
+    <div class="topbar-section section border-bottom allContent-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col d-none d-md-block">
@@ -125,10 +125,22 @@ include 'includes/head-vars.php';
               </li>
             </ul>
           </nav>
+          <?php 
+          if(!isset($_SESSION['loggedInStatus'])) {
+          ?>
           <div class="header-call">
             <a href="login-register.php" class="btn btn">Login</a>
             <a href="login-register.php" class="btn btn-primary">Signup</a>
           </div>
+          <?php 
+          } else {
+          ?>
+          <div class="header-call">
+            <h3>Welcome <?=$_SESSION['loggedInUserData']['name']?></h3>
+          </div>
+          <?php
+          }
+          ?>
         </div>
       </div>
       <!-- Site Menu Section End -->
@@ -806,6 +818,8 @@ include 'includes/head-vars.php';
             <!-- Section Title End -->
           </div>
         </div>
+      </div>
+    </div>
 
        
 
