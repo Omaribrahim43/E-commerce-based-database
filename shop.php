@@ -3,8 +3,54 @@ $pageTitle = 'Shop';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
-$id = $_GET['id']??1; 
+
+$id = $_GET['id']??0; 
 ?>
+ 
+
+    <!-- Mobile Header Section Start -->
+    <div class="mobile-header sticky-header bg-white section d-xl-none">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Header Logo Start -->
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+                <!-- Header Tools Start -->
+                <div class="col-auto">
+                    <div class="header-tools justify-content-end">
+                        <div class="header-login d-none d-sm-block">
+                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                        </div>
+                        <div class="header-search d-none d-sm-block">
+                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
+                        </div>
+                        <div class="header-wishlist d-none d-sm-block">
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="header-cart">
+                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="mobile-menu-toggle">
+                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
+                                <svg viewBox="0 0 800 600">
+                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
+                                    <path d="M300,320 L540,320" class="middle"></path>
+                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Tools End -->
+
+            </div>
+        </div>
     </div>
     <!-- OffCanvas Search Start -->
     <div id="offcanvas-search" class="offcanvas offcanvas-search">
@@ -490,7 +536,8 @@ $id = $_GET['id']??1;
                         <div class="grid-item col sales">
                             <div class="product">
                                 <div class="product-thumb">
-                                    <a href="product-details.php" class="image">
+                                    <a href="product-details.php?id=<?php echo $product_id ?>"  class="image">
+                                  
 
                                         <?php if($product_discount > 0){  ?>
                                             <span class="product-badges">
@@ -514,7 +561,7 @@ $id = $_GET['id']??1;
                                     <h6 class="title"><a href="product-details.php"><?php echo $product_name.$id  ;?></a></h6>
                                     <span class="price">
                                     <?php if($product_discount > 0){  ?>
-                                        <span class="old"><?php echo $product_price;?>JOD</span> <?php }?>
+                                        <span class="old"><?php echo $product_price;?>JD</span> <?php }?>
                                         
                                     <span class="new"><?php echo $product_price - ($product_price * $product_discount)  ;?>JD</span>
                                     </span>
