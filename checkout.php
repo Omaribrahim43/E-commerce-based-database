@@ -2,9 +2,10 @@
 $pageTitle = 'Checkout';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
+$user_id = $_SESSION['user_id'];
 ?>
     <div class="offcanvas-overlay"></div>
-
+    
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp">
         <div class="container">
@@ -25,38 +26,39 @@ include 'includes/navbar.php';
     </div>
     <!-- Page Title/Header End -->
 
+             
+
+
+
     <!-- Checkout Section Start -->
-    <div class="section section-padding">
+        <div class="section section-padding">
         <div class="container">
-            <div class="checkout-coupon">
-                <p class="coupon-toggle">Have a coupon? <a href="#checkout-coupon-form" data-bs-toggle="collapse">Click here to enter your code</a></p>
-                <div id="checkout-coupon-form" class="collapse">
-                    <div class="coupon-form">
-                        <p>If you have a coupon code, please apply it below.</p>
-                        <form action="#" class="learts-mb-n10">
-                            <input class="learts-mb-10" type="text" placeholder="Coupon code">
-                            <button class="btn btn-dark btn-outline-hover-dark learts-mb-10">apply coupon</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
+
+                <?php
+                $sql = "SELECT u.*, o.order_address
+                FROM users u
+                LEFT JOIN orders o ON u.user_id = o.user_id
+                WHERE o.user_id = '$user_id'";
+                $result = mysqli_query($conn, $sql);
+                ?>
+
             <div class="section-title2">
                 <h2 class="title">Billing details</h2>
             </div>
-            <form action="#" class="checkout-form learts-mb-50">
+            <form action="" class="checkout-form learts-mb-50" method="post">
                 <div class="row">
                     <div class="col-md-6 col-12 learts-mb-20">
+                        <?php 
+                        $row = mysqli_fetch_array($result);
+                        ?>
                         <label for="bdFirstName">User Name <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdFirstName">
+                        <p><?php echo $row["username"];?></p>
+                        
+                        
+                            <?php ?>
                     </div>
-                    <!-- <div class="col-md-6 col-12 learts-mb-20">
-                        <label for="bdLastName">Last Name <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdLastName">
-                    </div> -->
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdCompanyName">Company name (optional)</label>
-                        <input type="text" id="bdCompanyName">
-                    </div> -->
+                    
                     <div class="col-12 learts-mb-20">
                         <label for="bdCountry">Country <abbr class="required">*</abbr></label>
                         <select id="bdCountry" class="select2-basic">
@@ -312,64 +314,76 @@ include 'includes/navbar.php';
                             <option value="ZW">Zimbabwe</option>
                         </select>
                     </div>
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdAddress1">Street address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdAddress1" placeholder="House number and street name">
-                    </div> -->
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
-                        <input type="text" id="bdAddress2" placeholder="Apartment, suite, unit etc. (optional) ">
-                    </div> -->
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdTownOrCity">Town / City <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdTownOrCity">
-                    </div> -->
+                    
+                    <?php 
+                    
+                   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    if(isset($_POST['order_city'])){
+                    $order_city = $_POST['order_city'];
+                    }
+                    if(isset($_POST['order_city'])){
+
+                    $order_address = $_POST['order_address'];
+                    }
+                    
+                    $check_order_sql = "SELECT * FROM orders WHERE user_id = '$user_id'";
+                    $check_order_result = mysqli_query($conn, $check_order_sql);
+                
+                    if (mysqli_num_rows($check_order_result) > 0) {
+                       
+                        $update_order_sql = "UPDATE orders SET order_city = '$order_city', order_address = '$order_address' WHERE user_id = '$user_id'";
+                        $update_order_result = mysqli_query($conn, $update_order_sql);
+                    } else {
+                        if($_SESSION['loggedInStatus'] == true){
+                            $email = $_SESSION['loggedInUserData']['email'];
+                            
+                            $insert_order_sql = "INSERT INTO orders (user_email, order_city, order_address) VALUES ('$email','$order_city', '$order_address') ON ";
+                            $insert_order_result = mysqli_query($conn, $insert_order_sql);
+                        }
+                    }
+                    
+                    }
+                 
+
+                    ?>
                     <div class="col-12 learts-mb-20">
                         <label for="bdDistrict">City <abbr class="required">*</abbr></label>
-                        <select id="bdDistrict" class="select2-basic">
+                        <select id="bdDistrict" name="order_city" class="select2-basic">
                             <option value="">Select an option…</option>
-                            <option value="BD-05">Ajloun</option>
-                            <option value="BD-01">Amman</option>
-                            <option value="BD-02">Aqaba</option>
-                            <option value="BD-06">Balqa</option>
-                            <option value="BD-07">Irbid</option>
-                            <option value="BD-03">Jerash</option>
-                            <option value="BD-04">Karak</option>
-                            <option value="BD-09">Ma'an</option>
-                            <option value="BD-10">Madaba</option>
-                            <option value="BD-12">Mafraq</option>
-                            <option value="BD-11">Tafilah</option>
-                            <option value="BD-08">Zarqa</option>  
+                            <option value="Ajloun">Ajloun</option>
+                            <option value="Amman">Amman</option>
+                            <option value="Aqaba">Aqaba</option>
+                            <option value="Balqa">Balqa</option>
+                            <option value="Irbid">Irbid</option>
+                            <option value="Jerash">Jerash</option>
+                            <option value="Karak">Karak</option>
+                            <option value="Ma'an">Ma'an</option>
+                            <option value="Madaba">Madaba</option>
+                            <option value="Mafraq">Mafraq</option>
+                            <option value="Tafilah">Tafilah</option>
+                            <option value="Zarqa">Zarqa</option>  
                         </select>
                     </div>
+                    
                     <div class="col-12 learts-mb-20">
-                        <label for="bdAddress1">Street address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdAddress1" placeholder="House number and street name">
+                        <label for="bdAddress1">Shipping address <abbr class="required">*</abbr></label>
+                        <input type="text" id="bdAddress1"name="order_address" placeholder="House number and street name">
                     </div>
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdPostcode">Postcode / ZIP (optional)</label>
-                        <input type="text" id="bdPostcode">
-                    </div> -->
+                    
+                  
                     <div class="col-md-6 col-12 learts-mb-20">
                         <label for="bdEmail">Email address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdEmail">
+                        <p><?php echo $row["user_email"];?></p>
+                        
                     </div>
                     <div class="col-md-6 col-12 learts-mb-30">
                         <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdPhone">
+                        <p><?php echo $row["user_phone"];?></p>
+                        
                     </div>
-                    <!-- <div class="col-12 learts-mb-40">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Create an account?</label>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-12 learts-mb-20">
-                        <label for="bdOrderNote">Order Notes (optional)</label>
-                        <textarea id="bdOrderNote" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </div> -->
+                    
                 </div>
-            </form>
+            
             <div class="section-title2 text-center">
                 <h2 class="title">Your order</h2>
             </div>
@@ -404,7 +418,7 @@ include 'includes/navbar.php';
                                 </tr>
                                 <tr class="total">
                                     <th>Total</th>
-                                    <td><strong><span>£242.00</span></strong></td>
+                                    <td><strong><span><?php $totalPrice ?></span></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -441,6 +455,8 @@ include 'includes/navbar.php';
                                     <div id="payPalPayments" class="collapse" data-bs-parent="#paymentMethod">
                                         <div class="card-body">
                                             <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                                            <div id="paypal-button-container"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -452,10 +468,13 @@ include 'includes/navbar.php';
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
     <!-- Checkout Section End -->
+    
+
 <?php
 include 'includes/footer.php';
 include 'includes/scripts.php';

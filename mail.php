@@ -33,7 +33,24 @@ function send_mail($recipient, $subject, $message, $name)
     $content = $message . "<br><br>Email: " . $email;
 
     $mail->MsgHTML($content);
-    
+    $mail->Send();
+
+
+    $mail->clearAddresses();
+    $mail->AddAddress($email, "admin"); // admin email
+
+    $mail->SetFrom("maleksawalha1996@gmail.com", $name);
+
+    $content = "welcome to our website";
+
+    $mail->MsgHTML($content);
+
+    $mail->Send();
+
+
+
+
+
     if (!$mail->Send()) {
         //echo "Error while sending Email.";
         //var_dump($mail);

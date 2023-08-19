@@ -24,10 +24,13 @@ if(isset($_POST['loginBtn'])){
                     $_SESSION['loggedInStatus'] = true;
                     $_SESSION['loggedInUserRole'] = $row['role'];
                     $_SESSION['loggedInUserData'] = [
+                        'id' => $row['user_id'],
                         'name' => $row['username'],
-                        'email' => $row['user_email']
+                        'email' => $row['user_email'],
+                        'password' => $row['user_password'],
+                        'phone' => $row['user_phone'],
                     ];
-                    $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['user_id'] = $row['user_id']; // to store the user id in the session
                     // var_dump($_SESSION);
                     // exit;
                     redirect('admin/index.php', 'Invalid Email Address or Password.');
@@ -38,12 +41,15 @@ if(isset($_POST['loginBtn'])){
                         redirect('login-register.php', 'Your Account has been banned. Please contact the admin.');
 
                     }
-                    $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['user_id'] = $row['user_id'];// to store the user id in the session
                     $_SESSION['loggedInStatus'] = true;
                     $_SESSION['loggedInUserRole'] = $row['role'];
                     $_SESSION['loggedInUserData'] = [
+                        'id' => $row['user_id'],
                         'name' => $row['username'],
-                        'email' => $row['user_email']
+                        'email' => $row['user_email'],
+                        'password' => $row['user_password'],
+                        'phone' => $row['user_phone'],
                     ];
                     // var_dump($_SESSION);
                     // exit;
