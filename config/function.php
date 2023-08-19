@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require 'dbcon.php';
+require_once 'dbcon.php';
 
 function validate($inputData) {
     global $conn;
@@ -95,4 +95,5 @@ function logoutSession() {
     unset($_SESSION['loggedInUserRole']);
     unset($_SESSION['loggedInUserData']);
 }
+
 ?>

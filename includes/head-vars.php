@@ -1,4 +1,4 @@
-<?php require 'config/function.php'; ?>
+<?php require_once 'config/function.php'; ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>

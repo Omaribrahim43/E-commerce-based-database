@@ -50,7 +50,7 @@ include 'includes/navbar.php';
                         <!-- Single Tab Content Start -->
                         <div class="tab-pane fade show active" id="dashboad">
                             <div class="myaccount-content dashboad">
-                                <p>Hello <strong>didiv91396</strong> (not <strong>didiv91396</strong>? <a href="login-register.php">Log out</a>)</p>
+                                <p>Hello <strong>didiv91396</strong> (not <strong>didiv91396</strong>? <a href="login.php">Log out</a>)</p>
                                 <p>From your account dashboard you can view your <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p>
                             </div>
                         </div>

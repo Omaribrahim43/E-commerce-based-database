@@ -1,10 +1,7 @@
 <?php
 $pageTitle = 'Single Product';
-include 'includes/head-vars.php';
-include 'includes/navbar.php';
-
-
-
+include_once 'includes/head-vars.php';
+include_once 'includes/navbar.php';
 ?>
 <div class="offcanvas-overlay"></div>
 
@@ -14,7 +11,6 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row">
             <div class="col">
-
                 <div class="page-title">
                     <h1 class="title">Shop</h1>
                     <ul class="breadcrumb">
@@ -23,7 +19,6 @@ include 'includes/navbar.php';
                         <li class="breadcrumb-item active">Cleaning Dustpan & Brush</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -36,7 +31,7 @@ include 'includes/navbar.php';
         <div class="row learts-mb-n40">
 
             <?php
-            $id = $_GET['id']??6;
+            $id = $_GET['id']??1;
 
             $sql = "SELECT products.product_id ,products.product_name,products.product_description,products.product_price,products.product_image,products.product_discount
             ,products.category_id,categories.category_name
@@ -48,7 +43,6 @@ include 'includes/navbar.php';
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
 
-
             $product_id = $row['product_id'];
             $product_name = $row['product_name'];
             $product_description = $row['product_description'];
@@ -57,15 +51,6 @@ include 'includes/navbar.php';
             $product_discount = $row['product_discount'];
             $category_id = $row['category_id'];
             $category_name= $row['category_name'];
-
-
-
-
-
-
-
-
-
             ?>
 
 
@@ -165,11 +150,9 @@ include 'includes/navbar.php';
                     <div class="product-buttons">
                         <a href="wishlist.php" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
                             data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
-                        <a href="shopping-cart.php" class="btn btn-dark btn-outline-hover-dark"><i
-                                class="fas fa-shopping-cart"></i> Add
-                            to
-                            Cart</a>
-
+                        <a href="shopping-cart.php" class="btn btn-dark btn-outline-hover-dark">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </a>
                     </div>
                     <div class="product-brands">
                         <span class="title">Brands</span>
@@ -192,7 +175,6 @@ include 'includes/navbar.php';
                                             <li><a style="color:#F8796C;font-weight:bolder" href="shop.php?id=<?php echo $category_id ?>">
                                                     <?php
                                                      echo $category_name ;
-
                                                     ?>
                                                 </a></li>
                                         </ul>
@@ -227,18 +209,6 @@ include 'includes/navbar.php';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </div>
 
@@ -265,8 +235,7 @@ include 'includes/navbar.php';
             <?php
             $sqlc = "SELECT comments.comment_id, comments.comment_text, comments.rating, comments.comment_date, users.username
             FROM comments
-             JOIN users ON comments.user_id = users.user_id AND comments.product_id = $id;
-             ";
+             JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
             
 
             $resultc = mysqli_query($conn, $sqlc);
@@ -302,10 +271,7 @@ include 'includes/navbar.php';
                                         </div>
                                     </div>
                                 </li>
-                               
-                            
-                            </ul>
-                            
+                            </ul>  
                     <?php
 
             }
@@ -325,9 +291,9 @@ include 'includes/navbar.php';
             $loggedInName = NULL;
             $loggedInEmail = NULL;
         } ?>
-                            <span class="title">Add a review</span>
+        <span class="title">Add a review</span>
         <div class="review-form">
-            <form action="product-details.php" method="post">
+            <form action="product-details.php?id=<?=$id?>" method="post">
                 <div class="row learts-mb-n30">
                     <div class="col-md-6 col-12 learts-mb-30">
                         <input type="text" value="<?php echo $loggedInName?>" name="name" placeholder="Your Name" required>
@@ -665,24 +631,13 @@ include 'includes/navbar.php';
     </div>
 </div>
 <!-- Recommended Products Section End -->
+
+
 <?php
 include 'includes/footer.php';
 include 'includes/scripts.php';
-
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js%22%3E"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js%22%3E"></script>
-
-<script>
-    $(document).ready(function() {
-        $(".rateyo").rateYo({
-            onChange: function(rating, rateYoInstance) {
-                $('#hidden-rating').val(rating);
-            }
-        });
-    });
-</script>
 <?php
 // $count=0;
 
@@ -693,19 +648,20 @@ if (isset($_POST['submit'])) {
     $rating = $_POST["rating"];
     $comment = $_POST["comment"];
 
-    $idsql = "SELECT user_id FROM users WHERE user_email='$email'";
-    $sqlr = "INSERT INTO comments (comment_text,user_id,rating ,product_id ) VALUES ('$comment', '$idsql','$rating' ,'$id');";
+    $idResult = mysqli_query($conn, "SELECT user_id FROM users WHERE user_email='$email'");
+    $row = mysqli_fetch_assoc($idResult);
+    $user_id = $row['user_id'];
 
+    $sqlr = "INSERT INTO comments (comment_text,user_id,rating ,product_id ) VALUES ('$comment', '$user_id','$rating' ,'$id')";
     if (mysqli_query($conn, $sqlr))
     {
         echo "New Rate added successfully";
         // $count++;
     }
-    
     else
     {
         echo "Error: " . $sqlr . "<br>" . mysqli_error($conn);
-    }}
-   
-
+    }
+}
 ?>
+
