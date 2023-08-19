@@ -39,7 +39,7 @@ if(isset($_POST['loginBtn'])){
                 } else {
                     if($row['is_ban'] == 1) {
                         
-                        redirect('login-register.php', 'Your Account has been banned. Please contact the admin.');
+                        redirect('login.php', 'Your Account has been banned. Please contact the admin.');
 
                     }
                     $_SESSION['user_id'] = $row['user_id'];// to store the user id in the session
@@ -57,7 +57,7 @@ if(isset($_POST['loginBtn'])){
                     redirect('index.php', 'Logged In Successfuly!');
                 }
             } else {
-                redirect('login-register.php', 'Invalid Email Address or Password.');
+                redirect('login.php', 'Please Verify Your Email.!');
             }
         } else {
             redirect('login.php', 'Somthing Went Wrong');
