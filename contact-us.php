@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<?php include_once 'head-vars.php';?>
-<body>
-
-    <?php include_once 'navbar.php'?>
-
+<?php 
+$pageTitle = 'Contact Us';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+?>
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
@@ -87,14 +85,94 @@ Amman, Jordan</span>
             <div class="row">
                 <div class="col-lg-8 col-12 mx-auto">
                     <div class="contact-form">
-                        <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+
+
+
+                    <?php 
+
+include "mail.php";
+//send_mail($recipient,$subject,$message);
+
+$error = "";
+
+if(count($_POST) > 0)
+{
+
+    //something was posted
+    $recipient = "sawalhhamalik@gmail.com";
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    if(empty($recipient)){
+        $error .= "recipient can not be empty<br>";
+    }
+
+    if(empty($subject)){
+        $error .= "subject can not be empty<br>";
+    }
+
+    if(empty($message)){
+        $error .= "message can not be empty<br>";
+    }
+    if(empty($name)){
+        $error .= "message can not be empty<br>";
+    }
+    
+    if($error == "")
+    {
+        if(send_mail($recipient,$subject,$message,$name))
+        {
+            $error .= "Message sent!<br>";
+        }else
+        {
+            $error .= "Message NOT sent!<br>";
+        }
+    }
+}
+
+?>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" class="border p-4 shadow rounded">
+                <h3 class="mb-3">Send Email</h3>
+                <div class="mb-3">
+                    <?php if($error != ""):?>
+                        <span class="text-danger"><?=$error?></span>
+                    <?php endif;?>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="email" class="form-control" placeholder="Receiver Email" autofocus>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+                        <!-- <form action="assets/php/contact-mail.php" id="contact-form" method="post">
                             <div class="row learts-mb-n30">
                                 <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
                                 <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
                                 <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
                                 <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark">Submit</button></div>
                             </div>
-                        </form>
+                        </form> -->
                         <p class="form-messege"></p>
                     </div>
                 </div>
@@ -103,98 +181,7 @@ Amman, Jordan</span>
         </div>
     </div>
     <!-- Contact Form Section End -->
-
-    <div class="footer2-section section section-padding">
-        <div class="container">
-            <div class="row learts-mb-n40">
-
-                <div class="col-lg-6 learts-mb-40">
-                    <div class="widget-about">
-                        <img src="assets/images/logo/logo-2.webp" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod itaque recusandae commodi mollitia facere iure nisi, laudantium quis quas perferendis a minus dolores.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 learts-mb-40">
-                    <div class="row">
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Store location</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Orders</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Support Policy</a></li>
-                                <li><a href="#">Size Guide</a></li>
-                                <li><a href="#">FAQs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 learts-mb-40">
-                    <ul class="widget-list">
-                        <li> <i class="fab fa-twitter"></i> <a href="https://www.twitter.com/">Twitter</a></li>
-                        <li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
-                        <li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
-                        <li> <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/">Youtube</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="footer2-copyright section">
-        <div class="container">
-            <p class="copyright text-center">&copy; 2023 learts. All Rights Reserved</p>
-        </div>
-    </div>
-
-    <!-- JS
-============================================ -->
-
-    <!-- Vendors JS -->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugins JS -->
-    <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <script src="assets/js/plugins/mo.min.js"></script>
-    <script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
-    <script src="assets/js/plugins/jquery.matchHeight-min.js"></script>
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-    <script src="assets/js/plugins/photoswipe.min.js"></script>
-    <script src="assets/js/plugins/photoswipe-ui-default.min.js"></script>
-    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
-    <script src="assets/js/plugins/ResizeSensor.js"></script>
-    <script src="assets/js/plugins/jquery.sticky-sidebar.min.js"></script>
-    <script src="assets/js/plugins/product360.js"></script>
-    <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
-    <script src="assets/js/plugins/scrollax.min.js"></script>
-
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
-<script src="assets/js/plugins/plugins.min.js"></script> -->
-
-    <!-- Main Activation JS -->
-    <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<?php
+include 'includes/footer.php';
+include 'includes/scripts.php';
+?>

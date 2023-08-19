@@ -27,20 +27,26 @@ if(isset($_POST['loginBtn'])){
                         'name' => $row['username'],
                         'email' => $row['user_email']
                     ];
-
+                    $_SESSION['user_id'] = $row['user_id'];
+                    // var_dump($_SESSION);
+                    // exit;
                     redirect('admin/index.php', 'Invalid Email Address or Password.');
+
                 } else {
                     if($row['is_ban'] == 1) {
+                        
                         redirect('login-register.php', 'Your Account has been banned. Please contact the admin.');
+
                     }
-                    
+                    $_SESSION['user_id'] = $row['user_id'];
                     $_SESSION['loggedInStatus'] = true;
                     $_SESSION['loggedInUserRole'] = $row['role'];
                     $_SESSION['loggedInUserData'] = [
                         'name' => $row['username'],
                         'email' => $row['user_email']
                     ];
-
+                    // var_dump($_SESSION);
+                    // exit;
                     redirect('index.php', 'Logged In Successfuly!');
                 }
             } else {

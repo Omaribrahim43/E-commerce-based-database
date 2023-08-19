@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<?php include_once 'head-vars.php';?>
-<body>
-
-    <?php include_once 'navbar.php'?>
-
-
+<?php 
+$pageTitle = 'Checkout';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+?>
     <div class="offcanvas-overlay"></div>
 
     <!-- Page Title/Header Start -->
@@ -49,17 +46,17 @@
             <form action="#" class="checkout-form learts-mb-50">
                 <div class="row">
                     <div class="col-md-6 col-12 learts-mb-20">
-                        <label for="bdFirstName">FIrst Name <abbr class="required">*</abbr></label>
+                        <label for="bdFirstName">User Name <abbr class="required">*</abbr></label>
                         <input type="text" id="bdFirstName">
                     </div>
-                    <div class="col-md-6 col-12 learts-mb-20">
+                    <!-- <div class="col-md-6 col-12 learts-mb-20">
                         <label for="bdLastName">Last Name <abbr class="required">*</abbr></label>
                         <input type="text" id="bdLastName">
-                    </div>
-                    <div class="col-12 learts-mb-20">
+                    </div> -->
+                    <!-- <div class="col-12 learts-mb-20">
                         <label for="bdCompanyName">Company name (optional)</label>
                         <input type="text" id="bdCompanyName">
-                    </div>
+                    </div> -->
                     <div class="col-12 learts-mb-20">
                         <label for="bdCountry">Country <abbr class="required">*</abbr></label>
                         <select id="bdCountry" class="select2-basic">
@@ -82,7 +79,7 @@
                             <option value="AZ">Azerbaijan</option>
                             <option value="BS">Bahamas</option>
                             <option value="BH">Bahrain</option>
-                            <option value="BD" selected>Bangladesh</option>
+                            <option value="BD">Bangladesh</option>
                             <option value="BB">Barbados</option>
                             <option value="BY">Belarus</option>
                             <option value="PW">Belau</option>
@@ -177,7 +174,7 @@
                             <option value="JM">Jamaica</option>
                             <option value="JP">Japan</option>
                             <option value="JE">Jersey</option>
-                            <option value="JO">Jordan</option>
+                            <option value="JO" selected>Jordan</option>
                             <option value="KZ">Kazakhstan</option>
                             <option value="KE">Kenya</option>
                             <option value="KI">Kiribati</option>
@@ -315,92 +312,44 @@
                             <option value="ZW">Zimbabwe</option>
                         </select>
                     </div>
+                    <!-- <div class="col-12 learts-mb-20">
+                        <label for="bdAddress1">Street address <abbr class="required">*</abbr></label>
+                        <input type="text" id="bdAddress1" placeholder="House number and street name">
+                    </div> -->
+                    <!-- <div class="col-12 learts-mb-20">
+                        <label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
+                        <input type="text" id="bdAddress2" placeholder="Apartment, suite, unit etc. (optional) ">
+                    </div> -->
+                    <!-- <div class="col-12 learts-mb-20">
+                        <label for="bdTownOrCity">Town / City <abbr class="required">*</abbr></label>
+                        <input type="text" id="bdTownOrCity">
+                    </div> -->
+                    <div class="col-12 learts-mb-20">
+                        <label for="bdDistrict">City <abbr class="required">*</abbr></label>
+                        <select id="bdDistrict" class="select2-basic">
+                            <option value="">Select an option…</option>
+                            <option value="BD-05">Ajloun</option>
+                            <option value="BD-01">Amman</option>
+                            <option value="BD-02">Aqaba</option>
+                            <option value="BD-06">Balqa</option>
+                            <option value="BD-07">Irbid</option>
+                            <option value="BD-03">Jerash</option>
+                            <option value="BD-04">Karak</option>
+                            <option value="BD-09">Ma'an</option>
+                            <option value="BD-10">Madaba</option>
+                            <option value="BD-12">Mafraq</option>
+                            <option value="BD-11">Tafilah</option>
+                            <option value="BD-08">Zarqa</option>  
+                        </select>
+                    </div>
                     <div class="col-12 learts-mb-20">
                         <label for="bdAddress1">Street address <abbr class="required">*</abbr></label>
                         <input type="text" id="bdAddress1" placeholder="House number and street name">
                     </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
-                        <input type="text" id="bdAddress2" placeholder="Apartment, suite, unit etc. (optional) ">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdTownOrCity">Town / City <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdTownOrCity">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdDistrict">District <abbr class="required">*</abbr></label>
-                        <select id="bdDistrict" class="select2-basic">
-                            <option value="">Select an option…</option>
-                            <option value="BD-05">Bagerhat</option>
-                            <option value="BD-01">Bandarban</option>
-                            <option value="BD-02">Barguna</option>
-                            <option value="BD-06">Barishal</option>
-                            <option value="BD-07">Bhola</option>
-                            <option value="BD-03">Bogura</option>
-                            <option value="BD-04">Brahmanbaria</option>
-                            <option value="BD-09">Chandpur</option>
-                            <option value="BD-10">Chattogram</option>
-                            <option value="BD-12">Chuadanga</option>
-                            <option value="BD-11">Cox's Bazar</option>
-                            <option value="BD-08">Cumilla</option>
-                            <option value="BD-13">Dhaka</option>
-                            <option value="BD-14">Dinajpur</option>
-                            <option value="BD-15">Faridpur </option>
-                            <option value="BD-16">Feni</option>
-                            <option value="BD-19">Gaibandha</option>
-                            <option value="BD-18">Gazipur</option>
-                            <option value="BD-17">Gopalganj</option>
-                            <option value="BD-20">Habiganj</option>
-                            <option value="BD-21">Jamalpur</option>
-                            <option value="BD-22">Jashore</option>
-                            <option value="BD-25">Jhalokati</option>
-                            <option value="BD-23">Jhenaidah</option>
-                            <option value="BD-24">Joypurhat</option>
-                            <option value="BD-29">Khagrachhari</option>
-                            <option value="BD-27">Khulna</option>
-                            <option value="BD-26">Kishoreganj</option>
-                            <option value="BD-28">Kurigram</option>
-                            <option value="BD-30">Kushtia</option>
-                            <option value="BD-31">Lakshmipur</option>
-                            <option value="BD-32">Lalmonirhat</option>
-                            <option value="BD-36">Madaripur</option>
-                            <option value="BD-37">Magura</option>
-                            <option value="BD-33">Manikganj </option>
-                            <option value="BD-39">Meherpur</option>
-                            <option value="BD-38">Moulvibazar</option>
-                            <option value="BD-35">Munshiganj</option>
-                            <option value="BD-34">Mymensingh</option>
-                            <option value="BD-48">Naogaon</option>
-                            <option value="BD-43">Narail</option>
-                            <option value="BD-40">Narayanganj</option>
-                            <option value="BD-42">Narsingdi</option>
-                            <option value="BD-44">Natore</option>
-                            <option value="BD-45">Nawabganj</option>
-                            <option value="BD-41">Netrakona</option>
-                            <option value="BD-46">Nilphamari</option>
-                            <option value="BD-47">Noakhali</option>
-                            <option value="BD-49">Pabna</option>
-                            <option value="BD-52">Panchagarh</option>
-                            <option value="BD-51">Patuakhali</option>
-                            <option value="BD-50">Pirojpur</option>
-                            <option value="BD-53">Rajbari</option>
-                            <option value="BD-54">Rajshahi</option>
-                            <option value="BD-56">Rangamati</option>
-                            <option value="BD-55">Rangpur</option>
-                            <option value="BD-58">Satkhira</option>
-                            <option value="BD-62">Shariatpur</option>
-                            <option value="BD-57">Sherpur</option>
-                            <option value="BD-59">Sirajganj</option>
-                            <option value="BD-61">Sunamganj</option>
-                            <option value="BD-60">Sylhet</option>
-                            <option value="BD-63">Tangail</option>
-                            <option value="BD-64">Thakurgaon</option>
-                        </select>
-                    </div>
-                    <div class="col-12 learts-mb-20">
+                    <!-- <div class="col-12 learts-mb-20">
                         <label for="bdPostcode">Postcode / ZIP (optional)</label>
                         <input type="text" id="bdPostcode">
-                    </div>
+                    </div> -->
                     <div class="col-md-6 col-12 learts-mb-20">
                         <label for="bdEmail">Email address <abbr class="required">*</abbr></label>
                         <input type="text" id="bdEmail">
@@ -409,16 +358,16 @@
                         <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
                         <input type="text" id="bdPhone">
                     </div>
-                    <div class="col-12 learts-mb-40">
+                    <!-- <div class="col-12 learts-mb-40">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Create an account?</label>
                         </div>
-                    </div>
-                    <div class="col-12 learts-mb-20">
+                    </div> -->
+                    <!-- <div class="col-12 learts-mb-20">
                         <label for="bdOrderNote">Order Notes (optional)</label>
                         <textarea id="bdOrderNote" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </div>
+                    </div> -->
                 </div>
             </form>
             <div class="section-title2 text-center">
@@ -507,97 +456,7 @@
         </div>
     </div>
     <!-- Checkout Section End -->
-
-    <div class="footer2-section section section-padding">
-        <div class="container">
-            <div class="row learts-mb-n40">
-
-                <div class="col-lg-6 learts-mb-40">
-                    <div class="widget-about">
-                        <img src="assets/images/logo/logo-2.webp" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod itaque recusandae commodi mollitia facere iure nisi, laudantium quis quas perferendis a minus dolores.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 learts-mb-40">
-                    <div class="row">
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Store location</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Orders</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <ul class="widget-list">
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Support Policy</a></li>
-                                <li><a href="#">Size Guide</a></li>
-                                <li><a href="#">FAQs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 learts-mb-40">
-                    <ul class="widget-list">
-                        <li> <i class="fab fa-twitter"></i> <a href="https://www.twitter.com/">Twitter</a></li>
-                        <li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
-                        <li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
-                        <li> <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/">Youtube</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="footer2-copyright section">
-        <div class="container">
-            <p class="copyright text-center">&copy; 2023 learts. All Rights Reserved</p>
-        </div>
-    </div>
-
-    <!-- JS
-============================================ -->
-
-    <!-- Vendors JS -->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugins JS -->
-    <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <script src="assets/js/plugins/mo.min.js"></script>
-    <script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
-    <script src="assets/js/plugins/jquery.matchHeight-min.js"></script>
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-    <script src="assets/js/plugins/photoswipe.min.js"></script>
-    <script src="assets/js/plugins/photoswipe-ui-default.min.js"></script>
-    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
-    <script src="assets/js/plugins/ResizeSensor.js"></script>
-    <script src="assets/js/plugins/jquery.sticky-sidebar.min.js"></script>
-    <script src="assets/js/plugins/product360.js"></script>
-    <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
-    <script src="assets/js/plugins/scrollax.min.js"></script>
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
-<script src="assets/js/plugins/plugins.min.js"></script> -->
-
-    <!-- Main Activation JS -->
-    <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<?php
+include 'includes/footer.php';
+include 'includes/scripts.php';
+?>

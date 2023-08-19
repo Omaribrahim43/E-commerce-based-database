@@ -1,4 +1,4 @@
-<?php include('inc/header.php'); ?>
+<?php include_once('inc/header.php'); ?>
 
 <div class="row">
     <div class="col-md-3 mb-4">

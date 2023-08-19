@@ -1,5 +1,6 @@
 <?php 
 include_once '../config/function.php'; 
+include_once 'authentication.php'; 
 ?>
 
 <!DOCTYPE html>

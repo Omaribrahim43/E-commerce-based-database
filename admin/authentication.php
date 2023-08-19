@@ -1,5 +1,5 @@
 <?php 
-require '../config/function.php';
+require_once '../config/function.php';
 if(isset($_SESSION['loggedInStatus'])){
     if(isset($_SESSION['loggedInUserRole'])) {
         $role = $_SESSION['loggedInUserRole'];
@@ -23,9 +23,9 @@ if(isset($_SESSION['loggedInStatus'])){
             logoutSession();
             redirect('../login-register.php', 'Somthing Went Wrong.');
         }
-    } else {
+    } 
+}else {
         redirect('../login-register.php', 'Login to Continue');
     }
-}
 
 ?>
