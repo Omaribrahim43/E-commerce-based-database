@@ -31,7 +31,7 @@ if(isset($_POST['updateUser'])) {
     $role = validate($_POST['role']);
 
     $userId = validate($_POST['userId']);
-    $user = getById('users', $userId);
+    $user = getById('users', $userId, 'user_id');
     if($user['status'] != 200) {
         redirect('users-edit.php?user_id='.$userId, 'No Such ID is Found.');
     }

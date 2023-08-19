@@ -1,4 +1,4 @@
-      <div class="footer2-section section section-padding">
+    <div class="footer2-section section section-padding">
         <div class="container">
             <div class="row learts-mb-n40">
 

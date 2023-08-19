@@ -8547,7 +8547,7 @@ body.offcanvas-open .sticky-header {
 }
 .category-banner1 .inner .content .title {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 800;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11207,7 +11207,7 @@ body.offcanvas-open .sticky-header {
   font-size: 12px;
   font-weight: 300;
   line-height: 1;
-  content: "    ";
+  content: "";
   color: #ababab;
 }
 .product-review .content .ratings .star-rating .rating-active {
@@ -11219,15 +11219,15 @@ body.offcanvas-open .sticky-header {
   overflow: hidden;
   height: 100%;
 }
-.product-review .content .ratings .star-rating .rating-active::before {
+/* .product-review .content .ratings .star-rating .rating-active::before {
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
   font-weight: 900;
   line-height: 1;
-  content: "    ";
+  content: " ";
   white-space: nowrap;
   color: #f5cc26;
-}
+} */
 .product-review .content .meta {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13114,6 +13114,8 @@ body.offcanvas-open .sticky-header {
 .shop-product-filter button.active {
   color: #333;
 }
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px),
   only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (max-width: 767px) {

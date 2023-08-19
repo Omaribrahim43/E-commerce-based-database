@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require 'dbcon.php';
+require_once 'dbcon.php';
 
 function validate($inputData) {
     global $conn;
@@ -45,13 +45,13 @@ function chechParamId($paramType) {
     }
 }
 
-function getById($tableName, $id) {
+function getById($tableName, $id, $colName) {
     global $conn;
 
     $table = validate($tableName);
     $id = validate($id);
 
-    $query = "SELECT * FROM $table WHERE user_id='$id' LIMIT 1";
+    $query = "SELECT * FROM $table WHERE $colName='$id' LIMIT 1";
     $result = mysqli_query($conn, $query);
 
     if($result) {
@@ -79,13 +79,13 @@ function getById($tableName, $id) {
     }
 }
 
-function deleteQuery($tableName, $id){
+function deleteQuery($tableName, $id, $colName){
     global $conn;
 
     $table = validate($tableName);
     $id = validate($id);
 
-    $query = "DELETE FROM $table WHERE user_id='$id' LIMIT 1";
+    $query = "DELETE FROM $table WHERE $colName='$id' LIMIT 1";
     $result = mysqli_query($conn, $query);
     return $result;
 }
@@ -95,4 +95,5 @@ function logoutSession() {
     unset($_SESSION['loggedInUserRole']);
     unset($_SESSION['loggedInUserData']);
 }
+
 ?>
