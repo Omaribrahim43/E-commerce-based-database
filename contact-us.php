@@ -1,3 +1,5 @@
+
+
 <?php 
 $pageTitle = 'Contact Us';
 include 'includes/head-vars.php';
@@ -85,15 +87,53 @@ Amman, Jordan</span>
             <div class="row">
                 <div class="col-lg-8 col-12 mx-auto">
                     <div class="contact-form">
-                        <form action="assets/php/contact-mail.php" id="contact-form" method="post">
-                            <div class="row learts-mb-n30">
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
-                                <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
-                                <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark">Submit</button></div>
-                            </div>
-                        </form>
-                        <p class="form-messege"></p>
+
+                    <?php
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $mail = new PHPMailer;
+
+    // Set PHPMailer to use SMTP
+    $mail->isSMTP();
+
+    // Specify SMTP server settings
+    $mail->Host = 'smtp.example.com'; // Replace with your SMTP server address
+    $mail->SMTPAuth = true;
+    $mail->Username = 'your_username'; // Replace with your SMTP username
+    $mail->Password = 'your_password'; // Replace with your SMTP password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    // Set sender and recipient
+    $mail->setFrom($email, $name);
+    $mail->addAddress('recipient@example.com', 'Recipient Name'); // Replace with the recipient's email
+
+    // Set email subject and body
+    $mail->Subject = 'Contact Form Submission';
+    $mail->Body = "Name: $name\nEmail: $email\n\n$message";
+
+    if ($mail->send()) {
+        echo 'Email has been sent.';
+    } else {
+        echo 'Email could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    }
+}
+?>
+
+
+<form id="contact-form" method="post" action="send_email.php">
+    <div class="row learts-mb-n30">
+        <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
+        <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
+        <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
+        <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark" name="submit" value="submit">Submit</button></div>
+    </div>
+</form>
                     </div>
                 </div>
             </div>
