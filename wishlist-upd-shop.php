@@ -14,7 +14,7 @@ if(isset($_GET['product_id'])) {
     if (mysqli_query($conn, $sqlw))
     {
         echo "Product ID: $product_id"; 
-        header("Location: product-details.php?id=" . $product_id);
+        header("Location: shop.php?product_id=" . $product_id);
 
         exit();
     }
