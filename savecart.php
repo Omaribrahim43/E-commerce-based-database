@@ -11,7 +11,7 @@ if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
         $product_quantity = $item['quantity'];
 
         // Check if the item is already in the cart table
-        $check_sql = "SELECT * FROM cart WHERE user_id = '$loggedInId' AND product_id = '$product_id'";
+        $check_sql = "SELECT * FROM cart WHERE user_id='$loggedInId' AND product_id = '$product_id'";
         $check_result = mysqli_query($conn, $check_sql);
 
         if (mysqli_num_rows($check_result) == 0) {
@@ -32,7 +32,7 @@ if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
 
     // Clear the cart in the session after insertion
     //$_SESSION['cart'] = array();
-  unset($_SESSION['cart'] );
+    unset($_SESSION['cart'] );
 
     header('Location: checkout.php');
     exit(0);
