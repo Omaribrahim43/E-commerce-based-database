@@ -449,7 +449,7 @@ $id = $_GET['id']??0;
                 <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n30">
 
                     <!-- Sort by Start -->
-                    <div class="col learts-mb-30">
+                    <!-- <div class="col learts-mb-30">
                         <h3 class="widget-title product-filter-widget-title">Sort by</h3>
                         <ul class="widget-list product-filter-widget customScroll">
                             <li><a href="#">Popularity</a></li>
@@ -458,14 +458,14 @@ $id = $_GET['id']??0;
                             <li><a href="#">Price: low to high</a></li>
                             <li><a href="#">Price: high to low</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- Sort by End -->
 
                     <!-- Price filter Start -->
                     <div class="col learts-mb-30">
                         <h3 class="widget-title product-filter-widget-title">Price filter</h3>
                         <ul class="widget-list product-filter-widget customScroll">
-                            <li> <a href="#">All</a></li>
+                            <li> <a href="#">All </a></li>
                             <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>0</span>JOD - <span class="amount"><span class="cur-symbol"></span>50</span>JOD</a></li>
                             <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>50</span>JOD - <span class="amount"><span class="cur-symbol"></span>70</span>JOD</a></li>
                             <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>70</span>JOD - <span class="amount"><span class="cur-symbol"></span>100</span>JOD</a></li>
@@ -566,9 +566,9 @@ $id = $_GET['id']??0;
                                     <span class="new"><?php echo $product_price - ($product_price * $product_discount)  ;?>JD</span>
                                     </span>
                                     <div class="product-buttons">
-                                        <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a>
-                                        <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
-                                        <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a>
+                                        <!-- <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a> -->
+                                        <a href="" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                        <!-- <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -597,6 +597,9 @@ $id = $_GET['id']??0;
 
     </div>
     <!-- Shop Products Section End -->
+
+
+
 <?php 
 include 'includes/footer.php';
 include 'includes/scripts.php';

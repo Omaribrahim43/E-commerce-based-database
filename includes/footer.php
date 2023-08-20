@@ -13,10 +13,10 @@
                     <div class="row">
                         <div class="col">
                             <ul class="widget-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="shop.php">Shop</a></li>
+                                <li><a href="about-us.php">About us</a></li>
+                                <li><a href="contact-us.php">Contact us</a></li>
                             </ul>
                         </div>
                         <div class="col">

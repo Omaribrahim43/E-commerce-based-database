@@ -1,17 +1,18 @@
 <?php
-session_start();
-$id = $_GET['product_id'] ?? 0;
+$pageTitle = 'Cart';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+
+// session_start();
+$id = $_GET['product_id']??0;
 $qua = 1;
 
 if (!isset($_SESSION['cart'])) {
-
     $_SESSION['cart'] = array();
-
 }
 
 
 $existingProductIds = array_column($_SESSION['cart'], 'productid');
-
 if (in_array($id, $existingProductIds)) {
 
 } else {
@@ -22,20 +23,11 @@ if (in_array($id, $existingProductIds)) {
 }
 
 
-
-
 // echo '<pre>';
-// print_r($_SESSION);
+// print_r($_SESSION['cart']);
 // echo '</pre>';
 
-
-
-
-$pageTitle = 'Cart';
-include 'includes/head-vars1.php';
-include 'includes/navbar.php';
 ?>
-
 
 <div class="offcanvas-overlay"></div>
 
@@ -45,7 +37,6 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row">
             <div class="col">
-
                 <div class="page-title">
                     <h1 class="title">Cart</h1>
                     <ul class="breadcrumb">
@@ -53,7 +44,6 @@ include 'includes/navbar.php';
                         <li class="breadcrumb-item active">Cart</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -196,7 +186,7 @@ include 'includes/navbar.php';
                     </tr>
                 </tbody>
             </table>
-            <a href="checkout.php" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
+            <a href="savecart.php" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
         </div>
     </div>
 
