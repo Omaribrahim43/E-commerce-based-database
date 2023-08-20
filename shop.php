@@ -3,338 +3,13 @@ $pageTitle = 'Shop';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
-$id = $_GET['id']??1; 
+
+$id = $_GET['id']??0; 
+$range = $_GET['range']??0; 
 ?>
-  <!-- End Nav Bar -->
+ 
 
-    <!-- Header Section Start -->
-    <div class="sticky-header section bg-white section-fluid d-none d-xl-block">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Header Logo Start -->
-                <div class="col-xl-auto col">
-                    <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
-                    </div>
-                </div>
-                <!-- Header Logo End -->
-
-                <!-- Search Start -->
-                <div class="col-auto me-auto d-none d-xl-block">
-                    <nav class="site-main-menu site-main-menu-left justify-content-center">
-                        <ul>
-                            <li class="has-children"><a href="#"><span class="menu-text">Home</span></a>
-                                <ul class="sub-menu mega-menu">
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-                                        <ul>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-01.webp" alt="home-01"> <a href="index.html"><span class="menu-text">Arts Propelled</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-02.webp" alt="home-02"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-03.webp" alt="home-03"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-04.webp" alt="home-04"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-                                        <ul>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-05.webp" alt="home-05"> <a href="index-5.html"><span class="menu-text">Kitchen Cozy</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-06.webp" alt="home-06"> <a href="index-6.html"><span class="menu-text">Dreamy Designs</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-07.webp" alt="home-07"> <a href="index-7.html"><span class="menu-text">Crispy Recipes</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-08.webp" alt="home-08"> <a href="index-8.html"><span class="menu-text">Decoholic Chic</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-                                        <ul>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-9.webp" alt="home-9"> <a href="index-9.html"><span class="menu-text">Reblended Dish</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-10.webp" alt="home-10"> <a href="index-10.html"><span class="menu-text">Craftin House</span></a></li>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-11.webp" alt="home-11"> <a href="index-11.html"><span class="menu-text">Craftswork Biz</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="menu-banner"><img src="assets/images/banner/menu-banner-1.webp" alt="Home Menu Banner"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Shop</span></a>
-                                <ul class="sub-menu mega-menu">
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">SHOP PAGES</span></a>
-                                        <ul>
-                                            <li><a href="shop.html"><span class="menu-text">Shop No Sidebar</span></a></li>
-                                            <li><a href="shop-left-sidebar.html"><span class="menu-text">Shop Left Sidebar</span></a></li>
-                                            <li><a href="shop-right-sidebar.html"><span class="menu-text">Shop Right Sidebar</span></a></li>
-                                            <li><a href="shop-fullwidth-no-gutters.html"><span class="menu-text">Shop Fullwidth No Space</span></a></li>
-                                            <li><a href="shop-fullwidth.html"><span class="menu-text">Shop Fullwidth No Sidebar</span></a></li>
-                                            <li><a href="shop-fullwidth-left-sidebar.html"><span class="menu-text">Shop Fullwidth Left Sidebar</span></a></li>
-                                            <li><a href="shop-fullwidth-right-sidebar.html"><span class="menu-text">Shop Fullwidth Right Sidebar</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">PRODUCT PAGES</span></a>
-                                        <ul>
-                                            <li><a href="product-details.html"><span class="menu-text">Basic</span></a></li>
-                                            <li><a href="product-details-fullwidth.html"><span class="menu-text">Fullwidth</span></a></li>
-                                            <li><a href="product-details-sticky.html"><span class="menu-text">Sticky Details</span></a></li>
-                                            <li><a href="product-details-sidebar.html"><span class="menu-text">Width Sidebar</span></a></li>
-                                            <li><a href="product-details-extra-content.html"><span class="menu-text">Extra Content</span></a></li>
-                                            <li><a href="product-details-image-variation.html"><span class="menu-text">Variations Images</span></a></li>
-                                            <li><a href="product-details-group.html"><span class="menu-text">Bought Together</span></a></li>
-                                            <li><a href="product-details-360.html"><span class="menu-text">Product 360</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">PRODUCT & Other PAGES</span></a>
-                                        <ul>
-                                            <li><a href="product-details-background.html"><span class="menu-text">Product with Background</span></a></li>
-                                            <li><a href="shopping-cart.html"><span class="menu-text">Shopping Cart</span></a></li>
-                                            <li><a href="checkout.html"><span class="menu-text">Checkout</span></a></li>
-                                            <li><a href="order-tracking.html"><span class="menu-text">Order Tracking</span></a></li>
-                                            <li><a href="wishlist.html"><span class="menu-text">Wishlist</span></a></li>
-                                            <li><a href="login-register.html"><span class="menu-text">Customer Login</span></a></li>
-                                            <li><a href="my-account.html"><span class="menu-text">My Account</span></a></li>
-                                            <li><a href="lost-password.html"><span class="menu-text">Lost Password</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="align-self-center">
-                                        <a href="#" class="menu-banner"><img src="assets/images/banner/menu-banner-2.webp" alt="Shop Menu Banner"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Project</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="portfolio-3-columns.html"><span class="menu-text">Portfolio 3 Columns</span></a></li>
-                                    <li><a href="portfolio-4-columns.html"><span class="menu-text">Portfolio 4 Columns</span></a></li>
-                                    <li><a href="portfolio-5-columns.html"><span class="menu-text">Portfolio 5 Columns</span></a></li>
-                                    <li><a href="portfolio-details.html"><span class="menu-text">Portfolio Details</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Elements</span></a>
-                                <ul class="sub-menu mega-menu">
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">Column One</span></a>
-                                        <ul>
-                                            <li><a href="elements-products.html"><span class="menu-text">Product Styles</span></a></li>
-                                            <li><a href="elements-products-tabs.html"><span class="menu-text">Product Tabs</span></a></li>
-                                            <li><a href="elements-product-sale-banner.html"><span class="menu-text">Product & Sale Banner</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">Column Two</span></a>
-                                        <ul>
-                                            <li><a href="elements-category-banner.html"><span class="menu-text">Category Banner</span></a></li>
-                                            <li><a href="elements-team.html"><span class="menu-text">Team Member</span></a></li>
-                                            <li><a href="elements-testimonials.html"><span class="menu-text">Testimonials</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">Column Three</span></a>
-                                        <ul>
-                                            <li><a href="elements-instagram.html"><span class="menu-text">Instagram</span></a></li>
-                                            <li><a href="elements-map.html"><span class="menu-text">Google Map</span></a></li>
-                                            <li><a href="elements-icon-box.html"><span class="menu-text">Icon Box</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-title"><span class="menu-text">Column Four</span></a>
-                                        <ul>
-                                            <li><a href="elements-buttons.html"><span class="menu-text">Buttons</span></a></li>
-                                            <li><a href="elements-faq.html"><span class="menu-text">FAQs / Toggles</span></a></li>
-                                            <li><a href="elements-brands.html"><span class="menu-text">Brands</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Blog</span></a>
-                                <ul class="sub-menu">
-                                    <li class="has-children"><a href="blog-right-sidebar.html"><span class="menu-text">Standard Layout</span></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-right-sidebar.html"><span class="menu-text">Right Sidebar</span></a></li>
-                                            <li><a href="blog-left-sidebar.html"><span class="menu-text">Left Sidebar</span></a></li>
-                                            <li><a href="blog-fullwidth.html"><span class="menu-text">Full Width</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children"><a href="blog-grid-right-sidebar.html"><span class="menu-text">Grid Layout</span></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-grid-right-sidebar.html"><span class="menu-text">Right Sidebar</span></a></li>
-                                            <li><a href="blog-grid-left-sidebar.html"><span class="menu-text">Left Sidebar</span></a></li>
-                                            <li><a href="blog-grid-fullwidth.html"><span class="menu-text">Full Width</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children"><a href="blog-list-right-sidebar.html"><span class="menu-text">List Layout</span></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-right-sidebar.html"><span class="menu-text">Right Sidebar</span></a></li>
-                                            <li><a href="blog-list-left-sidebar.html"><span class="menu-text">Left Sidebar</span></a></li>
-                                            <li><a href="blog-list-fullwidth.html"><span class="menu-text">Full Width</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children"><a href="blog-masonry-right-sidebar.html"><span class="menu-text">Masonry Layout</span></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-masonry-right-sidebar.html"><span class="menu-text">Right Sidebar</span></a></li>
-                                            <li><a href="blog-masonry-left-sidebar.html"><span class="menu-text">Left Sidebar</span></a></li>
-                                            <li><a href="blog-masonry-fullwidth.html"><span class="menu-text">Full Width</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children"><a href="blog-details-right-sidebar.html"><span class="menu-text">Single Post Layout</span></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-details-right-sidebar.html"><span class="menu-text">Right Sidebar</span></a></li>
-                                            <li><a href="blog-details-left-sidebar.html"><span class="menu-text">Left Sidebar</span></a></li>
-                                            <li><a href="blog-details-fullwidth.html"><span class="menu-text">Full Width</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Pages</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="about-us.html"><span class="menu-text">About us</span></a></li>
-                                    <li><a href="about-us-2.html"><span class="menu-text">About us 02</span></a></li>
-                                    <li><a href="contact-us.html"><span class="menu-text">Contact us</span></a></li>
-                                    <li><a href="coming-soon.html"><span class="menu-text">Coming Soon</span></a></li>
-                                    <li><a href="404.html"><span class="menu-text">Page 404</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Search End -->
-
-                <!-- Search Start -->
-                <div class="col-auto d-none d-xl-block">
-                    <div class="header2-search">
-                        <form action="#">
-                            <input type="text" placeholder="Search...">
-                            <button class="btn"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Search End -->
-
-                <!-- Header Tools Start -->
-                <div class="col-auto">
-                    <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
-                        </div>
-                        <div class="header-search d-none d-sm-block d-xl-none">
-                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
-                        </div>
-                        <div class="header-wishlist d-none d-sm-block">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
-                        </div>
-                        <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                        <div class="mobile-menu-toggle d-xl-none">
-                            <a href="#" class="offcanvas-toggle">
-                                <svg viewBox="0 0 800 600">
-                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
-                                    <path d="M300,320 L540,320" class="middle"></path>
-                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Header Tools End -->
-
-            </div>
-        </div>
-
-    </div>
-    <!-- Header Section End -->
-    <!-- Mobile Header Section Start -->
-    <div class="mobile-header bg-white section d-xl-none">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Header Logo Start -->
-                <div class="col">
-                    <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
-                    </div>
-                </div>
-                <!-- Header Logo End -->
-
-                <!-- Header Tools Start -->
-                <div class="col-auto">
-                    <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
-                        </div>
-                        <div class="header-search d-none d-sm-block">
-                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
-                        </div>
-                        <div class="header-wishlist d-none d-sm-block">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
-                        </div>
-                        <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                        <div class="mobile-menu-toggle">
-                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
-                                <svg viewBox="0 0 800 600">
-                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
-                                    <path d="M300,320 L540,320" class="middle"></path>
-                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Header Tools End -->
-
-            </div>
-        </div>
-    </div>
-    <!-- Mobile Header Section End -->
-
-    <!-- Mobile Header Section Start -->
-    <div class="mobile-header sticky-header bg-white section d-xl-none">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Header Logo Start -->
-                <div class="col">
-                    <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
-                    </div>
-                </div>
-                <!-- Header Logo End -->
-
-                <!-- Header Tools Start -->
-                <div class="col-auto">
-                    <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
-                        </div>
-                        <div class="header-search d-none d-sm-block">
-                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
-                        </div>
-                        <div class="header-wishlist d-none d-sm-block">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
-                        </div>
-                        <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                        <div class="mobile-menu-toggle">
-                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
-                                <svg viewBox="0 0 800 600">
-                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
-                                    <path d="M300,320 L540,320" class="middle"></path>
-                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Header Tools End -->
-
-            </div>
-        </div>
-    </div>
-    <!-- Mobile Header Section End -->
-
+  
     <!-- OffCanvas Search Start -->
     <div id="offcanvas-search" class="offcanvas offcanvas-search">
         <div class="inner">
@@ -669,7 +344,7 @@ $id = $_GET['id']??1;
                     <div class="page-title">
                         <h1 class="title">Shop</h1>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item active">Products</li>
                         </ul>
                     </div>
@@ -732,7 +407,7 @@ $id = $_GET['id']??1;
                 <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n30">
 
                     <!-- Sort by Start -->
-                    <div class="col learts-mb-30">
+                    <!-- <div class="col learts-mb-30">
                         <h3 class="widget-title product-filter-widget-title">Sort by</h3>
                         <ul class="widget-list product-filter-widget customScroll">
                             <li><a href="#">Popularity</a></li>
@@ -741,19 +416,18 @@ $id = $_GET['id']??1;
                             <li><a href="#">Price: low to high</a></li>
                             <li><a href="#">Price: high to low</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- Sort by End -->
 
                     <!-- Price filter Start -->
                     <div class="col learts-mb-30">
                         <h3 class="widget-title product-filter-widget-title">Price filter</h3>
                         <ul class="widget-list product-filter-widget customScroll">
-                            <li> <a href="#">All</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>0</span>JOD - <span class="amount"><span class="cur-symbol"></span>50</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>50</span>JOD - <span class="amount"><span class="cur-symbol"></span>70</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>70</span>JOD - <span class="amount"><span class="cur-symbol"></span>100</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>100</span>JOD - <span class="amount"><span class="cur-symbol"></span>150</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>200</span>JOD +</a></li>
+                            <li> <a href="shop.php?id=<?php echo 0;?>">All </a></li>
+                            <li> <a href="shop.php?range=<?php echo 1?>"><span class="amount"><span class="cur-symbol"></span>5</span>JD - <span class="amount"><span class="cur-symbol"></span>30</span>JD</a></li>
+                            <li> <a href="shop.php?range=<?php echo 2?>"><span class="amount"><span class="cur-symbol"></span>31</span>JD - <span class="amount"><span class="cur-symbol"></span>70</span>JD</a></li>
+                            <li> <a href="shop.php?range=<?php echo 3?>"><span class="amount"><span class="cur-symbol"></span>71</span>JD - <span class="amount"><span class="cur-symbol"></span>100</span>JD</a></li>
+
                         </ul>
                     </div>
                     <!-- Price filter End -->
@@ -787,13 +461,45 @@ $id = $_GET['id']??1;
                     
                     <?php
                      
-                     $sql;
 
-                     if($id == 0){
-                        $sql = "SELECT * FROM products";
-                     }else{
-                     $sql = "SELECT * FROM products WHERE category_id='$id'";
-                     }
+                    //  switch ($favcolor) {
+                    //     case "red":
+                    //       echo "Your favorite color is red!";
+                    //       break;
+                    //     case "blue":
+                    //       echo "Your favorite color is blue!";
+                    //       break;
+                    //     case "green":
+                    //       echo "Your favorite color is green!";
+                    //       break;
+                    //     default:
+                    //       echo "Your favorite color is neither red, blue, nor green!";
+                    //   }
+
+                     $sql;
+                   
+
+
+                    
+                        if($id == 0 && $range == 0 ){
+                            $sql = "SELECT * FROM products";
+    
+    
+                         }else if($id == 0 && $range == 1 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 5 AND product_price <= 30";
+                         }else if($id == 0 && $range == 2 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 31 AND product_price <= 70";
+                         }else if($id == 0 && $range == 3 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 71 AND product_price <= 100";
+                         }else{
+                            $sql = "SELECT * FROM products WHERE category_id='$id'";
+                         }
+
+                     
+                      
+
+
+                    
                     
                   
                     $result = mysqli_query($conn, $sql);
@@ -819,7 +525,8 @@ $id = $_GET['id']??1;
                         <div class="grid-item col sales">
                             <div class="product">
                                 <div class="product-thumb">
-                                    <a href="product-details.php" class="image">
+                                    <a href="product-details.php?id=<?php echo $product_id ?>"  class="image">
+                                  
 
                                         <?php if($product_discount > 0){  ?>
                                             <span class="product-badges">
@@ -837,20 +544,20 @@ $id = $_GET['id']??1;
                                 
 
                                     </a>
-                                    <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                    <a href="wishlist-upd-shop.php?product_id=<?php echo $product_id ?>" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                 </div>
                                 <div class="product-info">
-                                    <h6 class="title"><a href="product-details.php"><?php echo $product_name.$id  ;?></a></h6>
+                                    <h6 class="title"><a href="product-details.php"><?php echo $product_name  ;?></a></h6>
                                     <span class="price">
                                     <?php if($product_discount > 0){  ?>
-                                        <span class="old"><?php echo $product_price;?>JOD</span> <?php }?>
+                                        <span class="old"><?php echo $product_price;?>JD</span> <?php }?>
                                         
                                     <span class="new"><?php echo $product_price - ($product_price * $product_discount)  ;?>JD</span>
                                     </span>
                                     <div class="product-buttons">
-                                        <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a>
-                                        <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
-                                        <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a>
+                                        <!-- <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a> -->
+                                        <a href="shopping-cart.php?product_id=<?php echo $product_id ?>" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                        <!-- <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -879,6 +586,9 @@ $id = $_GET['id']??1;
 
     </div>
     <!-- Shop Products Section End -->
+
+
+
 <?php 
 include 'includes/footer.php';
 include 'includes/scripts.php';

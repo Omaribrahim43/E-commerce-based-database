@@ -6,6 +6,7 @@
     <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
     <script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/09ce849ccf.js" crossorigin="anonymous"></script>
 
     <!-- Plugins JS -->
     <script src="assets/js/plugins/select2.min.js"></script>

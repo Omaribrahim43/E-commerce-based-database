@@ -1,4 +1,4 @@
-<?php require 'config/function.php'; ?>
+<?php require_once 'config/function.php'; ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -23,7 +23,7 @@
 
     <!-- Vendor CSS (Bootstrap & Icon Font) -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
+    <!-- <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" /> -->
     <link rel="stylesheet" href="assets/css/vendor/themify-icons.css" />
     <link rel="stylesheet" href="assets/css/vendor/customFonts.css" />
 
@@ -48,5 +48,7 @@
     <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.min.css" />
+    
+    
   </head>
   <body>

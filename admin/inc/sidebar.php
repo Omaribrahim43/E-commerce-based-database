@@ -9,9 +9,9 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  active" href="index.php">
+          <a class="nav-link" href="index.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-home text-white text-lg"></i>
+              <i class="fa fa-home text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
@@ -19,8 +19,8 @@
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Site Management</h6>
         </li>
-        <li class="nav-item">
-          <a class="nav-link  " href="users.php">
+        <li class="nav-item ">
+          <a class="nav-link" href="users.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa fa-user-plus text-dark text-lg"></i>
             </div>
@@ -30,38 +30,38 @@
         <li class="nav-item">
           <a class="nav-link  " href="categories.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-object-group text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Categories</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="product.php">
+          <a class="nav-link  " href="products.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-brands fa-product-hunt text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Product</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="oreders.php">
+          <a class="nav-link  " href="orders.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-truck text-dark text-lg"></i>
             </div>
-            <span class="nav-link-text ms-1">Oreders</span>
+            <span class="nav-link-text ms-1">Orders</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link  " href="comments.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa fa-cogs text-dark text-lg"></i>
+              <i class="fa-solid fa-comments text-dark text-lg"></i>
             </div>
             <span class="nav-link-text ms-1">Comments</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="sidenav-footer mx-3 ">
-      <a class="btn bg-gradient-primary mt-3 w-100" href="logout.php">Logout</a>
+      <a class="btn bg-gradient-secondary mt-3 w-100" href="logout.php">Logout</a>
     </div>
   </aside>

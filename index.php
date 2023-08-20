@@ -3,7 +3,7 @@ $pageTitle = 'Home';
 include 'includes/head-vars.php';
 ?>
     <!-- Topbar Section Start -->
-    <div class="topbar-section section border-bottom">
+    <div class="topbar-section section border-bottom allContent-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col d-none d-md-block">
@@ -85,18 +85,27 @@ include 'includes/head-vars.php';
           <!-- Header Tools Start -->
           <div class="col-auto">
             <div class="header-tools justify-content-end">
+              <?php 
+              if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                <div class="header-login">
+                  <a href="my-account.php"><i class="far fa-user"></i></a>
+                </div>
+              <?php 
+              }else { ?>
               <div class="header-login">
-                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
+              <?php
+              }
+              ?>
               <div class="header-wishlist">
                 <a href="#offcanvas-wishlist" class="offcanvas-toggle"
-                  ><span class="wishlist-count">3</span
+                  ><span class="wishlist-count"></span
                   ><i class="far fa-heart"></i
                 ></a>
               </div>
               <div class="header-cart">
                 <a href="#offcanvas-cart" class="offcanvas-toggle"
-                  ><span class="cart-count">3</span
+                  ><span class="cart-count"></span
                   ><i class="fas fa-shopping-cart"></i
                 ></a>
               </div>
@@ -125,10 +134,22 @@ include 'includes/head-vars.php';
               </li>
             </ul>
           </nav>
+          <?php 
+          if(!isset($_SESSION['loggedInStatus'])) {
+          ?>
           <div class="header-call">
-            <a href="login-register.php" class="btn btn">Login</a>
-            <a href="login-register.php" class="btn btn-primary">Signup</a>
+            <a href="login.php" class="btn btn">Login</a>
+            <a href="register.php" class="btn btn-primary">Signup</a>
           </div>
+          <?php 
+          } else {
+          ?>
+          <div class="header-call">
+            <h3>Welcome <?=$_SESSION['loggedInUserData']['name']?></h3>
+          </div>
+          <?php
+          }
+          ?>
         </div>
       </div>
       <!-- Site Menu Section End -->
@@ -596,7 +617,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">3</span>
@@ -621,7 +642,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">1</span>
@@ -654,7 +675,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">DESIGNS FOR YOU</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">2</span>
@@ -687,7 +708,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">3</span>
@@ -712,7 +733,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">1</span>
@@ -806,6 +827,8 @@ include 'includes/head-vars.php';
             <!-- Section Title End -->
           </div>
         </div>
+      </div>
+    </div>
 
        
 
@@ -826,7 +849,7 @@ include 'includes/head-vars.php';
                   Little simple <br />
                   things
                 </h2>
-                <a href="#" class="link">shop now</a>
+                <a href="shop.php?id=2" class="link">shop now</a>
               </div>
             </div>
           </div>
@@ -842,7 +865,7 @@ include 'includes/head-vars.php';
                   Holiday <br />
                   Gifts
                 </h2>
-                <a href="#" class="link">shop now</a>
+                <a href="shop.php?id=1" class="link">shop now</a>
               </div>
             </div>
           </div>
@@ -906,8 +929,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Boho Beard Mug</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$45.00</span>
-                    <span class="new">$39.00</span>
+                    <span class="old">20 JD</span>
+                    <span class="new">16.5 JD</span>
                   </span>
                 </div>
               </div>
@@ -924,7 +947,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Motorized Tricycle</a>
                   </h6>
-                  <span class="price"> $35.00 </span>
+                  <span class="price"> 30 JD </span>
                 </div>
               </div>
 
@@ -940,7 +963,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Walnut Cutting Board</a>
                   </h6>
-                  <span class="price"> $100.00 </span>
+                  <span class="price"> 25 JD </span>
                   <div class="ratting">
                     <span class="rate" style="width: 80%"></span>
                   </div>
@@ -960,8 +983,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Pizza Plate Tray</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$30.00</span>
-                    <span class="new">$22.00</span>
+                    <span class="old">25 JD</span>
+                    <span class="new">21 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 80%"></span>
@@ -981,7 +1004,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Minimalist Ceramic Pot</a>
                   </h6>
-                  <span class="price"> $120.00 </span>
+                  <span class="price"> 45 JD </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
                   </div>
@@ -1000,7 +1023,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Clear Silicate Teapot</a>
                   </h6>
-                  <span class="price"> $140.00 </span>
+                  <span class="price"> 45 JD </span>
                 </div>
               </div>
             </div>
@@ -1027,8 +1050,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Pottery Bowl Set</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$45.00</span>
-                    <span class="new">$39.00</span>
+                    <span class="old">45 JD</span>
+                    <span class="new">39 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
@@ -1048,7 +1071,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Electric Egg Blender</a>
                   </h6>
-                  <span class="price"> $200.00 </span>
+                  <span class="price"> 80 JD </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
                   </div>
@@ -1068,8 +1091,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Hallmark Grandma Mug</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$45.00</span>
-                    <span class="new">$39.00</span>
+                    <span class="old">25 JD</span>
+                    <span class="new">21 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
@@ -1089,7 +1112,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Modern Camera</a>
                   </h6>
-                  <span class="price"> $380.00 </span>
+                  <span class="price"> 100 JD </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
                   </div>
@@ -1109,8 +1132,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Steel Watering Can</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$20.00</span>
-                    <span class="new">$18.00</span>
+                    <span class="old">25 JD</span>
+                    <span class="new">22 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
@@ -1130,7 +1153,7 @@ include 'includes/head-vars.php';
                   <h6 class="title">
                     <a href="product-details.php">Minimalist Ceramic Pot</a>
                   </h6>
-                  <span class="price"> $120.00 </span>
+                  <span class="price"> 45 JD </span>
                   <div class="ratting">
                     <span class="rate" style="width: 100%"></span>
                   </div>
@@ -1160,8 +1183,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Boho Beard Mug</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$45.00</span>
-                    <span class="new">$39.00</span>
+                    <span class="old">25 JD</span>
+                    <span class="new">21 JD</span>
                   </span>
                 </div>
               </div>
@@ -1179,8 +1202,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Antique Sewing Scissors</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$15.00</span>
-                    <span class="new">$12.00</span>
+                    <span class="old">20 JD</span>
+                    <span class="new">16 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 80%"></span>
@@ -1201,8 +1224,8 @@ include 'includes/head-vars.php';
                     <a href="product-details.php">Pizza Plate Tray</a>
                   </h6>
                   <span class="price">
-                    <span class="old">$30.00</span>
-                    <span class="new">$22.00</span>
+                    <span class="old">25 JD</span>
+                    <span class="new">21 JD</span>
                   </span>
                   <div class="ratting">
                     <span class="rate" style="width: 80%"></span>
@@ -1223,7 +1246,7 @@ include 'includes/head-vars.php';
         <!-- Section Title Start -->
         <div class="section-title2 text-center">
           <h3 class="sub-title">Follow us on Instagram</h3>
-          <h2 class="title">@learts_shop</h2>
+          <h2 class="title">@HandMade_Harmony</h2>
         </div>
         <!-- Section Title End -->
 

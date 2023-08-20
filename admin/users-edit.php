@@ -13,7 +13,7 @@
 
                 <?= alertMessage(); ?>
 
-                <form action="code.php" method="POST">
+                <form action="user-code.php" method="POST">
 
                     <?php 
                         $paramResult = chechParamId('user_id');
@@ -22,7 +22,7 @@
                             return false;
                         }
 
-                        $user = getById('users', chechParamId('user_id'));
+                        $user = getById('users', chechParamId('user_id'), 'user_id');
                         if($user['status'] == 200) {
 
                             ?>
@@ -45,13 +45,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label>Email</label>
-                                        <input type="email" name="email" value="<?= $user['data']['user_email'] ;?>" class="form-control" required>
-                                    </div>
+                                        <input type="email" name="email" value="<?= $user['data']['user_email'] ;?>" class="form-control" required>                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label>Password</label>
-                                        <input type="password" name="password" value="<?= $user['data']['user_password'] ;?>" class="form-control" required>
+                                        <input type="password" name="password" class="form-control" required>
+                                        <?=validationREGEX();?>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -73,7 +73,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3 text-end">
                                         <br>
-                                        <button type="submit" name="updateUser" class="btn btn-primary">Update</button>
+                                        <button type="submit" name="updateUser" class="btn btn-secondary">Update</button>
                                     </div>
                                 </div>
                             </div>

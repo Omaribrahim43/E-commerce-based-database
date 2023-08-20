@@ -104,7 +104,7 @@ include 'includes/navbar.php';
             <div class="row learts-mb-n30">
 
                 <div class="col-xl-3 col-lg-4 col-12 me-auto learts-mb-30">
-                    <h1 class="fw-400">The difference when you shop Learts!</h1>
+                    <h1 class="fw-400">The difference when you shop HandMade Harmony!</h1>
                 </div>
                 <div class="col-lg-8 col-12 learts-mb-30">
                     <div class="row learts-mb-n30">
@@ -145,7 +145,7 @@ include 'includes/navbar.php';
             <!-- Section Title Start -->
             <div class="section-title2 text-center">
                 <h3 class="sub-title">Follow us on Instagram</h3>
-                <h2 class="title">@learts_shop</h2>
+                <h2 class="title">@HandMade_Harmony</h2>
             </div>
             <!-- Section Title End -->
 

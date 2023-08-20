@@ -47,14 +47,23 @@
                 <!-- Header Tools Start -->
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
+                        <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
                         <div class="header-login">
                             <a href="my-account.php"><i class="far fa-user"></i></a>
                         </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                         <div class="header-wishlist">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count"></span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count"></span><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -213,10 +222,10 @@
                             <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
                         </div>
                         <div class="header-wishlist d-none d-sm-block">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count"></span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count"></span><i class="fas fa-shopping-cart"></i></a>
                         </div>
                         <div class="mobile-menu-toggle">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -266,7 +275,7 @@
                 <span class="title">Wishlist</span>
                 <button class="offcanvas-close">×</button>
             </div>
-            <div class="body customScroll">
+            <!-- <div class="body customScroll">
                 <ul class="minicart-product-list">
                     <li>
                         <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
@@ -293,7 +302,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="foot">
                 <div class="buttons">
                     <a href="wishlist.php" class="btn btn-dark btn-hover-primary">view wishlist</a>
@@ -310,7 +319,7 @@
                 <span class="title">Cart</span>
                 <button class="offcanvas-close">×</button>
             </div>
-            <div class="body customScroll">
+            <!-- <div class="body customScroll">
                 <ul class="minicart-product-list">
                     <li>
                         <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
@@ -337,7 +346,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="foot">
                 <div class="sub-total">
                     <strong>Subtotal :</strong>
