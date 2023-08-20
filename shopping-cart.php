@@ -8,14 +8,11 @@ $id = $_GET['product_id']??0;
 $qua = 1;
 
 if (!isset($_SESSION['cart'])) {
-
     $_SESSION['cart'] = array();
-
 }
 
 
 $existingProductIds = array_column($_SESSION['cart'], 'productid');
-
 if (in_array($id, $existingProductIds)) {
 
 } else {
@@ -26,17 +23,11 @@ if (in_array($id, $existingProductIds)) {
 }
 
 
-
 // echo '<pre>';
 // print_r($_SESSION['cart']);
 // echo '</pre>';
 
-
-
-
-
 ?>
-
 
 <div class="offcanvas-overlay"></div>
 
@@ -46,7 +37,6 @@ if (in_array($id, $existingProductIds)) {
     <div class="container">
         <div class="row">
             <div class="col">
-
                 <div class="page-title">
                     <h1 class="title">Cart</h1>
                     <ul class="breadcrumb">
@@ -54,7 +44,6 @@ if (in_array($id, $existingProductIds)) {
                         <li class="breadcrumb-item active">Cart</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>

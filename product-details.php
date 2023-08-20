@@ -109,16 +109,16 @@ include_once 'includes/navbar.php';
             <!-- Product Summery Start -->
             <div class="col-lg-6 col-12 learts-mb-40">
                 <div class="product-summery">
-                    <div class="product-nav">
+                    <!-- <div class="product-nav">
                         <a href="#"><i class="fas fa-long-arrow-alt-left"></i></a>
                         <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
-                    </div>
-                    <div class="product-ratings">
+                    </div> -->
+                    <!-- <div class="product-ratings">
                         <span class="star-rating">
                             <span class="rating-active" style="width: 100%;">ratings</span>
                         </span>
                         <a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
-                    </div>
+                    </div> -->
                     <h3 class="product-title">
                         <?php echo $product_name ?>
                     </h3>
@@ -130,7 +130,7 @@ include_once 'includes/navbar.php';
                             <?php echo $product_description ?>
                         </p>
                     </div>
-                    <div class="product-variations">
+                    <!-- <div class="product-variations">
                         <table>
                             <tbody>
 
@@ -146,9 +146,9 @@ include_once 'includes/navbar.php';
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div> -->
                     <div class="product-buttons">
-                        <a href="wishlist.php" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
+                        <a href="wishlistupdate.php?product_id=<?php echo $id ?>" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
                             data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
                         <a href="shopping-cart.php?product_id=<?php echo $id ?>" class="btn btn-dark btn-outline-hover-dark">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
@@ -292,17 +292,18 @@ include_once 'includes/navbar.php';
             $loggedInEmail = NULL;
         } ?>
         <span class="title">Add a review</span>
-        <div class="review-form">
+        <!-- <div class="review-form">
             <form action="product-details.php?id=<?=$id?>" method="post">
                 <div class="row learts-mb-n30">
                     <div class="col-md-6 col-12 learts-mb-30">
                         <input type="text" value="<?php echo $loggedInName?>" name="name" placeholder="Your Name" required>
                     </div>
+                    
                     <div class="col-md-6 col-12 learts-mb-30">
                         <input type="email" value="<?php echo $loggedInEmail?>" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="col-md-6 col-12 learts-mb-30">
-                        <input type="hidden" name="comment_date" required>
+                        <input type="hidden" name="comment_date"  required>
                     </div>
                     <div class="col-md-6 learts-mb-10">
                         <div class="rateyo" id="drating" ></div>
@@ -316,7 +317,42 @@ include_once 'includes/navbar.php';
                     </div>
                 </div>
             </form>
+        </div> -->
+        <div class="review-form">
+    <form action="product-details.php?id=<?=$id?>" method="post">
+        <div class="row learts-mb-n30">
+            <div class="col-md-6 col-12 learts-mb-30">
+                <input type="text" value="<?php echo $loggedInName?>" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="col-md-6 col-12 learts-mb-30">
+                <input type="email" value="<?php echo $loggedInEmail?>" name="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="col-12 learts-mb-30">
+                <input type="hidden" name="comment_date"  required>
+            </div>
+            
+            <div class="col-12 learts-mb-10">
+                <div class="rateyo" id="drating"></div>
+            </div>
+            
+            <div class="col-md-6 col-12 learts-mb-30">
+                <input type="number" name="rating" id="rating" min="1" max="5" placeholder="Rate This Product From 1 to 5" required>
+            </div>
+            
+            <div class="col-12 learts-mb-30">
+                <textarea name="comment" placeholder="Your Review" required></textarea>
+            </div>
+            
+            <div class="col-12 text-center learts-mb-30">
+                <button class="btn btn-dark btn-outline-hover-dark" type="submit" name="submit">Submit</button>
+            </div>
         </div>
+    </form>
+</div>
+
+
  
                         </div>
                     </div>
