@@ -47,9 +47,9 @@ ini_set('display_errors', 1);
             <div class="col-lg-4 col-12 learts-mb-30">
                 <div class="myaccount-tab-list nav">
                     <a href="#orders" data-bs-toggle="tab">Orders <i class="far fa-file-alt"></i></a>
-                    <a href="#address" data-bs-toggle="tab">address <i class="far fa-map-marker-alt"></i></a>
+                    <a href="#address" data-bs-toggle="tab">address <i class="fa-solid fa-location-dot"></i></a>
                     <a href="#account-info" data-bs-toggle="tab">Account Details <i class="far fa-user"></i></a>
-                    <a href="admin/logout.php">Logout <i class="far fa-sign-out-alt"></i></a>
+                    <a href="admin/logout.php">Logout <i class="fa-solid fa-right-from-bracket"></i></i></a>
                 </div>
             </div>
             <!-- My Account Tab List End -->
@@ -129,10 +129,8 @@ ini_set('display_errors', 1);
 
                                 <?php
 
-                                $sql = "SELECT o.*, u.user_phone
-                            FROM orders o
-                            JOIN users u ON o.user_id = u.user_id
-                            WHERE o.user_id = '$user_id'";
+                                $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
+                            
                                 $orderResult = mysqli_query($conn, $sql);
                                 ?>
                                 <?php
@@ -141,8 +139,8 @@ ini_set('display_errors', 1);
                                     <div class="col-md-6 col-12 learts-mb-30">
                                         <h4 class="title">Shipping Address <a href="#" class="edit-link">edit</a></h4>
                                         <address>
-                                            <p><?php echo $row["order_city"]; ?></p>
-                                            <p><?php echo $row["order_address"]; ?></p>
+                                            <p><?php echo $row["user_city"]; ?></p>
+                                            <p><?php echo $row["user_address"]; ?></p>
                                             <p><?php echo $row["user_phone"]; ?></p>
                                         </address>
                                     </div>
@@ -199,12 +197,16 @@ ini_set('display_errors', 1);
                                                     <input type="text" id="first-name" name="username" value="<?php echo $_SESSION['loggedInUserData']['name'] ?>">
                                                 </div>
                                             </div>
-
-                                            <div class="col-12 learts-mb-30">
+                                            <div class="col-md-6 col-12 learts-mb-30">
+                                                <div class="single-input-item">
+                                                    <img src="assets/images/avatar.avif" width="320px" style="border-radius:50%; position: absolute;">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 learts-mb-30">
                                                 <label for="email">Email Addres <abbr class="required">*</abbr></label>
                                                 <input type="email" id="email" name="user_email" value="<?php echo $_SESSION['loggedInUserData']['email'] ?>">
                                             </div>
-                                            <div class="col-md-6 col-12 learts-mb-30">
+                                            <div class="col-md-8 col-12 learts-mb-30">
                                                             <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
                                                             <input type="text" id="bdPhone" name="user_phone" value="<?php echo $_SESSION['loggedInUserData']['phone'] ?>">
                                                         </div>
@@ -216,11 +218,11 @@ ini_set('display_errors', 1);
 
                                                         <div class="col-12 learts-mb-30">
                                                             <label for="new-pwd">New password (leave blank to leave unchanged)</label>
-                                                            <input type="password" id="new-pwd" name="user_password" value="<?php echo $_SESSION['loggedInUserData']['password'] ?>">
+                                                            <input type="password" id="new-pwd" name="user_password">
                                                         </div>
                                                         <div class="col-12 learts-mb-30">
                                                             <label for="confirm-pwd">Confirm new password</label>
-                                                            <input type="password" id="confirm-pwd" name="user_password" value="<?php echo $_SESSION['loggedInUserData']['password'] ?>">
+                                                            <input type="password" id="confirm-pwd" name="user_password">
                                                         </div>
                                                     </div>
                                                 </fieldset>
