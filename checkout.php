@@ -407,14 +407,12 @@ include 'includes/navbar.php';
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                foreach(){ ?>
+                               
                                 <tr>
                                     <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
                                     <td class="total"><span>£100.00</span></td>
                                 </tr>
-                                <?php }
-                                ?>
+                                
                                 <tr>
                                     <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
                                     <td class="total"><span>£100.00</span></td>
