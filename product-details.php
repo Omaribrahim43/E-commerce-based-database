@@ -150,10 +150,7 @@ include_once 'includes/navbar.php';
                     <div class="product-buttons">
                         <a href="wishlist.php" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top"
                             data-hint="Add to Wishlist"><i class="far fa-heart"></i></a>
-                        <a href="shopping-cart.php?product_id=<?php echo $id ?>"  class="btn btn-dark btn-outline-hover-dark">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
-                        </a>
-                        <a href="shopping-cart.php" class="btn btn-dark btn-outline-hover-dark">
+                        <a href="shopping-cart.php?product_id=<?php echo $id ?>" class="btn btn-dark btn-outline-hover-dark">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
                         </a>
                     </div>
@@ -239,7 +236,6 @@ include_once 'includes/navbar.php';
             $sqlc = "SELECT comments.comment_id, comments.comment_text, comments.rating, comments.comment_date, users.username
             FROM comments
              JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
-             JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
             
 
             $resultc = mysqli_query($conn, $sqlc);
@@ -276,7 +272,6 @@ include_once 'includes/navbar.php';
                                     </div>
                                 </li>
                             </ul>  
-                            </ul>  
                     <?php
 
             }
@@ -297,9 +292,7 @@ include_once 'includes/navbar.php';
             $loggedInEmail = NULL;
         } ?>
         <span class="title">Add a review</span>
-        <span class="title">Add a review</span>
         <div class="review-form">
-            <form action="product-details.php?id=<?=$id?>" method="post">
             <form action="product-details.php?id=<?=$id?>" method="post">
                 <div class="row learts-mb-n30">
                     <div class="col-md-6 col-12 learts-mb-30">
@@ -640,8 +633,6 @@ include_once 'includes/navbar.php';
 <!-- Recommended Products Section End -->
 
 
-
-
 <?php
 include 'includes/footer.php';
 include 'includes/scripts.php';
@@ -660,11 +651,7 @@ if (isset($_POST['submit'])) {
     $idResult = mysqli_query($conn, "SELECT user_id FROM users WHERE user_email='$email'");
     $row = mysqli_fetch_assoc($idResult);
     $user_id = $row['user_id'];
-    $idResult = mysqli_query($conn, "SELECT user_id FROM users WHERE user_email='$email'");
-    $row = mysqli_fetch_assoc($idResult);
-    $user_id = $row['user_id'];
 
-    $sqlr = "INSERT INTO comments (comment_text,user_id,rating ,product_id ) VALUES ('$comment', '$user_id','$rating' ,'$id')";
     $sqlr = "INSERT INTO comments (comment_text,user_id,rating ,product_id ) VALUES ('$comment', '$user_id','$rating' ,'$id')";
     if (mysqli_query($conn, $sqlr))
     {
@@ -676,8 +663,5 @@ if (isset($_POST['submit'])) {
         echo "Error: " . $sqlr . "<br>" . mysqli_error($conn);
     }
 }
-    }
-}
 ?>
-
 

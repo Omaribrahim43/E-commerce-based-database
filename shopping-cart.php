@@ -1,6 +1,10 @@
 <?php
-session_start();
-$id = $_GET['product_id'] ?? 0;
+$pageTitle = 'Cart';
+include 'includes/head-vars.php';
+include 'includes/navbar.php';
+
+// session_start();
+$id = $_GET['product_id']??0;
 $qua = 1;
 
 if (!isset($_SESSION['cart'])) {
@@ -23,17 +27,14 @@ if (in_array($id, $existingProductIds)) {
 
 
 
-
 // echo '<pre>';
-// print_r($_SESSION);
+// print_r($_SESSION['cart']);
 // echo '</pre>';
 
 
 
 
-$pageTitle = 'Cart';
-include 'includes/head-vars1.php';
-include 'includes/navbar.php';
+
 ?>
 
 
@@ -196,7 +197,7 @@ include 'includes/navbar.php';
                     </tr>
                 </tbody>
             </table>
-            <a href="checkout.php" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
+            <a href="savecart.php" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
         </div>
     </div>
 

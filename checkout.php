@@ -2,8 +2,18 @@
 $pageTitle = 'Checkout';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
-$user_id = $_SESSION['user_id'];
-?>
+// $user_id = $_SESSION['user_id'];
+// $id = $_SESSION['loggedInUserData']['id'];
+// $productId = $_SESSION['cart']['productid'];
+// $productQuantity = $_SESSION['cart']['quantity'];
+// $sql = "INSERT INTO cart (user_id,product_id,product_quantity) VALUES ('$id', '$productId', '$productQuantity') LIMIT 1";
+// $sqlRun = mysqli_query($conn, $sql);
+// if(mysqli_num_rows($sqlRun) > 0) {
+//     redirect('shop.php', 'Product added to cart.');
+// } else {
+//     redirect('shopping-cart.php', 'Somthing went wrong');
+// }
+// ?>
     <div class="offcanvas-overlay"></div>
     
     <!-- Page Title/Header Start -->
@@ -47,7 +57,7 @@ $user_id = $_SESSION['user_id'];
                 <h2 class="title">Billing details</h2>
             </div>
             <form action="" class="checkout-form learts-mb-50" method="post">
-                <div class="row">
+                <div class="row">   
                     <div class="col-md-6 col-12 learts-mb-20">
                         <?php 
                         $row = mysqli_fetch_array($result);
