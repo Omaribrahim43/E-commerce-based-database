@@ -237,11 +237,7 @@ include_once 'includes/navbar.php';
 
             <?php
             $sqlc = "SELECT comments.comment_id, comments.comment_text, comments.rating, comments.comment_date, users.username
-            FROM comments
-             JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
-             JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
-            
-
+                        FROM comments JOIN users ON comments.user_id = users.user_id AND comments.product_id = '$id'";
             $resultc = mysqli_query($conn, $sqlc);
 
             if ($resultc) {
@@ -674,8 +670,6 @@ if (isset($_POST['submit'])) {
     else
     {
         echo "Error: " . $sqlr . "<br>" . mysqli_error($conn);
-    }
-}
     }
 }
 ?>

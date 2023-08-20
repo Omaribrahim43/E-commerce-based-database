@@ -85,9 +85,18 @@ include 'includes/head-vars.php';
           <!-- Header Tools Start -->
           <div class="col-auto">
             <div class="header-tools justify-content-end">
+              <?php 
+              if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                <div class="header-login">
+                  <a href="my-account.php"><i class="far fa-user"></i></a>
+                </div>
+              <?php 
+              }else { ?>
               <div class="header-login">
-                <a href="my-account.php"><i class="far fa-user"></i></a>
               </div>
+              <?php
+              }
+              ?>
               <div class="header-wishlist">
                 <a href="#offcanvas-wishlist" class="offcanvas-toggle"
                   ><span class="wishlist-count">3</span
@@ -608,7 +617,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">3</span>
@@ -633,7 +642,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">1</span>
@@ -666,7 +675,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">DESIGNS FOR YOU</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">2</span>
@@ -699,7 +708,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">3</span>
@@ -724,7 +733,7 @@ include 'includes/head-vars.php';
                 <div class="home2-slide-content">
                     <h5 class="sub-title">DAILY OFFER</h5>
                     <h2 class="title">Country Feast Set</h2>
-                    <div class="link"><a href="shop.html">shop collection</a></div>
+                    <div class="link"><a href="shop.php">shop collection</a></div>
                 </div>
                 <div class="home2-slide-pages">
                     <span class="current">1</span>
@@ -840,7 +849,7 @@ include 'includes/head-vars.php';
                   Little simple <br />
                   things
                 </h2>
-                <a href="#" class="link">shop now</a>
+                <a href="shop.php?id=2" class="link">shop now</a>
               </div>
             </div>
           </div>
@@ -856,7 +865,7 @@ include 'includes/head-vars.php';
                   Holiday <br />
                   Gifts
                 </h2>
-                <a href="#" class="link">shop now</a>
+                <a href="shop.php?id=1" class="link">shop now</a>
               </div>
             </div>
           </div>

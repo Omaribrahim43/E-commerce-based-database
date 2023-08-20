@@ -27,14 +27,14 @@
 
                             ?>
 
-                            <input type="hidden" name="productId" value="<?= $product['data']['product_id'] ;?>" required>
+                            <input type="hidden" name="productId"  value="<?= $product['data']['product_id'] ;?>" required>
 
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="mb-3">
                                         <label class="col-md-12">Product image</label>
                                         <?php echo '<img class="mb-5" style="width:200px; border-radius:12px;" src="data:image/webp;base64,' . base64_encode($product['data']['product_image']) . '" />'; ?>
-                                        <input type="file" name="image" value="" class="form-control">
+                                        <input type="file" accept="image/*" name="image" value="" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-9">
@@ -75,7 +75,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3 text-end">
                                         <br>
-                                        <button type="submit" name="updateProduct" class="btn btn-primary">Update</button>
+                                        <button type="submit" name="updateProduct" class="btn btn-secondary">Update</button>
                                     </div>
                                 </div>
                             </div>
