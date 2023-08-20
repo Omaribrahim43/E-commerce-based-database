@@ -46,6 +46,7 @@ include 'includes/navbar.php';
             
 
                 <?php
+                $user_id = $_SESSION['loggedInUserData']['id'];
                 $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
                 $result = mysqli_query($conn, $sql);
                 ?>
@@ -77,7 +78,7 @@ include 'includes/navbar.php';
                             <option value="AS">American Samoa</option>
                             <option value="AD">Andorra</option>
                             <option value="AO">Angola</option>
-                            <option value="AI">Anguilla</option>
+                            <option value="AI">Anguilla</option> 
                             <option value="AQ">Antarctica</option>
                             <option value="AG">Antigua and Barbuda</option>
                             <option value="AR">Argentina</option>
@@ -406,6 +407,14 @@ include 'includes/navbar.php';
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php 
+                                foreach(){ ?>
+                                <tr>
+                                    <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
+                                    <td class="total"><span>£100.00</span></td>
+                                </tr>
+                                <?php }
+                                ?>
                                 <tr>
                                     <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
                                     <td class="total"><span>£100.00</span></td>
