@@ -558,7 +558,7 @@ $id = $_GET['id']??0;
                                     <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                 </div>
                                 <div class="product-info">
-                                    <h6 class="title"><a href="product-details.php"><?php echo $product_name.$id  ;?></a></h6>
+                                    <h6 class="title"><a href="product-details.php"><?php echo $product_name  ;?></a></h6>
                                     <span class="price">
                                     <?php if($product_discount > 0){  ?>
                                         <span class="old"><?php echo $product_price;?>JD</span> <?php }?>
