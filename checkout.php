@@ -400,14 +400,7 @@ include 'includes/navbar.php';
                 <div class="col-lg-6 order-lg-2 learts-mb-30">
                     <div class="order-review">
                         <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="name">Product</th>
-                                    <th class="total">Subtotal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               
+                            <thead>   
                                 <tr>
                                     <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
                                     <td class="total"><span>£100.00</span></td>
