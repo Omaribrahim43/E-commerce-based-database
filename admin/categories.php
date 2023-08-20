@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h4>
                     Category Lists
-                    <a href="categories-create.php" class="btn btn-primary float-end">Add categories</a>
+                    <a href="categories-create.php" class="btn btn-secondary float-end">Add categories</a>
                 </h4>
             </div>
             <div class="card-body">

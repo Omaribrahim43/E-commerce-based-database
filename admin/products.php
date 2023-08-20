@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h4>
                     Products Lists
-                    <a href="products-create.php" class="btn btn-primary float-end">Add Product</a>
+                    <a href="products-create.php" class="btn btn-secondary float-end">Add Product</a>
                 </h4>
             </div>
             <div class="card-body">

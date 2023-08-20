@@ -10,22 +10,22 @@ if(isset($_SESSION['loggedInStatus'])){
         if($result) {
             if(mysqli_num_rows($result) == 0) {
                 logoutSession();
-                redirect('../login-register.php', 'Access Denied');
+                redirect('../login.php', 'Access Denied');
             } else {
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 if($row['role'] != 'admin') {
                     logoutSession();
-                    redirect('../login-register.php', 'Access Denied');
+                    redirect('../login.php', 'Access Denied');
                 }
             }
         }
         else{
             logoutSession();
-            redirect('../login-register.php', 'Somthing Went Wrong.');
+            redirect('../login.php', 'Somthing Went Wrong.');
         }
     } 
 }else {
-        redirect('../login-register.php', 'Login to Continue');
-    }
+    redirect('../login.php', 'Login to Continue');
+}
 
 ?>

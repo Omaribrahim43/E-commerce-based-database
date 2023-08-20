@@ -6,6 +6,7 @@ $pageTitle = 'Wishlist';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
+
 // Retrieve wishlist items with associated product information
 $query = "SELECT w.product_id, p.product_name, p.product_image, p.product_price 
 FROM wish_list w

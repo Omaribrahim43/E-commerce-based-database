@@ -1,5 +1,3 @@
-
-
 <?php 
 $pageTitle = 'Contact Us';
 include 'includes/head-vars.php';
@@ -139,7 +137,7 @@ if(count($_POST) > 0)
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <form method="post" class="border p-4 shadow rounded">
                 <h3 class="mb-3">Send Email</h3>
                 <div class="mb-3">

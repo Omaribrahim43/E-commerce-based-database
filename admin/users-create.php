@@ -35,6 +35,7 @@
                             <div class="mb-3">
                                 <label>Password</label>
                                 <input type="password" name="password" class="form-control">
+                                <?=validationREGEX();?>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -56,7 +57,7 @@
                         <div class="col-md-6">
                             <div class="mb-3 text-end">
                                 <br>
-                                <button type="submit" name="saveUser" class="btn btn-primary">Save</button>
+                                <button type="submit" name="saveUser" class="btn btn-secondary">Save</button>
                             </div>
                         </div>
                     </div>

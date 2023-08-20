@@ -2,6 +2,7 @@
 $pageTitle = 'Login & Register';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
+require_once 'register-code.php';
 // if(isset($_SESSION['loggedInStatus'])) {
 //     redirect('index.php', 'You are already logged in.');
 // }
@@ -44,27 +45,27 @@ include 'includes/navbar.php';
                                 <div class="col-12 learts-mb-20">
                                     <label for="registerEmail">Email address <abbr class="required" required>*</abbr></label>
                                     <input type="text" id="registerEmail" name="registerEmail">
-                                    <?php //if (!empty($emailError)) echo "<span style='color: red;'>$emailError</span>"; ?>
+                                    <?=validationREGEX()?>
                                 </div>
                                 <div class="col-12 learts-mb-20">
                                     <label for="registerUserName">User name <abbr class="required" required>*</abbr></label>
                                     <input type="text" id="registerUserName" name="registerUserName">
-                                    <?php //if (!empty($usernameError)) echo "<span style='color: red;'>$usernameError</span>"; ?>
+                                    <?=validationREGEX()?>
                                 </div>
                                 <div class="col-12 learts-mb-20">
                                     <label for="registerUserName">Phone Number <abbr class="required" required>*</abbr></label>
                                     <input type="text" id="registerPhoneNumber" name="registerPhoneNumber">
-                                    <?php //if (!empty($usernameError)) echo "<span style='color: red;'>$usernameError</span>"; ?>
+                                    <?=validationREGEX()?>
                                 </div>
                                 <div class="col-12 learts-mb-20">
                                     <label for="registerPassword">Enter Password <abbr class="required" required>*</abbr></label>
                                     <input type="password" id="registerPassword" name="registerPassword">
-                                    <?php //if (!empty($passwordError)) echo "<span style='color: red;'>$passwordError</span>"; ?>
+                                    <?=validationREGEX()?>
                                 </div>
                                 <div class="col-12 learts-mb-20">
                                     <label for="registerConfirmPassword">Confirm Password <abbr class="required" required>*</abbr></label>
                                     <input type="password" id="registerConfrimPassword" name="registerConfrimPassword">
-                                    <?php //if (!empty($confirmPasswordError)) echo "<span style='color: red;'>$confirmPasswordError</span>"; ?>
+                                    <?=validationREGEX()?>
                                 </div>
                                 <div class="col-12 text-center learts-mb-50">
                                     <button class="btn btn-dark btn-outline-hover-dark" type="submit" id="sign-up" name="signup" >Register</button>
