@@ -61,7 +61,7 @@ ini_set('display_errors', 1);
 
                     <?php
 
-                    
+
 
                     $sqlUser = "SELECT * FROM users WHERE user_id = '$user_id'";
                     $userResult = mysqli_query($conn, $sqlUser);
@@ -129,20 +129,19 @@ ini_set('display_errors', 1);
 
                                 <?php
 
-                                $sql = "SELECT o.*, u.user_phone
-                            FROM orders o
-                            JOIN users u ON o.user_id = u.user_id
-                            WHERE o.user_id = '$user_id'";
-                                $orderResult = mysqli_query($conn, $sql);
+                                $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
+                            
+                            
+                                $userResult = mysqli_query($conn, $sql);
                                 ?>
                                 <?php
-                                while ($row = mysqli_fetch_array($orderResult)) {
+                                while ($row = mysqli_fetch_array($userResult)) {
                                 ?>
                                     <div class="col-md-6 col-12 learts-mb-30">
                                         <h4 class="title">Shipping Address <a href="#" class="edit-link">edit</a></h4>
                                         <address>
-                                            <p><?php echo $row["order_city"]; ?></p>
-                                            <p><?php echo $row["order_address"]; ?></p>
+                                            <p><?php echo $row["user_city"]; ?></p>
+                                            <p><?php echo $row["user_address"]; ?></p>
                                             <p><?php echo $row["user_phone"]; ?></p>
                                         </address>
                                     </div>
@@ -160,7 +159,7 @@ ini_set('display_errors', 1);
 
 
 
-                    
+
 
 
 
@@ -172,7 +171,7 @@ ini_set('display_errors', 1);
                     if (count($_POST) > 0) {
                         mysqli_query($conn, "UPDATE users SET username='" . $_POST['username'] . "',user_email='" . $_POST['user_email'] . "' ,user_phone='" . $_POST['user_phone'] . "',user_password='" . $_POST['user_password'] . "' WHERE user_id='" . $_POST['user_id'] . "'");
                         $alert = "Data successfully updated";
-                        
+
                         exit();
                     }
 
@@ -205,22 +204,22 @@ ini_set('display_errors', 1);
                                                 <input type="email" id="email" name="user_email" value="<?php echo $_SESSION['loggedInUserData']['email'] ?>">
                                             </div>
                                             <div class="col-md-6 col-12 learts-mb-30">
-                                                            <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
-                                                            <input type="text" id="bdPhone" name="user_phone" value="<?php echo $_SESSION['loggedInUserData']['phone'] ?>">
-                                                        </div>
+                                                <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
+                                                <input type="text" id="bdPhone" name="user_phone" value="<?php echo $_SESSION['loggedInUserData']['phone'] ?>">
+                                            </div>
                                             <div class="col-12 learts-mb-30 learts-mt-30">
                                                 <fieldset>
-                                                        
+
                                                     <legend>Password change</legend>
                                                     <div class="row learts-mb-n30">
 
                                                         <div class="col-12 learts-mb-30">
                                                             <label for="new-pwd">New password (leave blank to leave unchanged)</label>
-                                                            <input type="password" id="new-pwd" name="user_password" value="<?php echo $_SESSION['loggedInUserData']['password'] ?>">
+                                                            <input type="password" id="new-pwd" name="user_password" >
                                                         </div>
                                                         <div class="col-12 learts-mb-30">
                                                             <label for="confirm-pwd">Confirm new password</label>
-                                                            <input type="password" id="confirm-pwd" name="user_password" value="<?php echo $_SESSION['loggedInUserData']['password'] ?>">
+                                                            <input type="password" id="confirm-pwd" name="user_password">
                                                         </div>
                                                     </div>
                                                 </fieldset>
