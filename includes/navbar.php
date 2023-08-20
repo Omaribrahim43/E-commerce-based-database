@@ -47,9 +47,18 @@
                 <!-- Header Tools Start -->
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
+                        <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
                         <div class="header-login">
                             <a href="my-account.php"><i class="far fa-user"></i></a>
                         </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                         <div class="header-wishlist">
                             <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>

@@ -45,7 +45,7 @@
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label>Product image</label>
-                                <input type="file" name="image" class="form-control" required>
+                                <input type="file" name="image" accept="image/*" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -57,7 +57,7 @@
                         <div class="col-md-6">
                             <div class="mb-3 text-end">
                                 <br>
-                                <button type="submit" name="saveProduct" class="btn btn-primary">Save</button>
+                                <button type="submit" name="saveProduct" class="btn btn-secondary">Save</button>
                             </div>
                         </div>
                     </div>

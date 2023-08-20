@@ -82,7 +82,8 @@ if(isset($_POST['resetPass'])) {
 
             if(mysqli_num_rows($check_token_run) > 0) {
                 if($password == $confirm_password){
-                    $update_password = "UPDATE users SET user_password='$password' WHERE verify_token='$token' LIMIT 1";
+                    $pass = password_hash($password, PASSWORD_DEFAULT);
+                    $update_password = "UPDATE users SET user_password='$pass' WHERE verify_token='$token' LIMIT 1";
                     $update_password_run = mysqli_query($conn, $update_password);
 
                     if($update_password_run){

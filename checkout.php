@@ -46,10 +46,7 @@ include 'includes/navbar.php';
             
 
                 <?php
-                $sql = "SELECT u.*, o.order_address
-                FROM users u
-                LEFT JOIN orders o ON u.user_id = o.user_id
-                WHERE o.user_id = '$user_id'";
+                $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
                 $result = mysqli_query($conn, $sql);
                 ?>
 
@@ -328,12 +325,12 @@ include 'includes/navbar.php';
                     <?php 
                     
                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    if(isset($_POST['order_city'])){
-                    $order_city = $_POST['order_city'];
+                    if(isset($_POST['user_city'])){
+                    $user_city = $_POST['user_city'];
                     }
-                    if(isset($_POST['order_city'])){
+                    if(isset($_POST['user_city'])){
 
-                    $order_address = $_POST['order_address'];
+                    $user_address = $_POST['user_address'];
                     }
                     
                     $check_order_sql = "SELECT * FROM orders WHERE user_id = '$user_id'";
@@ -341,13 +338,13 @@ include 'includes/navbar.php';
                 
                     if (mysqli_num_rows($check_order_result) > 0) {
                        
-                        $update_order_sql = "UPDATE orders SET order_city = '$order_city', order_address = '$order_address' WHERE user_id = '$user_id'";
+                        $update_order_sql = "UPDATE users SET user_city = '$user_city', user_address = '$user_address' WHERE user_id = '$user_id'";
                         $update_order_result = mysqli_query($conn, $update_order_sql);
                     } else {
                         if($_SESSION['loggedInStatus'] == true){
                             $email = $_SESSION['loggedInUserData']['email'];
                             
-                            $insert_order_sql = "INSERT INTO orders (user_email, order_city, order_address) VALUES ('$email','$order_city', '$order_address') ON ";
+                            $insert_order_sql = "INSERT INTO users ( user_city, user_address) VALUES ('$user_city', '$user_address')";
                             $insert_order_result = mysqli_query($conn, $insert_order_sql);
                         }
                     }
@@ -358,7 +355,7 @@ include 'includes/navbar.php';
                     ?>
                     <div class="col-12 learts-mb-20">
                         <label for="bdDistrict">City <abbr class="required">*</abbr></label>
-                        <select id="bdDistrict" name="order_city" class="select2-basic">
+                        <select id="bdDistrict" name="user_city" class="select2-basic">
                             <option value="">Select an option…</option>
                             <option value="Ajloun">Ajloun</option>
                             <option value="Amman">Amman</option>
@@ -377,7 +374,7 @@ include 'includes/navbar.php';
                     
                     <div class="col-12 learts-mb-20">
                         <label for="bdAddress1">Shipping address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdAddress1"name="order_address" placeholder="House number and street name">
+                        <input type="text" id="bdAddress1"name="user_address" placeholder="House number and street name">
                     </div>
                     
                   
@@ -388,7 +385,8 @@ include 'includes/navbar.php';
                     </div>
                     <div class="col-md-6 col-12 learts-mb-30">
                         <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
-                        <p><?php echo $row["user_phone"];?></p>
+                        <input type="text" id="bdPhone" name="user_phone" value="<?php echo $_SESSION['loggedInUserData']['phone'] ?>">
+                        
                         
                     </div>
                     

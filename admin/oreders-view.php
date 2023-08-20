@@ -16,7 +16,7 @@
                     echo '<h5>'.$paramResult.'</h5>';
                     return false;
                 }
-                $order = getById('orders', chechParamId('order_id'), 'order_id');
+                $order = getByIdJoin('orders', 'users', chechParamId('order_id'), 'user_id');
                 if($order) {
                     if($order['status'] == 200) {
 
@@ -33,11 +33,11 @@
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td><?=$order['data']['email']?></td>
+                            <td><?=$order['data']['user_email']?></td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td><?=$order['data']['status']?></td>
+                            <td><?=$order['data']['order_status']?></td>
                         </tr>
                 </table>
                 <?php 

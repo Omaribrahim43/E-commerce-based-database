@@ -22,7 +22,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label>Category image</label>
-                                <input type="file" name="catImage" class="form-control" required>
+                                <input type="file" name="catImage" accept="image/*" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -34,7 +34,7 @@
                         <div class="col-md-4">
                             <div class="mb-3 text-end">
                                 <br>
-                                <button type="submit" name="saveCategory" class="btn btn-primary">Save</button>
+                                <button type="submit" name="saveCategory" class="btn btn-secondary">Save</button>
                             </div>
                         </div>
                     </div>

@@ -40,7 +40,7 @@
                                     <div class="mb-3">
                                         <label>Category image</label>
                                         <?php echo '<img class="mb-5" style="width:400px; border-radius:12px;" src="data:image/webp;base64,' . base64_encode($category['data']['category_image']) . '" />'; ?>
-                                        <input type="file" name="catImage" value="" class="form-control">
+                                        <input type="file" name="catImage" accept="image/*" value="" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -52,7 +52,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3 text-end">
                                         <br>
-                                        <button type="submit" name="updateCategory" class="btn btn-primary">Update</button>
+                                        <button type="submit" name="updateCategory" class="btn btn-secondary">Update</button>
                                     </div>
                                 </div>
                             </div>
