@@ -50,6 +50,9 @@ if(isset($_POST['loginBtn'])){
                         ];
                         // var_dump($_SESSION);
                         // exit;
+                        if(isset($_SESSION['nextPage'])) {
+                            redirect('checkout.php', '');
+                        }
                         redirect('index.php', 'Logged In Successfuly!');
                     }
                 } else {

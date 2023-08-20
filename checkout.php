@@ -377,22 +377,25 @@ include 'includes/navbar.php';
                         <label for="bdAddress1">Shipping address <abbr class="required">*</abbr></label>
                         <input type="text" id="bdAddress1"name="user_address" placeholder="House number and street name">
                     </div>
-                    
-                  
                     <div class="col-md-6 col-12 learts-mb-20">
                         <label for="bdEmail">Email address <abbr class="required">*</abbr></label>
                         <p><?php echo $row["user_email"];?></p>
-                        
                     </div>
                     <div class="col-md-6 col-12 learts-mb-30">
                         <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
                         <input type="text" id="bdPhone" name="user_phone" value="<?php echo $_SESSION['loggedInUserData']['phone'] ?>">
-                        
-                        
                     </div>
                     
                 </div>
-            
+            <?php
+            $sql = "SELECT products.product_name, cart.product_quantity, products.product_price FROM cart INNER JOIN products ON cart.product_id=products.product_id";
+            $sql_run = mysqli_query($conn, $sql);
+            $rows = array();
+            while ($row = mysqli_fetch_assoc($sql_run)) {
+                $rows[] = $row;
+            }
+
+            ?>
             <div class="section-title2 text-center">
                 <h2 class="title">Your order</h2>
             </div>
@@ -401,32 +404,19 @@ include 'includes/navbar.php';
                     <div class="order-review">
                         <table class="table">
                             <thead>   
+                                <?php foreach($rows as $item){?>
                                 <tr>
-                                    <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£100.00</span></td>
+                                    <td class="name"><?=$item['product_name']?>&nbsp; <strong class="quantity">×&nbsp;<?=$item['product_quantity']?></strong></td>
+                                    <td class="total"><span><?=$item['product_price']?></span></td>
                                 </tr>
-                                
-                                <tr>
-                                    <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£100.00</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="name">Pizza Plate Tray&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£22.00</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="name">Minimalist Ceramic Pot - Pearl river, Large&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£120.00</span></td>
-                                </tr>
+                                <?php
+                                } 
+                                ?>
                             </tbody>
                             <tfoot>
-                                <tr class="subtotal">
-                                    <th>Subtotal</th>
-                                    <td><span>£242.00</span></td>
-                                </tr>
                                 <tr class="total">
                                     <th>Total</th>
-                                    <td><strong><span><?php $totalPrice ?></span></strong></td>
+                                    <td><strong><span><?php echo $_SESSION['total'] ;?></span></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -472,7 +462,27 @@ include 'includes/navbar.php';
                         </div>
                         <div class="text-center">
                             <p class="payment-note">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                            <button class="btn btn-dark btn-outline-hover-dark">place order</button>
+                            <button data-toggle="modal" data-target="#exampleModal" class="btn btn-dark btn-outline-hover-dark">place order</button>
+                            
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

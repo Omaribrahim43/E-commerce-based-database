@@ -167,15 +167,15 @@ if (in_array($id, $existingProductIds)) {
                             </span></td>
                     </tr>
                     <tr class="total">
-                        <th>Total</th>
                         <?php
+
                         $discount = 0.2;
                         if (isset($_POST['coupon']) && $_POST['coupon'] == "group1") {
                             $total = $totalPrice - ($totalPrice * $discount);
                         } else {
                             $total = $totalPrice;
-                        } 
-                        ?>
+                        }
+                        $_SESSION['total'] = $total;  ?>
                         <td><strong><span class="amount">
                                     <?php echo $total ?>
                                 </span></strong></td>
