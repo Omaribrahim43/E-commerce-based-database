@@ -5,53 +5,11 @@ include 'includes/navbar.php';
 
 
 $id = $_GET['id']??0; 
+$range = $_GET['range']??0; 
 ?>
  
 
-    <!-- Mobile Header Section Start -->
-    <div class="mobile-header sticky-header bg-white section d-xl-none">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Header Logo Start -->
-                <div class="col">
-                    <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
-                    </div>
-                </div>
-                <!-- Header Logo End -->
-
-                <!-- Header Tools Start -->
-                <div class="col-auto">
-                    <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
-                        </div>
-                        <div class="header-search d-none d-sm-block">
-                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
-                        </div>
-                        <div class="header-wishlist d-none d-sm-block">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
-                        </div>
-                        <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                        <div class="mobile-menu-toggle">
-                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
-                                <svg viewBox="0 0 800 600">
-                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top"></path>
-                                    <path d="M300,320 L540,320" class="middle"></path>
-                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Header Tools End -->
-
-            </div>
-        </div>
-    </div>
+  
     <!-- OffCanvas Search Start -->
     <div id="offcanvas-search" class="offcanvas offcanvas-search">
         <div class="inner">
@@ -386,7 +344,7 @@ $id = $_GET['id']??0;
                     <div class="page-title">
                         <h1 class="title">Shop</h1>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="breadcrumb-item active">Products</li>
                         </ul>
                     </div>
@@ -465,12 +423,11 @@ $id = $_GET['id']??0;
                     <div class="col learts-mb-30">
                         <h3 class="widget-title product-filter-widget-title">Price filter</h3>
                         <ul class="widget-list product-filter-widget customScroll">
-                            <li> <a href="#">All </a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>0</span>JOD - <span class="amount"><span class="cur-symbol"></span>50</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>50</span>JOD - <span class="amount"><span class="cur-symbol"></span>70</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>70</span>JOD - <span class="amount"><span class="cur-symbol"></span>100</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>100</span>JOD - <span class="amount"><span class="cur-symbol"></span>150</span>JOD</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol"></span>200</span>JOD +</a></li>
+                            <li> <a href="shop.php?id=<?php echo 0;?>">All </a></li>
+                            <li> <a href="shop.php?range=<?php echo 1?>"><span class="amount"><span class="cur-symbol"></span>5</span>JD - <span class="amount"><span class="cur-symbol"></span>30</span>JD</a></li>
+                            <li> <a href="shop.php?range=<?php echo 2?>"><span class="amount"><span class="cur-symbol"></span>31</span>JD - <span class="amount"><span class="cur-symbol"></span>70</span>JD</a></li>
+                            <li> <a href="shop.php?range=<?php echo 3?>"><span class="amount"><span class="cur-symbol"></span>71</span>JD - <span class="amount"><span class="cur-symbol"></span>100</span>JD</a></li>
+
                         </ul>
                     </div>
                     <!-- Price filter End -->
@@ -504,13 +461,45 @@ $id = $_GET['id']??0;
                     
                     <?php
                      
-                     $sql;
 
-                     if($id == 0){
-                        $sql = "SELECT * FROM products";
-                     }else{
-                     $sql = "SELECT * FROM products WHERE category_id='$id'";
-                     }
+                    //  switch ($favcolor) {
+                    //     case "red":
+                    //       echo "Your favorite color is red!";
+                    //       break;
+                    //     case "blue":
+                    //       echo "Your favorite color is blue!";
+                    //       break;
+                    //     case "green":
+                    //       echo "Your favorite color is green!";
+                    //       break;
+                    //     default:
+                    //       echo "Your favorite color is neither red, blue, nor green!";
+                    //   }
+
+                     $sql;
+                   
+
+
+                    
+                        if($id == 0 && $range == 0 ){
+                            $sql = "SELECT * FROM products";
+    
+    
+                         }else if($id == 0 && $range == 1 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 5 AND product_price <= 30";
+                         }else if($id == 0 && $range == 2 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 31 AND product_price <= 70";
+                         }else if($id == 0 && $range == 3 ){
+                            $sql ="SELECT * FROM products WHERE product_price >= 71 AND product_price <= 100";
+                         }else{
+                            $sql = "SELECT * FROM products WHERE category_id='$id'";
+                         }
+
+                     
+                      
+
+
+                    
                     
                   
                     $result = mysqli_query($conn, $sql);
@@ -555,7 +544,7 @@ $id = $_GET['id']??0;
                                 
 
                                     </a>
-                                    <a href="wishlist.php" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                    <a href="wishlist-upd-shop.php?product_id=<?php echo $product_id ?>" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                 </div>
                                 <div class="product-info">
                                     <h6 class="title"><a href="product-details.php"><?php echo $product_name  ;?></a></h6>
@@ -567,7 +556,7 @@ $id = $_GET['id']??0;
                                     </span>
                                     <div class="product-buttons">
                                         <!-- <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a> -->
-                                        <a href="" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="shopping-cart.php?product_id=<?php echo $product_id ?>" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
                                         <!-- <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a> -->
                                     </div>
                                 </div>
