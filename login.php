@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = 'Login & Register';
+$pageTitle = 'Login';
 include 'includes/head-vars.php';
 
 if(isset($_SESSION['loggedInStatus'])) {
@@ -7,18 +7,16 @@ if(isset($_SESSION['loggedInStatus'])) {
 }
 ?>
     <div class="offcanvas-overlay"></div>
-
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp">
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <div class="page-title">
-                        <h1 class="title">Login & Register</h1>
+                        <h1 class="title">Login</h1>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active">Login & Register</li>
+                            <li class="breadcrumb-item active">Login</li>
                         </ul>
                     </div>
 
@@ -28,12 +26,12 @@ if(isset($_SESSION['loggedInStatus'])) {
     </div>
     <!-- Page Title/Header End -->
 
-    <!-- Login & Register Section Start -->
+    <!-- Login Section Start -->
     <div class="section section-padding">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-6">
-                    <div class="user-login-register bg-light">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="user-login-register bg-light rounded-4">
                         <div class="login-register-title">
                             <h2 class="title">Login</h2>
                             <p class="desc">Great to have you back!</p>
@@ -60,7 +58,10 @@ if(isset($_SESSION['loggedInStatus'])) {
                                                 </div>
                                             </div>
                                             <div class="col-12 learts-mb-20">
-                                                <a href="lost-password.php" class="fw-400">Lost your password?</a>
+                                                <a href="resend-verification.php" class="fw-400">Didnt recieve verification email?</a>
+                                            </div>
+                                            <div class="col-12 learts-mb-20">
+                                                <a href="reset-password.php" class="fw-400">Lost your password?</a>
                                             </div>
                                         </div>
                                     </div>

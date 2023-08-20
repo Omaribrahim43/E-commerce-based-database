@@ -95,4 +95,5 @@ function logoutSession() {
     unset($_SESSION['loggedInUserRole']);
     unset($_SESSION['loggedInUserData']);
 }
+
 ?>

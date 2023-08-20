@@ -129,8 +129,8 @@ include 'includes/head-vars.php';
           if(!isset($_SESSION['loggedInStatus'])) {
           ?>
           <div class="header-call">
-            <a href="login-register.php" class="btn btn">Login</a>
-            <a href="login-register.php" class="btn btn-primary">Signup</a>
+            <a href="login.php" class="btn btn">Login</a>
+            <a href="register.php" class="btn btn-primary">Signup</a>
           </div>
           <?php 
           } else {

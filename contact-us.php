@@ -85,14 +85,94 @@ Amman, Jordan</span>
             <div class="row">
                 <div class="col-lg-8 col-12 mx-auto">
                     <div class="contact-form">
-                        <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+
+
+
+                    <?php 
+
+include "mail.php";
+//send_mail($recipient,$subject,$message);
+
+$error = "";
+
+if(count($_POST) > 0)
+{
+
+    //something was posted
+    $recipient = "sawalhhamalik@gmail.com";
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    if(empty($recipient)){
+        $error .= "recipient can not be empty<br>";
+    }
+
+    if(empty($subject)){
+        $error .= "subject can not be empty<br>";
+    }
+
+    if(empty($message)){
+        $error .= "message can not be empty<br>";
+    }
+    if(empty($name)){
+        $error .= "message can not be empty<br>";
+    }
+    
+    if($error == "")
+    {
+        if(send_mail($recipient,$subject,$message,$name))
+        {
+            $error .= "Message sent!<br>";
+        }else
+        {
+            $error .= "Message NOT sent!<br>";
+        }
+    }
+}
+
+?>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" class="border p-4 shadow rounded">
+                <h3 class="mb-3">Send Email</h3>
+                <div class="mb-3">
+                    <?php if($error != ""):?>
+                        <span class="text-danger"><?=$error?></span>
+                    <?php endif;?>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="email" class="form-control" placeholder="Receiver Email" autofocus>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+                        <!-- <form action="assets/php/contact-mail.php" id="contact-form" method="post">
                             <div class="row learts-mb-n30">
                                 <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
                                 <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
                                 <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
                                 <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark">Submit</button></div>
                             </div>
-                        </form>
+                        </form> -->
                         <p class="form-messege"></p>
                     </div>
                 </div>

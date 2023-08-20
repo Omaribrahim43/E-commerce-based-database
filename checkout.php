@@ -2,9 +2,10 @@
 $pageTitle = 'Checkout';
 include 'includes/head-vars.php';
 include 'includes/navbar.php';
+$user_id = $_SESSION['user_id'];
 ?>
     <div class="offcanvas-overlay"></div>
-
+    
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="https://htmldemo.net/learts/learts/assets/images/bg/page-title-1.webp">
         <div class="container">
@@ -25,38 +26,39 @@ include 'includes/navbar.php';
     </div>
     <!-- Page Title/Header End -->
 
+             
+
+
+
     <!-- Checkout Section Start -->
-    <div class="section section-padding">
+        <div class="section section-padding">
         <div class="container">
-            <div class="checkout-coupon">
-                <p class="coupon-toggle">Have a coupon? <a href="#checkout-coupon-form" data-bs-toggle="collapse">Click here to enter your code</a></p>
-                <div id="checkout-coupon-form" class="collapse">
-                    <div class="coupon-form">
-                        <p>If you have a coupon code, please apply it below.</p>
-                        <form action="#" class="learts-mb-n10">
-                            <input class="learts-mb-10" type="text" placeholder="Coupon code">
-                            <button class="btn btn-dark btn-outline-hover-dark learts-mb-10">apply coupon</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
+
+                <?php
+                $sql = "SELECT u.*, o.order_address
+                FROM users u
+                LEFT JOIN orders o ON u.user_id = o.user_id
+                WHERE o.user_id = '$user_id'";
+                $result = mysqli_query($conn, $sql);
+                ?>
+
             <div class="section-title2">
                 <h2 class="title">Billing details</h2>
             </div>
-            <form action="#" class="checkout-form learts-mb-50">
+            <form action="" class="checkout-form learts-mb-50" method="post">
                 <div class="row">
                     <div class="col-md-6 col-12 learts-mb-20">
-                        <label for="bdFirstName">FIrst Name <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdFirstName">
+                        <?php 
+                        $row = mysqli_fetch_array($result);
+                        ?>
+                        <label for="bdFirstName">User Name <abbr class="required">*</abbr></label>
+                        <p><?php echo $row["username"];?></p>
+                        
+                        
+                            <?php ?>
                     </div>
-                    <div class="col-md-6 col-12 learts-mb-20">
-                        <label for="bdLastName">Last Name <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdLastName">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdCompanyName">Company name (optional)</label>
-                        <input type="text" id="bdCompanyName">
-                    </div>
+                    
                     <div class="col-12 learts-mb-20">
                         <label for="bdCountry">Country <abbr class="required">*</abbr></label>
                         <select id="bdCountry" class="select2-basic">
@@ -79,7 +81,7 @@ include 'includes/navbar.php';
                             <option value="AZ">Azerbaijan</option>
                             <option value="BS">Bahamas</option>
                             <option value="BH">Bahrain</option>
-                            <option value="BD" selected>Bangladesh</option>
+                            <option value="BD">Bangladesh</option>
                             <option value="BB">Barbados</option>
                             <option value="BY">Belarus</option>
                             <option value="PW">Belau</option>
@@ -174,7 +176,7 @@ include 'includes/navbar.php';
                             <option value="JM">Jamaica</option>
                             <option value="JP">Japan</option>
                             <option value="JE">Jersey</option>
-                            <option value="JO">Jordan</option>
+                            <option value="JO" selected>Jordan</option>
                             <option value="KZ">Kazakhstan</option>
                             <option value="KE">Kenya</option>
                             <option value="KI">Kiribati</option>
@@ -312,112 +314,76 @@ include 'includes/navbar.php';
                             <option value="ZW">Zimbabwe</option>
                         </select>
                     </div>
+                    
+                    <?php 
+                    
+                   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    if(isset($_POST['order_city'])){
+                    $order_city = $_POST['order_city'];
+                    }
+                    if(isset($_POST['order_city'])){
+
+                    $order_address = $_POST['order_address'];
+                    }
+                    
+                    $check_order_sql = "SELECT * FROM orders WHERE user_id = '$user_id'";
+                    $check_order_result = mysqli_query($conn, $check_order_sql);
+                
+                    if (mysqli_num_rows($check_order_result) > 0) {
+                       
+                        $update_order_sql = "UPDATE orders SET order_city = '$order_city', order_address = '$order_address' WHERE user_id = '$user_id'";
+                        $update_order_result = mysqli_query($conn, $update_order_sql);
+                    } else {
+                        if($_SESSION['loggedInStatus'] == true){
+                            $email = $_SESSION['loggedInUserData']['email'];
+                            
+                            $insert_order_sql = "INSERT INTO orders (user_email, order_city, order_address) VALUES ('$email','$order_city', '$order_address') ON ";
+                            $insert_order_result = mysqli_query($conn, $insert_order_sql);
+                        }
+                    }
+                    
+                    }
+                 
+
+                    ?>
                     <div class="col-12 learts-mb-20">
-                        <label for="bdAddress1">Street address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdAddress1" placeholder="House number and street name">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
-                        <input type="text" id="bdAddress2" placeholder="Apartment, suite, unit etc. (optional) ">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdTownOrCity">Town / City <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdTownOrCity">
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdDistrict">District <abbr class="required">*</abbr></label>
-                        <select id="bdDistrict" class="select2-basic">
+                        <label for="bdDistrict">City <abbr class="required">*</abbr></label>
+                        <select id="bdDistrict" name="order_city" class="select2-basic">
                             <option value="">Select an option…</option>
-                            <option value="BD-05">Bagerhat</option>
-                            <option value="BD-01">Bandarban</option>
-                            <option value="BD-02">Barguna</option>
-                            <option value="BD-06">Barishal</option>
-                            <option value="BD-07">Bhola</option>
-                            <option value="BD-03">Bogura</option>
-                            <option value="BD-04">Brahmanbaria</option>
-                            <option value="BD-09">Chandpur</option>
-                            <option value="BD-10">Chattogram</option>
-                            <option value="BD-12">Chuadanga</option>
-                            <option value="BD-11">Cox's Bazar</option>
-                            <option value="BD-08">Cumilla</option>
-                            <option value="BD-13">Dhaka</option>
-                            <option value="BD-14">Dinajpur</option>
-                            <option value="BD-15">Faridpur </option>
-                            <option value="BD-16">Feni</option>
-                            <option value="BD-19">Gaibandha</option>
-                            <option value="BD-18">Gazipur</option>
-                            <option value="BD-17">Gopalganj</option>
-                            <option value="BD-20">Habiganj</option>
-                            <option value="BD-21">Jamalpur</option>
-                            <option value="BD-22">Jashore</option>
-                            <option value="BD-25">Jhalokati</option>
-                            <option value="BD-23">Jhenaidah</option>
-                            <option value="BD-24">Joypurhat</option>
-                            <option value="BD-29">Khagrachhari</option>
-                            <option value="BD-27">Khulna</option>
-                            <option value="BD-26">Kishoreganj</option>
-                            <option value="BD-28">Kurigram</option>
-                            <option value="BD-30">Kushtia</option>
-                            <option value="BD-31">Lakshmipur</option>
-                            <option value="BD-32">Lalmonirhat</option>
-                            <option value="BD-36">Madaripur</option>
-                            <option value="BD-37">Magura</option>
-                            <option value="BD-33">Manikganj </option>
-                            <option value="BD-39">Meherpur</option>
-                            <option value="BD-38">Moulvibazar</option>
-                            <option value="BD-35">Munshiganj</option>
-                            <option value="BD-34">Mymensingh</option>
-                            <option value="BD-48">Naogaon</option>
-                            <option value="BD-43">Narail</option>
-                            <option value="BD-40">Narayanganj</option>
-                            <option value="BD-42">Narsingdi</option>
-                            <option value="BD-44">Natore</option>
-                            <option value="BD-45">Nawabganj</option>
-                            <option value="BD-41">Netrakona</option>
-                            <option value="BD-46">Nilphamari</option>
-                            <option value="BD-47">Noakhali</option>
-                            <option value="BD-49">Pabna</option>
-                            <option value="BD-52">Panchagarh</option>
-                            <option value="BD-51">Patuakhali</option>
-                            <option value="BD-50">Pirojpur</option>
-                            <option value="BD-53">Rajbari</option>
-                            <option value="BD-54">Rajshahi</option>
-                            <option value="BD-56">Rangamati</option>
-                            <option value="BD-55">Rangpur</option>
-                            <option value="BD-58">Satkhira</option>
-                            <option value="BD-62">Shariatpur</option>
-                            <option value="BD-57">Sherpur</option>
-                            <option value="BD-59">Sirajganj</option>
-                            <option value="BD-61">Sunamganj</option>
-                            <option value="BD-60">Sylhet</option>
-                            <option value="BD-63">Tangail</option>
-                            <option value="BD-64">Thakurgaon</option>
+                            <option value="Ajloun">Ajloun</option>
+                            <option value="Amman">Amman</option>
+                            <option value="Aqaba">Aqaba</option>
+                            <option value="Balqa">Balqa</option>
+                            <option value="Irbid">Irbid</option>
+                            <option value="Jerash">Jerash</option>
+                            <option value="Karak">Karak</option>
+                            <option value="Ma'an">Ma'an</option>
+                            <option value="Madaba">Madaba</option>
+                            <option value="Mafraq">Mafraq</option>
+                            <option value="Tafilah">Tafilah</option>
+                            <option value="Zarqa">Zarqa</option>  
                         </select>
                     </div>
+                    
                     <div class="col-12 learts-mb-20">
-                        <label for="bdPostcode">Postcode / ZIP (optional)</label>
-                        <input type="text" id="bdPostcode">
+                        <label for="bdAddress1">Shipping address <abbr class="required">*</abbr></label>
+                        <input type="text" id="bdAddress1"name="order_address" placeholder="House number and street name">
                     </div>
+                    
+                  
                     <div class="col-md-6 col-12 learts-mb-20">
                         <label for="bdEmail">Email address <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdEmail">
+                        <p><?php echo $row["user_email"];?></p>
+                        
                     </div>
                     <div class="col-md-6 col-12 learts-mb-30">
                         <label for="bdPhone">Phone <abbr class="required">*</abbr></label>
-                        <input type="text" id="bdPhone">
+                        <p><?php echo $row["user_phone"];?></p>
+                        
                     </div>
-                    <div class="col-12 learts-mb-40">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Create an account?</label>
-                        </div>
-                    </div>
-                    <div class="col-12 learts-mb-20">
-                        <label for="bdOrderNote">Order Notes (optional)</label>
-                        <textarea id="bdOrderNote" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </div>
+                    
                 </div>
-            </form>
+            
             <div class="section-title2 text-center">
                 <h2 class="title">Your order</h2>
             </div>
@@ -452,7 +418,7 @@ include 'includes/navbar.php';
                                 </tr>
                                 <tr class="total">
                                     <th>Total</th>
-                                    <td><strong><span>£242.00</span></strong></td>
+                                    <td><strong><span><?php $totalPrice ?></span></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -489,6 +455,8 @@ include 'includes/navbar.php';
                                     <div id="payPalPayments" class="collapse" data-bs-parent="#paymentMethod">
                                         <div class="card-body">
                                             <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                                            <div id="paypal-button-container"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -500,10 +468,13 @@ include 'includes/navbar.php';
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
     <!-- Checkout Section End -->
+    
+
 <?php
 include 'includes/footer.php';
 include 'includes/scripts.php';

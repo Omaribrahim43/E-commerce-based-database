@@ -1,6 +1,6 @@
 <?php
 
-require 'config/function.php';
+require_once 'config/function.php';
 
 if(isset($_POST['loginBtn'])){
     $emailInput = validate($_POST['email']);
@@ -16,39 +16,53 @@ if(isset($_POST['loginBtn'])){
         if($result) {
             if(mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                if($row['role'] == 'admin') {
-                    if($row['is_ban'] == 1) {
-                        redirect('login-register.php', 'Your Account has been banned. Please contact the admin.');
-                    }
+                if($row['verify_status'] == '1'){
+                    if($row['role'] == 'admin') {
+                        if($row['is_ban'] == 1) {
+                            redirect('login.php', 'Your Account has been banned. Please contact the admin.');
+                        }
 
                     $_SESSION['loggedInStatus'] = true;
                     $_SESSION['loggedInUserRole'] = $row['role'];
                     $_SESSION['loggedInUserData'] = [
+                        'id' => $row['user_id'],
                         'name' => $row['username'],
-                        'email' => $row['user_email']
+                        'email' => $row['user_email'],
+                        'password' => $row['user_password'],
+                        'phone' => $row['user_phone'],
                     ];
-
+                    $_SESSION['user_id'] = $row['user_id']; // to store the user id in the session
+                    // var_dump($_SESSION);
+                    // exit;
                     redirect('admin/index.php', 'Invalid Email Address or Password.');
+
                 } else {
                     if($row['is_ban'] == 1) {
+                        
                         redirect('login-register.php', 'Your Account has been banned. Please contact the admin.');
+
                     }
-                    
+                    $_SESSION['user_id'] = $row['user_id'];// to store the user id in the session
                     $_SESSION['loggedInStatus'] = true;
                     $_SESSION['loggedInUserRole'] = $row['role'];
                     $_SESSION['loggedInUserData'] = [
+                        'id' => $row['user_id'],
                         'name' => $row['username'],
-                        'email' => $row['user_email']
+                        'email' => $row['user_email'],
+                        'password' => $row['user_password'],
+                        'phone' => $row['user_phone'],
                     ];
-
+                    // var_dump($_SESSION);
+                    // exit;
                     redirect('index.php', 'Logged In Successfuly!');
                 }
             } else {
                 redirect('login-register.php', 'Invalid Email Address or Password.');
             }
         } else {
-            redirect('login-register.php', 'Somthing Went Wrong');
+            redirect('login.php', 'Somthing Went Wrong');
         }
     }
+}
 }
 ?>
