@@ -399,8 +399,8 @@ include_once 'includes/navbar.php';
                     <div class="product-info">
                         <h6 class="title"><a href="product-details.php">Boho Beard Mug</a></h6>
                         <span class="price">
-                            <span class="old">$45.00</span>
-                            <span class="new">$39.00</span>
+                            <span class="old">30 JD</span>
+                            <span class="new">26.1 JD</span>
                         </span>
                         <div class="product-buttons">
                             <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top"
@@ -430,7 +430,7 @@ include_once 'includes/navbar.php';
                     <div class="product-info">
                         <h6 class="title"><a href="product-details.php">Motorized Tricycle</a></h6>
                         <span class="price">
-                            $35.00
+                            35 JD
                         </span>
                         <div class="product-buttons">
                             <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top"
@@ -463,7 +463,7 @@ include_once 'includes/navbar.php';
                     <div class="product-info">
                         <h6 class="title"><a href="product-details.php">Walnut Cutting Board</a></h6>
                         <span class="price">
-                            $100.00
+                            30 JD
                         </span>
                         <div class="product-buttons">
                             <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top"
@@ -496,8 +496,8 @@ include_once 'includes/navbar.php';
                     <div class="product-info">
                         <h6 class="title"><a href="product-details.php">Pizza Plate Tray</a></h6>
                         <span class="price">
-                            <span class="old">$30.00</span>
-                            <span class="new">$22.00</span>
+                            <span class="old">25 JD</span>
+                            <span class="new">18.25 JD</span>
                         </span>
                         <div class="product-buttons">
                             <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top"
