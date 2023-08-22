@@ -316,10 +316,10 @@ $range = $_GET['range']??0;
                         <a href="my-account.html"><i class="far fa-user"></i></a>
                     </div>
                     <div class="header-wishlist">
-                        <a href="wishlist.html"><span>3</span><i class="far fa-heart"></i></a>
+                        <a href="wishlist.html"><span></span><i class="far fa-heart"></i></a>
                     </div>
                     <div class="header-cart">
-                        <a href="shopping-cart.html"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                        <a href="shopping-cart.html"><span class="cart-count"></span><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
             </div>

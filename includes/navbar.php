@@ -123,9 +123,18 @@
                 <!-- Header Tools Start -->
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
+                        <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                        <div class="header-login">
                             <a href="my-account.php"><i class="far fa-user"></i></a>
                         </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                         <div class="header-search d-none d-sm-block d-xl-none">
                             <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
                         </div>
@@ -169,9 +178,18 @@
                 <!-- Header Tools Start -->
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
+                        <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                        <div class="header-login">
                             <a href="my-account.php"><i class="far fa-user"></i></a>
                         </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                         <div class="header-search d-none d-sm-block">
                             <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
                         </div>
@@ -215,9 +233,18 @@
                 <!-- Header Tools Start -->
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
-                        <div class="header-login d-none d-sm-block">
+                        <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                        <div class="header-login">
                             <a href="my-account.php"><i class="far fa-user"></i></a>
                         </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                         <div class="header-search d-none d-sm-block">
                             <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
                         </div>
@@ -385,9 +412,18 @@
             </div>
             <div class="offcanvas-buttons">
                 <div class="header-tools">
-                    <div class="header-login">
-                        <a href="my-account.php"><i class="far fa-user"></i></a>
-                    </div>
+                    <?php 
+                        if(isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true){ ?>
+                        <div class="header-login">
+                            <a href="my-account.php"><i class="far fa-user"></i></a>
+                        </div>
+                        <?php 
+                        }else { ?>
+                        <div class="header-login">
+                        </div>
+                        <?php
+                        }
+                        ?>
                     <div class="header-wishlist">
                         <a href="wishlist.php"><span>3</span><i class="far fa-heart"></i></a>
                     </div>

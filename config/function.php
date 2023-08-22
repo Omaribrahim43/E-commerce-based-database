@@ -154,4 +154,17 @@ function calculateTable($table_name) {
         return 'Somthing went wrong';
     }
 }
+function calculateTableForUser($table_name, $id)
+{
+    global $conn;
+    $query = "SELECT COUNT('*') FROM $table_name WHERE user_id=$id";
+    $queryRun = mysqli_query($conn, $query);
+
+    if ($queryRun) {
+        $row = mysqli_fetch_array($queryRun);
+        return $row[0];
+    } else {
+        return 'Somthing went wrong';
+    }
+}
 ?>
