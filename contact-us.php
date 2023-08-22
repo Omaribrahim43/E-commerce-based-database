@@ -50,6 +50,11 @@ Amman, Jordan</span>
                         <span class="info"><i class="icon fas fa-phone-alt"></i> Mobile: (+962) – 777 - 2121 <br> Hotline: 0800 – 2222</span>
                         <span class="info"><i class="icon far fa-envelope"></i> Mail: <a href="#">contact@leartsstore.com</a></span>
                     </div>
+                    <div class="map_section clearfix">
+    <div id="mapBox" data-lat="31.9556" data-lon="35.9286" data-zoom="15" data-info="Rainbow Street, Rabbath Ammon" data-mlat="31.9556" data-mlon="35.9286">
+    </div>
+</div>
+
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
