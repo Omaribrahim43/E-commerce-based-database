@@ -125,7 +125,7 @@ include 'includes/head-vars.php';
             ?>
             <div class="header-cart">
               <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                  <?php if (count($_SESSION['cart']) > 0) {
+                  <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                     echo count($_SESSION['cart']);
                   } ?>
                 </span><i class="fas fa-shopping-cart"></i>
@@ -159,19 +159,19 @@ include 'includes/head-vars.php';
         </ul>
       </nav>
       <?php
-      if (!isset($_SESSION['loggedInStatus'])) {
-        ?>
-        <div class="header-call">
-          <a href="login.php" class="btn btn">Login</a>
-          <a href="register.php" class="btn btn-primary">Signup</a>
-        </div>
-        <?php
-      } else {
+      if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
         ?>
         <div class="header-call">
           <h3 style="font-size:24px">Welcome
             <?= $_SESSION['loggedInUserData']['name'] ?>
           </h3>
+        </div>
+        <?php
+      } else {
+        ?>
+        <div class="header-call">
+          <a href="login.php" class="btn btn">Login</a>
+          <a href="register.php" class="btn btn-primary">Signup</a>
         </div>
         <?php
       }
@@ -225,8 +225,6 @@ include 'includes/head-vars.php';
             </div>
             <?php
           } else { ?>
-            <div class="header-login">
-            </div>
             <?php
           }
           ?>
@@ -259,7 +257,7 @@ include 'includes/head-vars.php';
             ?>
             <div class="header-cart">
               <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                  <?php if (count($_SESSION['cart']) > 0) {
+                  <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                     echo count($_SESSION['cart']);
                   } ?>
                 </span><i class="fas fa-shopping-cart"></i>
@@ -296,8 +294,7 @@ include 'includes/head-vars.php';
             </div>
             <?php
           } else { ?>
-            <div class="header-login">
-            </div>
+
             <?php
           }
           ?>
@@ -335,7 +332,7 @@ include 'includes/head-vars.php';
             ?>
             <div class="header-cart">
               <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                  <?php if (count($_SESSION['cart']) > 0) {
+                  <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                     echo count($_SESSION['cart']);
                   } ?>
                 </span><i class="fas fa-shopping-cart"></i>

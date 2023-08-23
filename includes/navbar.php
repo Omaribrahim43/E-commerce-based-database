@@ -88,7 +88,7 @@
                         ?>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                                    <?php if (count($_SESSION['cart']) > 0) {
+                                    <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                         echo count($_SESSION['cart']);
                                     } ?>
                                 </span><i class="fas fa-shopping-cart"></i>
@@ -195,7 +195,7 @@
                         ?>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                                    <?php if (count($_SESSION['cart']) > 0) {
+                                    <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                         echo count($_SESSION['cart']);
                                     } ?>
                                 </span><i class="fas fa-shopping-cart"></i>
@@ -274,7 +274,7 @@
                         ?>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                                    <?php if (count($_SESSION['cart']) > 0) {
+                                    <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                         echo count($_SESSION['cart']);
                                     } ?>
                                 </span><i class="fas fa-shopping-cart"></i>
@@ -367,7 +367,7 @@
                         ?>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
-                                    <?php if (count($_SESSION['cart']) > 0) {
+                                    <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                         echo count($_SESSION['cart']);
                                     } ?>
                                 </span><i class="fas fa-shopping-cart"></i>
