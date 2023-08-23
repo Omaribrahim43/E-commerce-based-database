@@ -21,7 +21,7 @@ function send_mail($recipient, $subject, $message, $name)
     $mail->Port       = 587;
     $mail->Host       = "smtp.gmail.com";
     $mail->Username   = "maleksawalha1996@gmail.com"; // website email
-    $mail->Password   = "tbhjfcxgtyrqjcwt";
+    $mail->Password   = "jgdhpfosaedvkfqt";
 
     $mail->IsHTML(true);
     $mail->AddAddress("sawalhhamalik@gmail.com", "admin"); // admin email

@@ -10,7 +10,6 @@
                 </h4>
             </div>
             <div class="card-body">
-
                 <?= alertMessage(); ?>
                 <div class="table-responsive">
                     <table class="table table-borderd table-striped align-middle text-center">

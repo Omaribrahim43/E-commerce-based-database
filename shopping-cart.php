@@ -4,7 +4,7 @@ include 'includes/head-vars.php';
 include 'includes/navbar.php';
 
 // session_start();
-$id = $_GET['product_id']??0;
+$id = $_GET['product_id'] ?? 0;
 $qua = 1;
 
 if (!isset($_SESSION['cart'])) {
@@ -75,7 +75,7 @@ if (in_array($id, $existingProductIds)) {
                     foreach ($_SESSION['cart'] as $products) {
 
                         $id = $products["productid"];
-                       
+
 
                         $sql = "SELECT * FROM products WHERE product_id='$id'";
 
@@ -110,35 +110,37 @@ if (in_array($id, $existingProductIds)) {
 
                             ?>
 
-                    <tr>
-                        <td class="thumbnail"><a href="product-details.php">
-                                <?php echo '<img src="data:image/webp;base64,' .
+                            <tr>
+                                <td class="thumbnail"><a href="product-details.php">
+                                        <?php echo '<img src="data:image/webp;base64,' .
                                             base64_encode($product_image) . '" alt="product image" />'; ?>
-                            </a></td>
-                        <td class="name"> <a href="product-details.php">
-                                <?php echo $product_name ?>
-                            </a></td>
-                        <td class="price"><span>
-                                <?php echo $product_price ?>JD
-                            </span></td>
-                        <td class="price"><span>
-                                <?php echo $PriceAfterDiscount ?>JD
-                            </span></td>
-                        <td class="quantity">
+                                    </a></td>
+                                <td class="name"> <a href="product-details.php">
+                                        <?php echo $product_name ?>
+                                    </a></td>
+                                <td class="price"><span>
+                                        <?php echo $product_price ?>JD
+                                    </span></td>
+                                <td class="price"><span>
+                                        <?php echo $PriceAfterDiscount ?>JD
+                                    </span></td>
+                                <td class="quantity">
 
-                            <div class="product-quantity">
-                                <span class="qty-btn minus"><a href="load.php?minusid=<?php echo $id ?>"><i class="ti-minus"></i></a></span>
-                                <input type="text" class="input-qty" name="quantity" value="<?php echo $quan ?>">
-                                <span class="qty-btn plus"><a href="load.php?plusid=<?php echo $id ?>"><i class="ti-plus"></i></a></span>
-                            </div>
-                        </td>
-                        <td class="subtotal"><span>
-                                <?php echo $totalSingleProduct ?>JD
-                            </span></td>
-                        <td class="remove"><a href="delete_cart.php?delid=<?php echo $id ?>" class="btn">×</a></td>
-                    </tr>
+                                    <div class="product-quantity">
+                                        <span class="qty-btn minus"><a href="load.php?minusid=<?php echo $id ?>"><i
+                                                    class="ti-minus"></i></a></span>
+                                        <input type="text" class="input-qty" name="quantity" value="<?php echo $quan ?>">
+                                        <span class="qty-btn plus"><a href="load.php?plusid=<?php echo $id ?>"><i
+                                                    class="ti-plus"></i></a></span>
+                                    </div>
+                                </td>
+                                <td class="subtotal"><span>
+                                        <?php echo $totalSingleProduct ?>JD
+                                    </span></td>
+                                <td class="remove"><a href="delete_cart.php?delid=<?php echo $id ?>" class="btn">×</a></td>
+                            </tr>
 
-                    <?php }
+                        <?php }
                     } ?>
 
 
@@ -170,15 +172,24 @@ if (in_array($id, $existingProductIds)) {
                         <?php
 
                         $discount = 0.2;
+                        $mess = '';
                         if (isset($_POST['coupon']) && $_POST['coupon'] == "group1") {
                             $total = $totalPrice - ($totalPrice * $discount);
+                            $mess = 'Coupon applied successfully!';
                         } else {
                             $total = $totalPrice;
                         }
-                        $_SESSION['total'] = $total;  ?>
-                        <td><strong><span class="amount">
+                        $_SESSION['total'] = $total; ?>
+                        <h5 class="text-success">
+                            <?= $mess ?>
+                        </h5>
+                        <th>total</th>
+                        <td>
+                            <strong><span class="amount">
                                     <?php echo $total ?>
-                                </span></strong></td>
+                                    JD
+                                </span></strong>
+                        </td>
                     </tr>
                 </tbody>
             </table>

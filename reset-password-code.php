@@ -61,10 +61,10 @@ if(isset($_POST['reset'])) {
             send_password_reset($get_name, $get_email, $token);
             redirect('reset-password.php', 'Reset Password Email has been sent.!');
         } else {
-            redirect('reset-password.php', 'Somthing Went Wronge. #1');
+            redirect('reset-password.php', 'Somthing Went Wronge. #1', 'red');
         }
     } else {
-        redirect('reset-password.php', 'No Such Email Found!');
+        redirect('reset-password.php', 'No Such Email Found!', 'red');
     }
 }
 
@@ -89,19 +89,19 @@ if(isset($_POST['resetPass'])) {
                     if($update_password_run){
                         redirect("login.php", "New Password Updated Successfully!");
                     } else {
-                        redirect("change-password.php?token=$token&email=$email", "Didn't update your password somthing went wrong!");
+                        redirect("change-password.php?token=$token&email=$email", "Didn't update your password somthing went wrong!", 'red');
                     }
                 } else {
-                    redirect("change-password.php?token=$token&email=$email", 'Passwords does NOT Match!');
+                    redirect("change-password.php?token=$token&email=$email", 'Passwords does NOT Match!', 'red');
                 }
             } else {
-                redirect("change-password.php?token=$token&email=$email", 'Invalid Token!');
+                redirect("change-password.php?token=$token&email=$email", 'Invalid Token!', 'red');
             }
         } else {
-            redirect("change-password.php?token=$token&email=$email", 'Please fill all data!');
+            redirect("change-password.php?token=$token&email=$email", 'Please fill all data!', 'red');
         }
     } else {
-        redirect('change-password.php', 'No Token available!');
+        redirect('change-password.php', 'No Token available!', 'red');
     }
 }
 ?>

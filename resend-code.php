@@ -60,11 +60,11 @@ if(isset($_POST['resend'])) {
                 redirect('login.php', 'Email already verified please login.');
             }
         } else {
-            redirect('register.php', 'Email is not registered. Please Register now.!');
+            redirect('register.php', 'Email is not registered. Please Register now.!', 'red');
         }
 
     } else {
-        redirect('resend-verification.php', 'Please enter email address');
+        redirect('resend-verification.php', 'Please enter email address', 'red');
     }
 }
 ?>

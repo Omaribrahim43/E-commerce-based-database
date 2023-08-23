@@ -16,10 +16,10 @@ if(isset($_POST['saveProduct'])) {
         if($result){
             redirect('products.php', 'Product Added Successfuly');
         } else {
-            redirect('products-create.php', 'Somthing Went Wrong');
+            redirect('products-create.php', 'Somthing Went Wrong', 'red');
         }
     } else {
-        redirect('products-create.php', 'Please fill all the input fields.');
+        redirect('products-create.php', 'Please fill all the input fields.', 'red');
     }
 }
 
@@ -35,7 +35,7 @@ if(isset($_POST['updateProduct'])) {
     $productId = validate($_POST['productId']);
     $product = getById('products', $productId, 'product_id');
     if($product['status'] != 200) {
-        redirect('products-edit.php?product_id='.$productId, 'No Such ID is Found.');
+        redirect('products-edit.php?product_id='.$productId, 'No Such ID is Found.', 'red');
     }
     
     if ($name != '' || $description != '' || $imageData != '' || $price != '' || $discount != '' || $category != '') {
@@ -48,10 +48,10 @@ if(isset($_POST['updateProduct'])) {
         if($result){
             redirect('products-edit.php?product_id='.$productId, 'Product Updated Successfuly');
         } else {
-            redirect('products-create.php', 'Somthing Went Wrong');
+            redirect('products-create.php', 'Somthing Went Wrong', 'red');
         }
     } else {
-        redirect('products-create.php', 'Please fill all the input fields.');
+        redirect('products-create.php', 'Please fill all the input fields.', 'red');
     }
 }
 ?>

@@ -115,16 +115,20 @@ include 'includes/head-vars.php';
                 <?php if ((calculateTableForUser('cart', "$userId")) > 0) { ?>
                   <span class="cart-count">
                     <?= calculateTableForUser('cart', "$userId") ?>
-                  </span><i class="fas fa-shopping-cart"></i>
+                  </span>
                 <?php } else { ?>
                 <?php } ?>
+                <i class="fas fa-shopping-cart"></i>
               </a>
             </div>
           <?php } else {
             ?>
             <div class="header-cart">
-              <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count"><?php if( count($_SESSION['cart']) > 0) { echo count($_SESSION['cart']);} ?></span><i
-                  class="fas fa-shopping-cart"></i>
+              <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
+                  <?php if (count($_SESSION['cart']) > 0) {
+                    echo count($_SESSION['cart']);
+                  } ?>
+                </span><i class="fas fa-shopping-cart"></i>
               </a>
             </div>
             <?php
@@ -245,16 +249,20 @@ include 'includes/head-vars.php';
                 <?php if ((calculateTableForUser('cart', "$userId")) > 0) { ?>
                   <span class="cart-count">
                     <?= calculateTableForUser('cart', "$userId") ?>
-                  </span><i class="fas fa-shopping-cart"></i>
+                  </span>
                 <?php } else { ?>
                 <?php } ?>
+                <i class="fas fa-shopping-cart"></i>
               </a>
             </div>
           <?php } else {
             ?>
             <div class="header-cart">
-              <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count"><?php if( count($_SESSION['cart']) > 0) { echo count($_SESSION['cart']);} ?></span><i
-                  class="fas fa-shopping-cart"></i>
+              <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
+                  <?php if (count($_SESSION['cart']) > 0) {
+                    echo count($_SESSION['cart']);
+                  } ?>
+                </span><i class="fas fa-shopping-cart"></i>
               </a>
             </div>
             <?php
@@ -298,14 +306,43 @@ include 'includes/head-vars.php';
                   ><i class="fas fa-search"></i
                 ></a>
               </div> -->
-          <div class="header-wishlist d-none d-sm-block">
-            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count"></span><i
-                class="far fa-heart"></i></a>
-          </div>
-          <div class="header-cart">
-            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count"></span><i
-                class="fas fa-shopping-cart"></i></a>
-          </div>
+          <?php if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
+            $userId = $_SESSION['loggedInUserData']['id'];
+            ?>
+            <div class="header-wishlist d-none d-sm-block">
+              <a href="#offcanvas-wishlist" class="offcanvas-toggle">
+                <?php if ((calculateTableForUser('wish_list', "$userId")) > 0) { ?>
+                  <span class="wishlist-count">
+                    <?= calculateTableForUser('wish_list', "$userId") ?>
+                  </span>
+                <?php } else { ?>
+                <?php } ?>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="header-cart">
+              <a href="#offcanvas-cart" class="offcanvas-toggle">
+                <?php if ((calculateTableForUser('cart', "$userId")) > 0) { ?>
+                  <span class="cart-count">
+                    <?= calculateTableForUser('cart', "$userId") ?>
+                  </span>
+                <?php } else { ?>
+                <?php } ?>
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          <?php } else {
+            ?>
+            <div class="header-cart">
+              <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
+                  <?php if (count($_SESSION['cart']) > 0) {
+                    echo count($_SESSION['cart']);
+                  } ?>
+                </span><i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+            <?php
+          } ?>
           <div class="mobile-menu-toggle">
             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
               <svg viewBox="0 0 800 600">
@@ -434,33 +471,43 @@ include 'includes/head-vars.php';
     </div>
     <div class="body customScroll">
       <ul class="minicart-product-list">
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-1.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Walnut Cutting Board</a>
-            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-2.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Lucky Wooden Elephant</a>
-            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-3.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Fish Cut Out Set</a>
-            <span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
+        <?php
+        $totalPrice = 0;
+        if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
+          $userId = $_SESSION['loggedInUserData']['id'];
+          $query = "SELECT * FROM wish_list INNER JOIN products ON wish_list.product_id=products.product_id WHERE user_id='$userId';";
+          $run_query = mysqli_query($conn, $query);
+          if (mysqli_num_rows($run_query) > 0) {
+            foreach ($run_query as $item) {
+              $productId = $item['product_id'];
+              $productName = $item['product_name'];
+              $product_image = $item['product_image'];
+              $product_price = $item['product_price'];
+              ?>
+              <li>
+                <!-- <img style="width:80px;" src="data:image/webp;base64,' . base64_encode($productItem['product_image']) . '" /> -->
+                <a href="product-details.php" class="image">
+                  <img style="width:80px;" src="data:image/webp;base64,<?= base64_encode($product_image); ?>" />
+                </a>
+                <div class="content">
+                  <a href="product-details.php" class="title">
+                    <?= $productName ?>
+                  </a>
+                  <span class="quantity-price">
+                    $<span class="amount">
+                      <?= $product_price ?>
+                    </span>
+                  </span>
+                  <a href="#" class="remove">×</a>
+                </div>
+              </li>
+              <?php
+            }
+          } else {
+            echo "Your Wishlist Is Empty!";
+          }
+        }
+        ?>
       </ul>
     </div>
     <div class="foot">
@@ -481,39 +528,91 @@ include 'includes/head-vars.php';
     </div>
     <div class="body customScroll">
       <ul class="minicart-product-list">
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-1.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Walnut Cutting Board</a>
-            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-2.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Lucky Wooden Elephant</a>
-            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
-        <li>
-          <a href="product-details.php" class="image"><img src="assets/images/product/cart-product-3.webp"
-              alt="Cart product Image" /></a>
-          <div class="content">
-            <a href="product-details.php" class="title">Fish Cut Out Set</a>
-            <span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-            <a href="#" class="remove">×</a>
-          </div>
-        </li>
+        <?php
+        $totalPrice = 0;
+        if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
+          $userId = $_SESSION['loggedInUserData']['id'];
+          $query = "SELECT * FROM cart INNER JOIN products ON cart.product_id=products.product_id WHERE user_id='$userId';";
+          $run_query = mysqli_query($conn, $query);
+          if (mysqli_num_rows($run_query) > 0) {
+            foreach ($run_query as $item) {
+              $productId = $item['product_id'];
+              $productName = $item['product_name'];
+              $product_image = $item['product_image'];
+              $product_quantity = $item['product_quantity'];
+              $product_price = $item['product_price'];
+              $totalPrice += ($product_quantity * $product_price);
+              ?>
+              <li>
+                <!-- <img style="width:80px;" src="data:image/webp;base64,' . base64_encode($productItem['product_image']) . '" /> -->
+                <a href="product-details.php" class="image">
+                  <img style="width:80px;" src="data:image/webp;base64,<?= base64_encode($product_image); ?>" />
+                </a>
+                <div class="content">
+                  <a href="product-details.php" class="title">
+                    <?= $productName ?>
+                  </a>
+                  <span class="quantity-price">
+                    <?= $product_quantity ?> x <span class="amount">
+                      <?= $product_price ?>
+                    </span>
+                  </span>
+                  <a href="#" class="remove">×</a>
+                </div>
+              </li>
+              <?php
+            }
+          } else {
+            echo "Your Cart Is Empty!";
+          }
+        } else {
+          if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+            foreach ($_SESSION['cart'] as $item) {
+              $product_id = $item['productid'];
+              $product_quantity = $item['quantity'];
+
+              // Change "cart" to the actual table name containing product information
+              $sql = "SELECT * FROM products WHERE product_id = '$product_id'";
+              $sql_run = mysqli_query($conn, $sql);
+
+              // Fetch product information
+              if ($sql_run && mysqli_num_rows($sql_run) > 0) {
+                $product_data = mysqli_fetch_assoc($sql_run);
+                $productName = $product_data['product_name'];
+                $product_image = $product_data['product_image'];
+                $product_price = $product_data['product_price'];
+                $totalPrice += ($product_quantity * $product_price);
+              }
+              ?>
+              <li>
+                <a href="product-details.php" class="image">
+                  <img style="width: 80px;" src="data:image/webp;base64,<?= base64_encode($product_image); ?>" />
+                </a>
+                <div class="content">
+                  <a href="product-details.php" class="title">
+                    <?= $productName ?>
+                  </a>
+                  <span class="quantity-price">
+                    <?= $product_quantity ?> x <span class="amount">
+                      <?= $product_price ?>
+                    </span>
+                  </span>
+                  <a href="#" class="remove">×</a>
+                </div>
+              </li>
+              <?php
+            }
+          }
+        }
+        ?>
       </ul>
     </div>
     <div class="foot">
       <div class="sub-total">
         <strong>Subtotal :</strong>
-        <span class="amount">$144.00</span>
+        <span class="amount">$
+          <?= $totalPrice; ?>
+        </span>
       </div>
       <div class="buttons">
         <a href="shopping-cart.php" class="btn btn-dark btn-hover-primary">view cart</a>
@@ -549,28 +648,6 @@ include 'includes/head-vars.php';
           <a href="contact-us.php"><span class="menu-text">contact us</span></a>
         </li>
       </ul>
-    </div>
-    <div class="offcanvas-buttons">
-      <div class="header-tools">
-        <?php
-        if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) { ?>
-          <div class="header-login">
-            <a href="my-account.php"><i class="far fa-user"></i></a>
-          </div>
-          <?php
-        } else { ?>
-          <div class="header-login">
-          </div>
-          <?php
-        }
-        ?>
-        <div class="header-wishlist">
-          <a href="wishlist.php"><span>3</span><i class="far fa-heart"></i></a>
-        </div>
-        <div class="header-cart">
-          <a href="shopping-cart.php"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-        </div>
-      </div>
     </div>
     <div class="offcanvas-social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>

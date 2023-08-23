@@ -1,40 +1,58 @@
-<?php 
+<?php
 session_start();
 require_once 'dbcon.php';
 
-function validate($inputData) {
+function validate($inputData)
+{
     global $conn;
-    $validateData =  mysqli_real_escape_string($conn, $inputData);
+    $validateData = mysqli_real_escape_string($conn, $inputData);
     return trim($validateData);
 }
 
-function redirect($url, $status) {
-    $_SESSION['status'] = "$status";
-    header('Location: '.$url);
-    exit(0);
+function redirect($url, $status, $color = 'green')
+{
+    if ($color == 'green') {
+        $_SESSION['status'] = "$status";
+        $_SESSION['color'] = $color;
+        header('Location: ' . $url);
+        exit(0);
+    } else {
+        $_SESSION['InvalidStatus'] = "$status";
+        header('Location: ' . $url);
+        exit(0);
+    }
 }
-function invRedirect($url, $status) {
+function invRedirect($url, $status)
+{
     $_SESSION['invstatus'] = "$status";
-    header('Location: '.$url);
+    header('Location: ' . $url);
     exit(0);
 }
-function alertMessage(){
-    if(isset($_SESSION['status'])){
+function alertMessage($color="green")
+{
+    if (isset($_SESSION['status']) && $color == "green") {
         echo '<div class="alert alert-success">
-                <h6>'.$_SESSION['status'].'</h6>
+                <h6>' . $_SESSION['status'] . '</h6>
+              </div>';
+        unset($_SESSION['status']);
+    } else if (isset($_SESSION['InvalidStatus']) && $color == "red") {
+        echo '<div class="alert alert-danger">
+                <h6>' . $_SESSION['status'] . '</h6>
               </div>';
         unset($_SESSION['status']);
     }
 }
 
-function validationREGEX(){
-    if(isset($_SESSION['invstatus'])){
-        echo '<span style="color: red;">'.$_SESSION['invstatus'].'</span>';
+function validationREGEX()
+{
+    if (isset($_SESSION['invstatus'])) {
+        echo '<span style="color: red;">' . $_SESSION['invstatus'] . '</span>';
         unset($_SESSION['invstatus']);
     }
 }
 
-function getAll($tableName){
+function getAll($tableName)
+{
     global $conn;
 
     $table = validate($tableName);
@@ -44,9 +62,10 @@ function getAll($tableName){
     return $result;
 }
 
-function chechParamId($paramType) {
-    if(isset($_GET[$paramType])) {
-        if($_GET[$paramType] != null) {
+function chechParamId($paramType)
+{
+    if (isset($_GET[$paramType])) {
+        if ($_GET[$paramType] != null) {
             return $_GET[$paramType];
         } else {
             return 'No ID Given';
@@ -56,7 +75,8 @@ function chechParamId($paramType) {
     }
 }
 
-function getById($tableName, $id, $colName) {
+function getById($tableName, $id, $colName)
+{
     global $conn;
 
     $table = validate($tableName);
@@ -65,19 +85,19 @@ function getById($tableName, $id, $colName) {
     $query = "SELECT * FROM $table WHERE $colName='$id' LIMIT 1";
     $result = mysqli_query($conn, $query);
 
-    if($result) {
-        if(mysqli_num_rows($result) == 1) {
+    if ($result) {
+        if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $response = [
-            'status' => 200,
-            'message' => 'Fected data',
-            'data' => $row
+                'status' => 200,
+                'message' => 'Fected data',
+                'data' => $row
             ];
             return $response;
         } {
             $response = [
-            'status' => 404,
-            'message' => 'No Data Record'
+                'status' => 404,
+                'message' => 'No Data Record'
             ];
             return $response;
         }
@@ -90,7 +110,8 @@ function getById($tableName, $id, $colName) {
     }
 }
 
-function getByIdJoin($tableName1, $tableName2, $id, $colName) {
+function getByIdJoin($tableName1, $tableName2, $id, $colName)
+{
     global $conn;
 
     $table1 = validate($tableName1);
@@ -100,19 +121,19 @@ function getByIdJoin($tableName1, $tableName2, $id, $colName) {
     $query = "SELECT * FROM $table1 INNER JOIN $table2 ON $table1.$colName = $table2.$colName";
     $result = mysqli_query($conn, $query);
 
-    if($result) {
-        if(mysqli_num_rows($result) == 1) {
+    if ($result) {
+        if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $response = [
-            'status' => 200,
-            'message' => 'Fected data',
-            'data' => $row
+                'status' => 200,
+                'message' => 'Fected data',
+                'data' => $row
             ];
             return $response;
         } {
             $response = [
-            'status' => 404,
-            'message' => 'No Data Record'
+                'status' => 404,
+                'message' => 'No Data Record'
             ];
             return $response;
         }
@@ -125,7 +146,8 @@ function getByIdJoin($tableName1, $tableName2, $id, $colName) {
     }
 }
 
-function deleteQuery($tableName, $id, $colName){
+function deleteQuery($tableName, $id, $colName)
+{
     global $conn;
 
     $table = validate($tableName);
@@ -136,18 +158,20 @@ function deleteQuery($tableName, $id, $colName){
     return $result;
 }
 
-function logoutSession() {
+function logoutSession()
+{
     unset($_SESSION['loggedInStatus']);
     unset($_SESSION['loggedInUserRole']);
     unset($_SESSION['loggedInUserData']);
 }
 
-function calculateTable($table_name) {
+function calculateTable($table_name)
+{
     global $conn;
     $query = "SELECT COUNT('*') FROM $table_name";
     $queryRun = mysqli_query($conn, $query);
 
-    if($queryRun) {
+    if ($queryRun) {
         $row = mysqli_fetch_array($queryRun);
         return $row[0];
     } else {

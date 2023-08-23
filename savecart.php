@@ -28,6 +28,6 @@ if (isset($_SESSION['loggedInStatus']) && $_SESSION['loggedInStatus'] == true) {
     exit(0);
 } else {
     $_SESSION['nextPage'] = 'checkout.php';
-    redirect('login.php', 'Please login to proceed to checkout.');
+    redirect('login.php', 'Please login to proceed to checkout.', 'red');
 }
 ?>

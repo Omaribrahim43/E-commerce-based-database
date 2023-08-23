@@ -20,7 +20,7 @@ if(isset($_POST['loginBtn'])){
                     if($row['verify_status'] == '1'){
                         if($row['role'] == 'admin') {
                             if($row['is_ban'] == 1) {
-                                redirect('login.php', 'Your Account has been banned. Please contact the admin.');
+                                redirect('login.php', 'Your Account has been banned. Please contact the admin.', 'red');
                             }
                         $_SESSION['loggedInStatus'] = true;
                         $_SESSION['loggedInUserRole'] = $row['role'];
@@ -37,7 +37,7 @@ if(isset($_POST['loginBtn'])){
 
                     } else {
                         if($row['is_ban'] == 1) {
-                            redirect('login.php', 'Your Account has been banned. Please contact the admin.');
+                            redirect('login.php', 'Your Account has been banned. Please contact the admin.', 'red');
                         }
                         $_SESSION['user_id'] = $row['user_id'];// to store the user id in the session
                         $_SESSION['loggedInStatus'] = true;
@@ -56,13 +56,13 @@ if(isset($_POST['loginBtn'])){
                         redirect('index.php', 'Logged In Successfuly!');
                     }
                 } else {
-                    redirect('login.php', 'Please Verify Your Email.!');
+                    redirect('login.php', 'Please Verify Your Email.!', 'red');
                 }
             } else {
-                redirect('login.php', 'Invalid Password!');
+                redirect('login.php', 'Invalid Password!', 'red');
             }
         } else {
-            redirect('login.php', 'Somthing Went Wrong');
+            redirect('login.php', 'Somthing Went Wrong', 'red');
         }
     }
 }

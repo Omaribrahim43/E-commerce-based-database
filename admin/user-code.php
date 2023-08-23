@@ -25,12 +25,12 @@ if(isset($_POST['saveUser'])) {
                 if($result){
                     redirect('users.php', 'User/Admin Added Successfuly');
                 } else {
-                    redirect('users-create.php', 'Somthing Went Wrong');
+                    redirect('users-create.php', 'Somthing Went Wrong', 'red');
                 }
             }
         }
     } else {
-        redirect('users-create.php', 'Please fill all the input fields.');
+        redirect('users-create.php', 'Please fill all the input fields.', 'red');
     }
 }
 
@@ -46,7 +46,7 @@ if(isset($_POST['updateUser'])) {
     $userId = validate($_POST['userId']);
     $user = getById('users', $userId, 'user_id');
     if($user['status'] != 200) {
-        redirect('users-edit.php?user_id='.$userId, 'No Such ID is Found.');
+        redirect('users-edit.php?user_id='.$userId, 'No Such ID is Found.', 'red');
     }
     
     if ($name != '' || $email != '' || $phone != '' || $password != '' || $role != '' || $is_ban != '' ) {
@@ -65,11 +65,11 @@ if(isset($_POST['updateUser'])) {
             if($result){
                 redirect('users-edit.php?user_id='.$userId, 'User/Admin Updated Successfuly');
             } else {
-                redirect('users-create.php', 'Somthing Went Wrong');
+                redirect('users-create.php', 'Somthing Went Wrong', 'red');
             }
         }
     } else {
-        redirect('users-create.php', 'Please fill all the input fields.');
+        redirect('users-create.php', 'Please fill all the input fields.', 'red');
     }
 }
 ?>
