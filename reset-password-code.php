@@ -36,7 +36,7 @@ function send_password_reset($get_name, $get_email, $token){
         $email_template = "
                             <h2>Hello</h2>
                             <h3>You are reciving this email because we recieved a password reset rwquest for your account.</h3><br/><br/>
-                            <a href='http://localhost/php-project/change-password.php?token=$token&email=$get_email'>Click Me</a>
+                            <a href='http://localhost/E-commerce-based-database/change-password.php?token=$token&email=$get_email'>Click Me</a>
                         ";
         $mail->Body = $email_template;
         $mail->send();
@@ -61,10 +61,10 @@ if(isset($_POST['reset'])) {
             send_password_reset($get_name, $get_email, $token);
             redirect('reset-password.php', 'Reset Password Email has been sent.!');
         } else {
-            redirect('reset-password.php', 'Somthing Went Wronge. #1', 'red');
+            redirect('reset-password.php', 'Somthing Went Wronge. #1');
         }
     } else {
-        redirect('reset-password.php', 'No Such Email Found!', 'red');
+        redirect('reset-password.php', 'No Such Email Found!');
     }
 }
 
@@ -89,19 +89,19 @@ if(isset($_POST['resetPass'])) {
                     if($update_password_run){
                         redirect("login.php", "New Password Updated Successfully!");
                     } else {
-                        redirect("change-password.php?token=$token&email=$email", "Didn't update your password somthing went wrong!", 'red');
+                        redirect("change-password.php?token=$token&email=$email", "Didn't update your password somthing went wrong!");
                     }
                 } else {
-                    redirect("change-password.php?token=$token&email=$email", 'Passwords does NOT Match!', 'red');
+                    redirect("change-password.php?token=$token&email=$email", 'Passwords does NOT Match!');
                 }
             } else {
-                redirect("change-password.php?token=$token&email=$email", 'Invalid Token!', 'red');
+                redirect("change-password.php?token=$token&email=$email", 'Invalid Token!');
             }
         } else {
-            redirect("change-password.php?token=$token&email=$email", 'Please fill all data!', 'red');
+            redirect("change-password.php?token=$token&email=$email", 'Please fill all data!');
         }
     } else {
-        redirect('change-password.php', 'No Token available!', 'red');
+        redirect('change-password.php', 'No Token available!');
     }
 }
 ?>

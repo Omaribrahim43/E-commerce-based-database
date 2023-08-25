@@ -9,9 +9,9 @@ if(is_numeric($paraResult)){
     if($category['status'] == 200) {
         $categoryDeleteRes = deleteQuery('categories', $categoryId, 'category_id');
         if($categoryDeleteRes){
-            $category = redirect('categories.php', 'Category Deleted Successfuly', 'red');
+            $category = redirect('categories.php', 'Category Deleted Successfuly');
         } else {
-            $category = redirect('categories.php', 'Somthing Went Wrong', 'red');
+            $category = redirect('categories.php', 'Somthing Went Wrong');
         }
     } else {
         $category = redirect('categories.php', $category['message']);

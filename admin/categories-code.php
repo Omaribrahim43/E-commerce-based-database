@@ -12,12 +12,12 @@ if(isset($_POST['saveCategory'])) {
                     VALUES ('$name','$imageData','$description')";
             $result = mysqli_query($conn, $query);
             if($result){
-                redirect('categories.php', 'Category Added Successfuly', 'green');
+                redirect('categories.php', 'Category Added Successfuly');
             } else {
-                redirect('categories-create.php', 'Somthing Went Wrong', 'red');
+                redirect('categories-create.php', 'Somthing Went Wrong');
             }
         } else {
-            redirect('categories-create.php', 'Please fill all the input fields.', 'green');
+            redirect('categories-create.php', 'Please fill all the input fields.');
         }
     }
 }
@@ -31,7 +31,7 @@ if(isset($_POST['updateCategory'])) {
     $categoryId = validate($_POST['categoryId']);
     $category = getById('categories', $categoryId, 'category_id');
     if($category['status'] != 200) {
-        redirect('categories-edit.php?category_id='.$categoryId, 'No Such ID is Found.', 'red');
+        redirect('categories-edit.php?category_id='.$categoryId, 'No Such ID is Found.');
     }
     
     if ($name != '' || $description != '' || $image != '') {
@@ -42,12 +42,12 @@ if(isset($_POST['updateCategory'])) {
                     WHERE category_id = '$categoryId'";
         $result = mysqli_query($conn, $query);
         if($result){
-            redirect('categories-edit.php?category_id='.$categoryId, 'Category Updated Successfuly', 'green');
+            redirect('categories-edit.php?category_id='.$categoryId, 'Category Updated Successfuly');
         } else {
-            redirect('categories-create.php', 'Somthing Went Wrong', 'red');
+            redirect('categories-create.php', 'Somthing Went Wrong');
         }
     } else {
-        redirect('categories-create.php', 'Please fill all the input fields.', 'red');
+        redirect('categories-create.php', 'Please fill all the input fields.');
     }
 }
 ?>

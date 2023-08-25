@@ -17,9 +17,9 @@ if(isset($_GET['token'])){
             redirect('login.php','Email Already Verified. Please Login');
         }
     }else {
-        redirect('login.php','This token does not exists', 'red');
+        redirect('login.php','This token does not exists');
     }
 } else {
-    redirect('login.php','Not Allowed', 'red');
+    redirect('login.php','Not Allowed');
 }
 ?>

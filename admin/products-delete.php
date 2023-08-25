@@ -11,7 +11,7 @@ if(is_numeric($paraResult)){
         if($productDeleteRes){
             $product = redirect('products.php', 'Product Deleted Successfuly');
         } else {
-            $product = redirect('products.php', 'Somthing Went Wrong', 'red');
+            $product = redirect('products.php', 'Somthing Went Wrong');
         }
     } else {
         $product = redirect('products.php', $category['message']);

@@ -11,7 +11,7 @@ if(is_numeric($paraResult)){
         if($userDeleteRes){
             $user = redirect('users.php', 'User Deleted Successfuly');
         } else {
-            $user = redirect('users.php', 'Somthing Went Wrong', 'red');
+            $user = redirect('users.php', 'Somthing Went Wrong');
         }
     } else {
         $user = redirect('users.php', $user['message']);

@@ -9,18 +9,11 @@ function validate($inputData)
     return trim($validateData);
 }
 
-function redirect($url, $status, $color = 'green')
+function redirect($url, $status)
 {
-    if ($color == 'green') {
-        $_SESSION['status'] = "$status";
-        $_SESSION['color'] = $color;
-        header('Location: ' . $url);
-        exit(0);
-    } else {
-        $_SESSION['InvalidStatus'] = "$status";
-        header('Location: ' . $url);
-        exit(0);
-    }
+    $_SESSION['status'] = "$status";
+    header('Location: ' . $url);
+    exit(0);
 }
 function invRedirect($url, $status)
 {
@@ -28,19 +21,15 @@ function invRedirect($url, $status)
     header('Location: ' . $url);
     exit(0);
 }
-function alertMessage($color="green")
+function alertMessage()
 {
-    if (isset($_SESSION['status']) && $color == "green") {
+    if (isset($_SESSION['status'])) {
         echo '<div class="alert alert-success">
                 <h6>' . $_SESSION['status'] . '</h6>
               </div>';
         unset($_SESSION['status']);
-    } else if (isset($_SESSION['InvalidStatus']) && $color == "red") {
-        echo '<div class="alert alert-danger">
-                <h6>' . $_SESSION['status'] . '</h6>
-              </div>';
-        unset($_SESSION['status']);
     }
+
 }
 
 function validationREGEX()

@@ -127,6 +127,8 @@ include 'includes/head-vars.php';
               <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">
                   <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                     echo count($_SESSION['cart']);
+                  } else {
+                    echo '0';
                   } ?>
                 </span><i class="fas fa-shopping-cart"></i>
               </a>

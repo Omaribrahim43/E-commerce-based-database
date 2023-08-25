@@ -37,7 +37,7 @@ function sendEmailVerify($name, $email, $verify_token)
     $email_template = "
                             <h2>You have registered with Home Made Harmony</h2>
                             <h5>Verify your email address to login with the bellow given link</h5><br/><br/>
-                            <a href='http://localhost/php-project/verify-email.php?token=$verify_token'>Click Me</a>
+                            <a href='http://localhost/E-commerce-based-database/verify-email.php?token=$verify_token'>Click Me</a>
                         ";
 
     $mail->Body = $email_template;
